@@ -1,0 +1,5 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly project(":modules:edelweiss-system-configurations")
+	compileOnly project(":modules:edelweiss-common-util")
+}

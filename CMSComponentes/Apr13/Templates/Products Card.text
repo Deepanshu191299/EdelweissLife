@@ -1,0 +1,42 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+
+
+    <div class="product-icon">
+        <#if (Fieldset24719074.mainCardImage.getData())?? && Fieldset24719074.mainCardImage.getData() != "">
+	        <img alt="${Fieldset24719074.mainCardImage.getAttribute("alt")}" data-fileentryid="${Fieldset24719074.mainCardImage.getAttribute("fileEntryId")}" src="${Fieldset24719074.mainCardImage.getData()}" />
+       </#if>
+    </div>
+    <div class="product-text">
+		    <#if (Fieldset24719074.title.getData())??>
+	          <h4 class="fontsemi fs18">${Fieldset24719074.title.getData()}</h4>
+        </#if>
+        <#if (Fieldset24719074.description.getData())??>
+	          <div class="para1">${Fieldset24719074.description.getData()}</div>
+        </#if>
+        
+    </div>
+    <div class="scroll-text">
+        <ul class="edto-bullet1">
+				    <#if Fieldset34165115.benefits.getSiblings()?has_content>
+						<#list Fieldset34165115.benefits.getSiblings() as cur_Fieldset34165115_benefits>
+							<#if (cur_Fieldset34165115_benefits.getData())??>
+								<li> ${cur_Fieldset34165115_benefits.getData()}</li>
+							</#if>
+						</#list>
+					</#if>
+        </ul>
+    </div>
+    <div class="product-footer">
+      <#if getterUtil.getBoolean(Fieldset18777379.purchaseOnline.getData())>
+								<a data-senna-off="true" class="edto-btn-primary" href="${Fieldset18777379.getQuote.getFriendlyUrl()}">
+								BUY NOW
+							</a>
+							<#else>
+								<a data-senna-off="true" class="edto-btn-primary" href="${Fieldset18777379.knowMore.getFriendlyUrl()}">
+								KNOW MORE
+							</a>
+			 </#if>
+    </div>

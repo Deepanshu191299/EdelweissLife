@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-testimonials-util-web
+Bundle-SymbolicName: in.edelweiss.testimonials.util
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.testimonials.util.constants

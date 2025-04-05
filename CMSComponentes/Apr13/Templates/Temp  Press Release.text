@@ -1,0 +1,54 @@
+<#assign contentTitle = .vars['reserved-article-title'].data >
+<#assign smallImage = .vars['reserved-article-small-image-url'].data >
+<#assign urlIs = friendlyURLs[themeDisplay.getLanguageId()]!"" >
+
+<#assign createDate = .vars['reserved-article-create-date'].data />
+<#assign displayDate = .vars['reserved-article-display-date'].data />
+<#setting date_format="dd MMM, yyyy">
+<#assign checkCurDate = dateUtil.parseDate("EEE, d MMM yyyy HH:mm:ss Z", displayDate, locale)>
+
+
+ <#assign JournalArticleLocalService = serviceLocator.findService("com.liferay.journal.service.JournalArticleLocalService")>
+ <#assign assetEntryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetEntryLocalService" )>
+ <#assign getterUtil = staticUtil["com.liferay.portal.kernel.util.GetterUtil"] />
+ 
+<div class="inner-news-heading">
+                                <h5 class="fs18 fw700">${contentTitle}</h5>
+                                <div class="date-block">
+                                    <p class="para1"><span>
+																		<#setting datetime_format="dd MMM, yyyy">
+																		<#assign dateIs = displayDate>
+																		${checkCurDate?date}
+																		
+                                </span></p>
+                                   
+                                </div>
+                            </div>
+                            <div class="para1 fw500 pt-2 pb-2">
+                               ${shortNote.getData()} <a href="${urlIs}">Read More</a>
+                            </div>
+<div class="multi-btn">
+    <ul class="social-media-list">
+        <li>
+            <a href="${facebookLink.getData()}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                    <path fill="#425EAC" fill-rule="evenodd" d="M13.06 6.905h-.975c-.766 0-.914.364-.914.898v1.176h1.825l-.238 1.844h-1.587v4.729H9.268v-4.73H7.676V8.98h1.592V7.62c0-1.577.963-2.436 2.37-2.436.674 0 1.253.05 1.422.073v1.648zM0 10.368c0 5.726 4.64 10.368 10.368 10.368 5.726 0 10.368-4.64 10.368-10.368C20.736 4.642 16.096 0 10.368 0 4.642 0 0 4.64 0 10.368z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="${twitterLink.getData()}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                    <path fill="#1DADEB" fill-rule="evenodd" d="M14.49 8.254c.004.09.007.182.007.275 0 2.81-2.14 6.052-6.052 6.052a6.023 6.023 0 0 1-3.261-.956 4.267 4.267 0 0 0 3.15-.881 2.129 2.129 0 0 1-1.988-1.477 2.146 2.146 0 0 0 .96-.037 2.128 2.128 0 0 1-1.705-2.085v-.027c.286.16.615.255.963.266a2.127 2.127 0 0 1-.658-2.84 6.04 6.04 0 0 0 4.384 2.223 2.127 2.127 0 0 1 3.624-1.94c.485-.096.94-.272 1.352-.516a2.138 2.138 0 0 1-.935 1.177c.43-.052.84-.166 1.221-.335a4.33 4.33 0 0 1-1.061 1.1zM0 10.368c0 5.726 4.64 10.368 10.368 10.368 5.726 0 10.368-4.64 10.368-10.368C20.736 4.642 16.096 0 10.368 0 4.642 0 0 4.64 0 10.368z"></path>
+                </svg>
+            </a>
+        </li>
+				<li>
+				   <a href="${twitterLink.getData()}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                    <path fill="#1DADEB" fill-rule="evenodd" d="M14.49 8.254c.004.09.007.182.007.275 0 2.81-2.14 6.052-6.052 6.052a6.023 6.023 0 0 1-3.261-.956 4.267 4.267 0 0 0 3.15-.881 2.129 2.129 0 0 1-1.988-1.477 2.146 2.146 0 0 0 .96-.037 2.128 2.128 0 0 1-1.705-2.085v-.027c.286.16.615.255.963.266a2.127 2.127 0 0 1-.658-2.84 6.04 6.04 0 0 0 4.384 2.223 2.127 2.127 0 0 1 3.624-1.94c.485-.096.94-.272 1.352-.516a2.138 2.138 0 0 1-.935 1.177c.43-.052.84-.166 1.221-.335a4.33 4.33 0 0 1-1.061 1.1zM0 10.368c0 5.726 4.64 10.368 10.368 10.368 5.726 0 10.368-4.64 10.368-10.368C20.736 4.642 16.096 0 10.368 0 4.642 0 0 4.64 0 10.368z"></path>
+                </svg>
+            </a>
+				</li>
+    </ul>
+</div>

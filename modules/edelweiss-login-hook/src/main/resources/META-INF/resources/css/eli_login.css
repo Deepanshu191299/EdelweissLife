@@ -1,0 +1,32 @@
+.login-card-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+.eli-custom-login .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eli-custom-login .eli-input {
+    height: 35px;
+    font-size: 12px;
+}
+
+.eli-custom-login label {
+    font-size:14px;
+}
+
+.eli-custom-login .panel-body{
+	padding-left: unset;
+    padding-right: unset;
+}
+
+.eli-custom-login .eli-login-dynamin-navigation{
+	display: inline;
+}

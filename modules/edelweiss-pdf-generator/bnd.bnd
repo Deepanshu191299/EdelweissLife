@@ -1,0 +1,7 @@
+Bundle-Name: edelweiss-pdf-generator
+Bundle-SymbolicName: in.edelweiss.pdf.generator
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.pdf.generator.utility
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

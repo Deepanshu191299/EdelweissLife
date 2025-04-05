@@ -1,0 +1,39 @@
+// com beadcrumb
+
+.edto-breadcrumb-wrapper-wrapper {
+    width: 100%;
+    padding: 6px 0px;
+    display: flex;
+    border-bottom: 1px solid $borderLightGrey;
+    margin-top: 77px;
+        ul{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+                li{
+                    margin: 0;
+                    font-size: 14px;                        
+                        color: #212529;
+                        text-decoration: none;
+                        font-family: 'Montserrat-SemiBold';
+                    a{
+                        font-size: 14px;                        
+                        color: $textBlue-btn;
+                        text-decoration: none;
+                        font-family: 'Montserrat-SemiBold';
+                    }
+                    &.active{
+                        a{
+                            color: $textBlue-btn;
+                        }
+                    }
+                    &:last-child {
+                        a {                           
+                            color: $txtGray;
+                            cursor: context-menu;
+                        }
+                    }
+                }
+        }
+}

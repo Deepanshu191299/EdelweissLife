@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-guest-rating-web
+Bundle-SymbolicName: in.edelweiss.guest.rating.web
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.guest.rating.web.constants

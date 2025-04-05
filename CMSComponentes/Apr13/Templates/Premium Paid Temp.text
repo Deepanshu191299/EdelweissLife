@@ -1,0 +1,44 @@
+<div class="e-nach-double-box">
+	<div class="container">
+		<h2 class="fontbold fs28 text-center pb-3">Other options you can try</h2>
+		<div class="double-box-wrapper">
+			<#if fieldset.getSiblings()?has_content>
+				<#list fieldset.getSiblings() as curEntry> 
+					<div class="edto-ideal-box">
+						<#if (curEntry.image.getData())?? && curEntry.image.getData() != "">
+							<div class="ideal-icon">
+								<img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${curEntry.image.getAttribute("fileEntryId")}" src="${curEntry.image.getData()}" />
+							</div>
+						</#if>
+						<div class="ideal-text">
+							<h4 class="fontsemi fs16">
+								<#if (curEntry.title.getData())??>
+									${curEntry.title.getData()}
+								</#if>
+							</h4>
+							<p class="para1">
+								<#if (curEntry.text.getData())??>
+									${curEntry.text.getData()}
+								</#if>
+							</p>
+							<div class="product-footer">
+								<a class="edto-btn-primary" href="${curEntry.linkToLayout.getFriendlyUrl()}">
+									<#if (curEntry.ButtonName.getData())??>
+										${curEntry.ButtonName.getData()}
+									</#if>
+								</a>
+							</div>
+						</div>                    
+					</div>
+				</#list>
+            </#if>
+			
+		</div>
+	</div>
+</div>
+
+<style>
+.edto-ideal-box{
+    height: auto;
+}
+</style>

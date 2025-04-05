@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-soft-login-filter-web
+Bundle-SymbolicName: in.edelweiss.soft.login
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.soft.login.constants

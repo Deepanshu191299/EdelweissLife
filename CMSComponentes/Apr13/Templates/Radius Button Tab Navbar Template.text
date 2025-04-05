@@ -1,0 +1,51 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+
+<div class="edto-document-sub-tabs-wrapper">
+	<div class="container">
+		<div class="justify-content-center  center-product-navbar">
+			<ul class="nav nav-tabs myTabInner nav-active-tab-ul" id="myTab" role="tablist">
+				<#if stickyNavbarMenu.getSiblings()?has_content>
+				<#list stickyNavbarMenu.getSiblings() as curEntry>
+				<#if curEntry?index == 0>
+						<#assign tabMenuActive = "active"/>
+						</#if>
+					<#if curEntry?index != 0 >
+						<#assign tabMenuActive = ""/>
+					</#if>
+				<li class="nav-item">
+					<a class="nav-link ${tabMenuActive}" href="#${curEntry.id.getData()}" data-toggle="tab" role="tab" aria-controls="${curEntry.id.getData()}" aria-selected="true">
+						<#if (curEntry.title.getData())??>
+							${curEntry.title.getData()}
+						</#if>
+					</a> 
+				</li>
+				</#list>
+				</#if>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+
+$( document ).ready(function() {
+    $('.hidden-col').addClass('hidden');
+    $($('.hidden-col')[0]).removeClass('hidden');
+$(".nav-active-tab-ul li a").click(function(e) {
+    e.preventDefault();
+    $('.hidden-col').addClass('hidden');
+    $($(this).attr('href')).removeClass('hidden');
+}); 
+});
+   
+</script>
+<style>
+    .signed-in .page-editor .hidden{
+        display: block !important; 
+    }
+    .hidden{
+        display: none;
+    }
+</style>

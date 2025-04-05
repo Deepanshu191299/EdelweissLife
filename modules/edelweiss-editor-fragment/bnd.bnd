@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-editor-fragment
+Bundle-SymbolicName: in.delweiss.editor.fragment
+Bundle-Version: 1.0.0
+Export-Package: in.delweiss.editor.fragment.constants

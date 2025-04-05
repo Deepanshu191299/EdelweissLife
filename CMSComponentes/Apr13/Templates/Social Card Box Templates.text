@@ -1,0 +1,39 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<section>
+    <div class="carres-footer pb-1">
+    <div class="container">
+        <div class="center-btn">
+            <#if cardButtonList.getSiblings()?has_content>
+            <#list cardButtonList.getSiblings() as curEntry>
+            <a class="edto-btn-primary" href="${curEntry.cardButtonLink.getData()}"> 
+                <#if (curEntry.cardButtonTitle.getData())??>
+                    ${curEntry.cardButtonTitle.getData()}
+                </#if>
+            </a>
+            </#list>
+            </#if>
+        </div>
+        <h2 class="fontbold fs28 text-center"> 
+            <#if (cardHeading.getData())??>
+                ${cardHeading.getData()}
+            </#if>
+        </h2>
+        <ul class="social-meadia">
+            <#if socialCardIconList.getSiblings()?has_content>
+            <#list socialCardIconList.getSiblings() as curEntry>
+            <li>
+                <a href="${socialCardIconList.socialCardIconLink.getData()}">
+                <#if (curEntry.socialCardIconImage.getData())?? && curEntry.socialCardIconImage.getData() != "">
+	                 <img alt="${curEntry.socialCardIconImage.getAttribute("alt")}" data-fileentryid="${curEntry.socialCardIconImage.getAttribute("fileEntryId")}" src="${curEntry.socialCardIconImage.getData()}" />
+                </#if>
+                </a>
+            </li>
+            </#list>
+            </#if>
+        </ul>
+    </div>
+</div>
+</section>

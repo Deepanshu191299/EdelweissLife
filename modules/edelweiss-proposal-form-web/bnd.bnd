@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-proposal-form-web
+Bundle-SymbolicName: in.edelweiss.proposal.form
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.proposal.form.constants

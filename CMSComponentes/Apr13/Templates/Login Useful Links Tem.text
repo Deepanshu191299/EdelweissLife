@@ -1,0 +1,13 @@
+                        <h1 class="fontbold fs28"><#if (title.getData())??>	${title.getData()}</#if></h1>
+<#if usefulLink.getSiblings()?has_content>
+                <#list usefulLink.getSiblings() as curEntry> 
+                        <ul class="series">
+                            <li><a data-senna-off="true" href="${curEntry.linkToPage.getFriendlyUrl()}">
+	<#if (curEntry.linkName.getData())??>
+	${curEntry.linkName.getData()}
+</#if>
+</a></li>
+                                                     
+                        </ul>
+												</#list>
+												</#if>

@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-contact-us-web
+Bundle-SymbolicName: in.edelweiss.contact.us
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.contact.us.constants

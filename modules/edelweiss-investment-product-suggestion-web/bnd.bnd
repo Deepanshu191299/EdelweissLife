@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-investment-product-suggestion-web
+Bundle-SymbolicName: in.edelweiss.ips.web
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.ips.web.constants

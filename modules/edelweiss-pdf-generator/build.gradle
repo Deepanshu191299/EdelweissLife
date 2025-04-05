@@ -1,0 +1,9 @@
+dependencies {
+    compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+    cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.4"
+    
+    compileInclude group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+    compileInclude group: 'org.xhtmlrenderer', name: 'flying-saucer-core', version: '9.1.20'
+    compileInclude group: 'org.xhtmlrenderer', name: 'flying-saucer-pdf-openpdf', version: '9.1.20'
+}

@@ -1,0 +1,12 @@
+                    <div class="personility-text">
+                        <h2 class="fontbold fs28 pb-3"><#if (title.getData())??>
+	${title.getData()}
+</#if></h2>
+                        <h4 class="fs22 textsub-title pb-2"><#if (description.getData())??>
+	${description.getData()}
+</#if></h4>
+                      
+                        <a class="edto-btn-primary mt-2" href="${linkToPage.getFriendlyUrl()}"><#if (buttonName.getData())??>
+	${buttonName.getData()}
+</#if></a>
+                    </div>

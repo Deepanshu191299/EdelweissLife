@@ -1,0 +1,5 @@
+Bundle-Name: edelweiss-funds
+Bundle-SymbolicName: in.edelweiss.funds
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.funds.constants
+Web-ContextPath: /edelweiss-funds

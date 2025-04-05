@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-csb-integration-web
+Bundle-SymbolicName: edelweiss.csb.integration.web
+Bundle-Version: 1.0.0
+Export-Package: edelweiss.csb.integration.web.constants

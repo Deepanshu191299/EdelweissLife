@@ -1,0 +1,142 @@
+
+<div class="fund-equity250-header mt-4 mob-none">
+            <div class="container">
+                <div class="fund-equity250-inner">
+                    <!-- Edelweiss Tokio Life - Wealth Rise Heading-->
+                    <div class="fund-equity250-heading-box mb-3">
+                        <div class="fund-equity250-content">
+											      <p class="d-cstm-block"><#if (sectionTagLine.getData())??>${sectionTagLine.getData()}</#if></p>
+                            <h5 class="recomendedFundsStrongTag fs24 fontsemi">	<#if (sectionTitle.getData())??>${sectionTitle.getData()}</#if></h5>
+														<p class="d-cstm-block"><#if (sectionSubTitle.getData())??>${sectionSubTitle.getData()}</#if></p>
+														<p class="cstm-block-note"><#if (shortNote.getData())??>${shortNote.getData()}</#if></p>
+                        </div>
+                        <div class="fund-equity250-customize-wrapper">
+                            <a href="javascript:void(0);" class="pointer customize-btn">Customize Funds</a>
+                        </div>
+                    </div>
+                    <!-- Edelweiss Tokio Life - Wealth Rise Heading-->
+                    <!-- Customize Funds Toggle-->
+                    <div class="customize-fund-wrapper">
+                       
+                        <div class="progress-allocation-wrapper">
+                            <div class="allocatifund-allocation-mobon-tooltip allocation-left">
+                                <span>0%</span><span>left</span>
+                            </div>
+                            <div class="allocation-bar">
+                                <span class="color-ELCFD" style="height:100%"></span>
+                                <span class="color-ETTFD" style="height:0%"></span>
+                                <span class="color-BNDFD" style="height:0%"></span>
+                                <span class="color-EMCFD" style="height:0%"></span>
+                                <span class="color-MGFND" style="height:0%"></span>
+                                <span class="color-GLTFD" style="height:0%"></span>
+                                <span class="color-EBCFD" style="height:0%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- Customize Funds Toggle-->
+                    <!-- Edelweiss Tokio Life - Wealth Rise -->
+                    <div class="edelweiss-tokio-life-tab-group">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="edelweiss-tokio-life-tab">
+                                    <ul class="nav nav-tabs flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#tokio-tab-1">
+                                                <div class="tokio-tab-heading">
+                                                    <div class="tokio-dots-left">
+                                                        <span class="tokio-dots"></span>
+                                                    </div>
+                                                    <div class="tokio-tab-txt">
+                                                        <#if (title.getData())??><h5>${title.getData()}</h5></#if>
+                                                        <#if (customizeFundsCard.cfcContent.getData())??>
+                                                        <p>	${customizeFundsCard.cfcContent.getData()}</p></#if>
+                                                    </div>
+                                                    <div class="tokio-dots-right">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                            viewBox="0 0 28 28">
+                                                            <g fill="none" fill-rule="evenodd"
+                                                                transform="translate(1 .274)">
+                                                                <circle cx="13" cy="13.726" r="13" stroke="#124093"
+                                                                    stroke-width="1.3" />
+                                                                <path fill="#124093" fill-rule="nonzero"
+                                                                    stroke="#124093" stroke-width=".65"
+                                                                    d="M14.615 9.135a.452.452 0 0 0-.645 0 .455.455 0 0 0 0 .639l3.269 3.269H6.45a.45.45 0 0 0-.451.451c0 .252.2.458.451.458H17.24l-3.27 3.263a.463.463 0 0 0 0 .645c.181.18.472.18.646 0l4.043-4.043a.444.444 0 0 0 0-.638l-4.043-4.044z" />
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+																				
+																				 
+		                                       <#if customizeFundsCard.getSiblings()?has_content>
+                                             <#list customizeFundsCard.getSiblings() as cFundsCard>
+																				<li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#${cFundsCard.enterTabId.getData()}">
+                                                <div class="tokio-tab-heading">
+                                                    <div class="tokio-dots-left">
+                                                        <span class="tokio-dots"></span>
+                                                    </div>
+                                                    <div class="tokio-tab-txt">
+																										   <#if (cFundsCard.cfcTitle.getData())??>	
+                                                         <h5>${cFundsCard.cfcTitle.getData()}</h5>
+																										   </#if>
+																										   <#if (cFundsCard.cfcContent.getData())??>
+	                                                       <p>${cFundsCard.cfcContent.getData()}</p>
+                                                      </#if>
+                                                    </div>
+                                                    <div class="tokio-dots-right">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                            viewBox="0 0 28 28">
+                                                            <g fill="none" fill-rule="evenodd"
+                                                                transform="translate(1 .274)">
+                                                                <circle cx="13" cy="13.726" r="13" stroke="#124093"
+                                                                    stroke-width="1.3" />
+                                                                <path fill="#124093" fill-rule="nonzero"
+                                                                    stroke="#124093" stroke-width=".65"
+                                                                    d="M14.615 9.135a.452.452 0 0 0-.645 0 .455.455 0 0 0 0 .639l3.269 3.269H6.45a.45.45 0 0 0-.451.451c0 .252.2.458.451.458H17.24l-3.27 3.263a.463.463 0 0 0 0 .645c.181.18.472.18.646 0l4.043-4.043a.444.444 0 0 0 0-.638l-4.043-4.044z" />
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+																			  </#list>
+	                                     </#if>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="edelweiss-tokio-life-tab-content">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tokio-tab-1">
+                                            <h1>Graph</h1>
+                                        </div>
+																				 <#if customizeFundsCard.getSiblings()?has_content>
+                                             <#list customizeFundsCard.getSiblings() as cFundsCard>
+                                        <div class="tab-pane" id="${cFundsCard.enterTabId.getData()}">
+                                            <div class="tab-pane-img">
+																						<#if (cFundsCard.Image.getData())?? && cFundsCard.Image.getData() != "">
+	<img class="img-fluid" alt="${cFundsCard.Image.getAttribute("alt")}" data-fileentryid="${cFundsCard.Image.getAttribute("fileEntryId")}" src="${cFundsCard.Image.getData()}" />
+</#if>
+                                                
+                                            </div>
+                                        </div>
+                                         </#list>
+	                                     </#if>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Edelweiss Tokio Life - Wealth Rise -->
+                </div>
+            </div>
+        </div>
+				
+				<style>
+				 .edelweiss-tokio-life-tab  .nav-tabs .nav-link {white-space: inherit;}
+				 .cstm-block-note{font-size: 12px;margin-top: 10px;}
+				</style>

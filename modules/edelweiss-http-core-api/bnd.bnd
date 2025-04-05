@@ -1,0 +1,6 @@
+Bundle-Name: edelweiss-http-core-api
+Bundle-SymbolicName: com.edelweiss.http.core.component.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.edelweiss.http.core.api,\
+	com.edelweiss.http.core.exception

@@ -1,0 +1,69 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="edto-claim-philosophy-wrapper">
+	<div class="container">		
+		<#if (heading.getData())??>
+			<h2 class="fontbold fs28 text-center pt-3 pb-3">${heading.getData()}</h2>
+		</#if>		
+		<div class="claim-philosophyy-box">
+			<div class="col-lg-9 col-md-9 col-sm-12 col-12 p-0">
+				<div class="philosophy-text">
+					<#if (shotDescription.getData())??>
+						${shotDescription.getData()}
+					</#if>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 col-12 p-0">
+				<div class="letter-form">
+					<a class="edto-outline-btn" href="javascript:;" data-toggle="modal" data-target="#${buttonId.getData()}">
+						<#if (buttonTitle.getData())??>
+							${buttonTitle.getData()}
+						</#if>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal team-modal fade" id="${buttonId.getData()}" tabindex="-1" role="dialog" aria-labelledby="${buttonId.getData()}Title" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                </button>
+                <div class="user-profile">
+                    <span> 
+                        <#if (popupImage.getData())?? && popupImage.getData() != "">
+                            <img alt="${popupImage.getAttribute("alt")}" data-fileentryid="${popupImage.getAttribute("fileEntryId")}" src="${popupImage.getData()}" />
+                        </#if>
+                    </span>
+                    <h5 class="fs18 fw700 text-center pt-3 pb-2">
+                        <#if (popupTitle.getData())??>
+                            ${popupTitle.getData()}
+                        </#if>
+                    </h5>
+                    <h5 class="fs18 fw700 text-center txtOrange pb-2">
+                        <#if (popupSubTitle.getData())??>
+                            ${popupSubTitle.getData()}
+                        </#if>
+                    </h5>
+                </div>
+                <div class="profile-text para-bold">
+                    <#if (popupDescription.getData())??>
+                        ${popupDescription.getData()}
+                    </#if>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.team-modal .modal-dialog .modal-content .modal-body .close {
+    opacity: 1;
+    float: right;
+}
+</style>

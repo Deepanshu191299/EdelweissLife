@@ -1,0 +1,6 @@
+Bundle-Name: edelweiss-system-configurations
+Bundle-SymbolicName: in.edelweiss.system.configurations
+Bundle-Version: 1.0.0
+Export-Package: \
+	in.edelweiss.system.configurations,\
+	in.edelweiss.system.configurations.category

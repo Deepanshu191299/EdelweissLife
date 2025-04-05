@@ -1,0 +1,17 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly project(":modules:edelweiss-system-configurations")
+	compileInclude group: "org.apache.httpcomponents", name: "httpclient", version: "4.5.2"
+	compileInclude group: "org.apache.httpcomponents", name: "httpcore", version: "4.4.4"
+	
+	
+	
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+}
+
+configurations {
+	all{
+		exclude group: "commons-logging", module: "commons-logging"
+		exclude group: "commons-codec", module: "commons-codec"
+	}
+}

@@ -1,0 +1,5 @@
+Bundle-Name: Edelweiss Social Bookmark Pinterest
+Bundle-SymbolicName: in.edelweiss.social.bookmark.pinterest
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.social.bookmark.pinterest.constants
+Web-ContextPath: /edelweiss-social-bookmark-pinterest

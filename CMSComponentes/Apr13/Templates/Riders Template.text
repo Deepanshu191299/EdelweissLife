@@ -1,0 +1,37 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<#assign contentTitle = .vars['reserved-article-title'].data >
+<#assign urlIs = friendlyURLs[themeDisplay.getLanguageId()]!"" >
+ <#assign JournalArticleLocalService = serviceLocator.findService("com.liferay.journal.service.JournalArticleLocalService")>
+ <#assign assetEntryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetEntryLocalService" )>
+ <#assign getterUtil = staticUtil["com.liferay.portal.kernel.util.GetterUtil"] />
+ 
+<div class="rides-card">
+    <div class="edto-idea-partner-wrapper">
+        <div class="ideal-box-wrapper">
+            <div class="edto-ideal-box text-left">
+                <div class="ideal-text pt-0">
+                    <h4 class="fontsemi fs16">${contentTitle}</h4>
+                    <div class="para1 txtGray">
+                        <#if (shotDescription.getData())??>
+	                          ${shotDescription.getData()}
+                        </#if>
+                    </div>
+                    <div class="riders-card-arrow text-right mt-2">
+                        <a href="${urlIs}">
+                            <span>Read More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                <g fill="none" fill-rule="evenodd" transform="translate(1 .274)">
+                                    <circle cx="13" cy="13.726" r="13" stroke="#124093" stroke-width="1.3"></circle>
+                                    <path fill="#124093" fill-rule="nonzero" stroke="#124093" stroke-width=".65" d="M14.615 9.135a.452.452 0 0 0-.645 0 .455.455 0 0 0 0 .639l3.269 3.269H6.45a.45.45 0 0 0-.451.451c0 .252.2.458.451.458H17.24l-3.27 3.263a.463.463 0 0 0 0 .645c.181.18.472.18.646 0l4.043-4.043a.444.444 0 0 0 0-.638l-4.043-4.044z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

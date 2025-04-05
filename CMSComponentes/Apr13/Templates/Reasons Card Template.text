@@ -1,0 +1,225 @@
+
+<#if selectBK.getData()=="lightBlueBackground">
+    <#assign selectBKClass="bgLightBlue">
+<#else>
+    <#assign selectBKClass="">
+</#if>
+
+<#if selectGridSlider.getData()=="grid">
+    <#assign selectGridSliderClass=" reasons-grid">
+<#else>
+    <#assign selectGridSliderClass="reasons-slider">
+</#if>
+<div class="${selectBKClass} ${selectGridSliderClass}" id="keyBenefits">
+<div class="edto-insurance-login-wrapper reasons-why-grid pb-2">
+        <div class="container">
+            <h2 class="fontbold fs28 text-center pb-1"><#if (headingSection.getData())??>
+	${headingSection.getData()}
+</#if> </h2>
+						<p class=""fs18 text-centee"><#if (description.getData())??>
+	${description.getData()}
+</#if></p>
+                <div class="edto-login-box row mt-2" style="gap:0">
+								<#if reasonsCard.getSiblings()?has_content>
+                <#list reasonsCard.getSiblings() as curEntry>
+								<div class="col-md-4 my-3">
+                    <div class="edto-ideal-box shadow-none">
+                        <div class="ideal-icon">
+                          <#if (curEntry.image.getData())?? && curEntry.image.getData() != "">
+                            <img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${curEntry.image.getAttribute("fileEntryId")}" src="${curEntry.image.getData()}" />
+                        </#if>
+                        </div>
+                        <div class="ideal-text">
+                            <#if (curEntry.title.getData())??><h4 class="fontsemi fs16">${curEntry.title.getData()}</h4></#if>
+                           
+													  
+													 <div class="para1"> 
+													   <#if (curEntry.content.getData())??>
+                               	${curEntry.content.getData()}
+                            </#if>
+													</div>
+                        </div>
+                    </div>
+                </div>  
+								</#list>
+                </#if>
+								
+                </div>
+              <!--  -->
+              
+        </div>
+   </div>
+	 
+		
+		
+		
+	<div class="edto-reason-main-wrapper reasons-why-slider" id="keyBenefits">
+            <div class="container">
+                <h2 class="fontbold fs28 text-center pb-4"><#if (headingSection.getData())??>
+	${headingSection.getData()}
+</#if></h2>
+                <div class="reason-main-slider-card ">
+                    <div class="owl-carousel owl-theme">
+                        <#if reasonsCard.getSiblings()?has_content>
+                         <#list reasonsCard.getSiblings() as curEntry>
+                        <div class="item">
+                            <div class="reason-box-wrapper">
+                                <div class="edto-ideal-box shadow-none">
+                                    <div class="ideal-icon">
+                                        <#if (curEntry.image.getData())?? && curEntry.image.getData() != "">
+                                        <img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${curEntry.image.getAttribute("fileEntryId")}" src="${curEntry.image.getData()}" />
+                                    </#if>
+                                    </div>
+                                    <div class="ideal-text">
+                                        <#if (curEntry.title.getData())??><h4 class="fontsemi fs16">${curEntry.title.getData()}</h4></#if>
+                                        <div class="para1 txtGray"> 
+                                            <#if (curEntry.content.getData())??>
+                                            ${curEntry.content.getData()}
+                                           </#if> 
+                                       </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        </#list>
+                        </#if> 
+                    </div>
+                </div>
+            </div>
+        </div>
+				
+				
+				
+</div>	
+		
+				<style>
+	    .para-bold p {
+         padding-top:0px;
+        }
+			.reason-main-slider-card img{
+       width:70px !important;
+        margin: 0 auto;
+        }
+			.reasons-slider .reasons-why-grid{
+        display:none;
+        }
+			.reasons-grid .reasons-why-slider{
+       display:none;
+       }
+			.edto-ideal-box {
+       height:100%;
+        }
+	  	.para-bold p {
+	  	padding-top:0px;
+		  }
+			.reason-main-slider-card img{
+			width:70px !important;
+			margin: 0 auto;
+			}
+			.reasons-slider .reasons-why-grid{
+       display:none
+       }
+			.reasons-grid .reasons-why-slider{
+       display:none
+        }
+.edto-insurance-login-wrapper .edto-login-box {
+    justify-content: center;
+}
+		  .owl-carousel .owl-stage{
+			display: flex;
+			}
+ .owl-carousel .item {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+		margin:unset !important;
+}
+.reason-box-wrapper {
+ padding: 0 0 0 2px;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 80px; *//*This is optional*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.reason-box-wrapper .owl-carousel .edto-ideal-box {
+    width:400px;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 80px; *//*This is optional*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+		</style>			
+				
+	<script>
+	$( document ).ready(function() {
+  
+		$('.reason-main-slider-card .owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 1200,
+            responsive:{
+                0:{
+                    items:0
+                },
+                600:{
+                    items:2
+                },
+                911:{
+                    items:3
+                },
+                1400:{
+                    items:3
+                },
+                 1700:{
+                    items:3
+                }
+                
+            }
+        })
+});
+	</script>
+	<!--
+<script>
+          setTimeout(
+          function() 
+          {
+            $('.reason-main-slider-card .owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 1200,
+            responsive:{
+                0:{
+                    items:0
+                },
+                600:{
+                    items:2
+                },
+                911:{
+                    items:3
+                },
+                1400:{
+                    items:3
+                },
+                 1700:{
+                    items:3
+                }
+                
+            }
+        })
+          }, 500);  
+
+                 
+        </script>
+			-->
+		

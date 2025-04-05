@@ -1,0 +1,11 @@
+{
+	"config": {
+		"imports": {
+            "@liferay/frontend-js-react-web": {
+            	"/": "*",
+                "react": ">=16.12.0"
+            }
+        }
+     }
+
+}

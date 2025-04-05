@@ -1,0 +1,38 @@
+<section class="How-works" id="howWorks">
+    <div class="edto-makin-plan-wrapper pb-3">
+        <div class="container">
+            <#if (headingSection.getData())??>
+                <h2 class="fw700 fs28 text-center pb-4">${headingSection.getData()}</h2>
+            </#if>           
+            <div class="card-layout">
+                <#if stepsNumberCard.getSiblings()?has_content>
+                <#list stepsNumberCard.getSiblings() as curEntry>
+                <div class="card">
+                    <div class="card-body">
+                        <#if (curEntry.stepNumber.getData())??>
+                            <div class="steps-number"> ${curEntry.stepNumber.getData()}</div>
+                        </#if>
+                        <div class="card-text-box">
+                            <#if (curEntry.title.getData())??>
+                                <h4 class="card-title mb-2">${curEntry.title.getData()}</h4>
+                            </#if>    
+                            <div class="edto-bullet1-ul">
+                                <#if (curEntry.description.getData())??>
+                                ${curEntry.description.getData()}
+                            </#if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </#list>
+                </#if>
+            </div>
+        </div
+    </div>
+</section>
+
+<style>
+.How-works .edto-time-line-main-wrapper {
+     padding: unset;
+}
+</style>

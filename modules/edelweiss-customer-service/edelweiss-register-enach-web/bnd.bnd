@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-register-enach-web
+Bundle-SymbolicName: in.edelweiss.register.enach
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.register.enach.constants

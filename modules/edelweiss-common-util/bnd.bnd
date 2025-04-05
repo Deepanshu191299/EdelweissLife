@@ -1,0 +1,10 @@
+Bundle-Name: edelweiss-common-util
+Bundle-SymbolicName: in.edelweiss.common.util
+Bundle-Version: 1.0.0
+Export-Package: \
+	in.edelweiss.common.contants,\
+	in.edelweiss.common.util
+Import-Package:\
+    !org.apache.avalon.framework.logger,\
+    !org.apache.log,\
+    *

@@ -1,0 +1,718 @@
+// com box 1
+
+.edto-product-box{
+	width: inherit;
+	text-align: center;
+	box-shadow: $boxShadowbox;
+	padding: 20px;
+	border-radius: 12px;
+    position: relative;	
+}
+.product-icon{
+	span{
+		box-shadow: $boxShadowbox;
+		display: -webkit-box;
+		display: flex;
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		padding: 12px;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		align-items: center;
+		margin: 0 auto 15px;
+			img{
+				width: 100%;
+			}
+	}
+}
+.scroll-text{
+	padding-top: 13px;
+	width: 100%;
+	text-align: left;
+	ul{
+		height: 100px;
+		overflow: auto;
+        row-gap: 5px;
+        padding-right: 8px;
+            li{
+                font-size: 14px;
+            }
+	}
+}
+.product-text{
+	p{
+		color: $txtLightBlack;
+		line-height: 18px;
+		padding-top: 3px;
+        font-size: 14px;
+	}
+    h3{
+        padding-top: 3px; 
+    }
+}
+.product-footer{
+    padding: 33px 0px;
+}
+.product-footer .edto-btn-primary {
+    position: absolute;
+    min-width: 200px;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+}
+
+.new-product-box {
+    text-align: left;
+    padding: 0px;
+    position: relative;
+        .product-icon{
+            padding: 30px 50px 0px;
+        }
+        .product-text{
+            padding: 15px 30px 0px;
+            h4{
+                color: $txtBlue;
+            }
+            p{
+                padding-top: 15px;
+                line-height: 22px;
+            }
+        }
+        .scroll-text{
+            padding: 15px 8px 0px 30px;
+                ul{
+                    height: 130px;
+                }
+        }
+        .product-footer{
+            text-align: center;
+            padding-top: 50px;
+        }
+}
+.disable-product-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffffd1;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+// tags shape
+
+.tag-top{
+    position: absolute;
+    background-color: $bgBlue;
+    padding: 5px 12px;
+    width: 122px;
+    top: -11px;
+    
+        p{
+            color: $txtWhite;
+            font-size: $fs12;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-top: 14px solid transparent;
+            border-left: 15px solid $bgBlue;
+            border-bottom: 14px solid transparent;
+        }
+}
+
+
+
+
+
+// com box 2
+
+.edto-ideal-box{
+	width: inherit;
+	border: 1px solid $borderLightGrey;
+	border-radius: 12px;
+	background: $bgWhite;
+	padding: 30px;
+	text-align: center;	
+}
+.ideal-text{
+	padding-top: 20px;
+	// padding-left: 50px;
+	// padding-right: 50px;
+	p{
+		padding-top: 12px;
+	}
+}
+
+// com box 3
+.edto-sacling-main-wrapper{
+    width: 100%;
+    padding: 20px 0px 20px;
+    border-bottom: 1px solid $borderLightGrey;
+    border-top: 1px solid $borderLightGrey;
+    .note-text{
+        width: 100%;
+        text-align: center;
+        color: $txtLightBlack;
+        
+        padding: 30px 0px 0px;
+    }
+}
+
+.scaling-main-box{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner-scaling-wrapper{
+    width: 63%;
+    display: flex;
+   justify-content: center;
+	text-align: center;
+	border-radius: 100px;
+	box-shadow: 0 0 10px 0 #97979787;
+	border: 3px solid $borderOrange;
+}
+.edto-scaling-text{
+	width: inherit;
+	padding: 15px 30px;
+	border-right: 1px solid #ffffff24;
+		h2{
+			padding-top: 6px;
+            font-size: 28px;
+		}
+        h4{
+            font-size: 15px;
+        }
+       
+}
+
+// com box 4
+
+
+
+// step box
+.cliam-processing-box-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 35px;
+        .essay-simple-box{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: $box-shadow-testi;
+            padding: 20px;
+            border-radius: 12px;
+            align-items: center;
+            position: relative;
+            gap: 20px;
+            margin-right: 25px;
+                .essay-icon{
+                    width: 75px;
+                    height: 75px;
+                    line-height: 75px;
+                    text-align: center;
+                    border-radius: 100%;
+                    background-color: $bgWhite;
+                    box-shadow: $box-shadow-testi;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    bottom: 0;
+                    top: 63%;
+                    right: -27px;
+                    box-sizing: border-box;
+                    border: 1em solid #000;
+                    border-color: transparent transparent #fff #fff;
+                    transform-origin: 0 0;
+                    transform: rotate(-135deg);
+                    box-shadow: -2px 2px 3px 0 #9c9c9c40;
+                    z-index: 1;
+                }
+                .card-number{
+                    border: 1.9px solid $borderOrange;
+                    background-color: $bgBlue;
+                    color: $txtWhite;
+                    font-size: $fs16;
+                    font-family:'Montserrat-SemiBold';
+                    position: absolute;
+                    top: -25px;
+                    right: 28px;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                .essay-text{
+                    width: 70%;
+                }
+        }
+}
+
+// claim box
+
+.claim-philosophyy-box{
+    border: 1px solid $borderBlue;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #97979787;
+    overflow: hidden;
+    margin-top: 12px;
+        .philosophy-text{
+            display: block;
+            background-color: $bgBlue;
+            color: $txtWhite;
+                p{
+                    font-style: italic;
+                    font-size: 22px;
+                    color: $txtWhite;
+                    padding: 46px 85px 46px 38px;
+                }
+        }
+        .letter-form{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 157px;
+            position: relative;
+            background-color: $bgWhite;
+                
+                &:after{
+                    width: 146px;
+                    height: 159px;
+                    content: "";
+                    position: absolute;
+                    background: $bgWhite;
+                    border-radius: 50%;
+                    left: -72px;
+                    top: 0;
+                }
+        }
+        &.summary-claim{
+            height: 127px;
+            align-items: center;
+            background-color: $bgBlue;
+            .letter-form{
+                height: 125px;
+                    &:after{
+                        width: 127px;
+                        height: 127px;
+                    }
+                    .edto-btn-primary{
+                        padding: 13px 50px;
+                        z-index: 99;
+                    }
+            }
+            .philosophy-text{
+                background-color: transparent;
+                padding-left: 20px;
+                p{
+                    font-size: $fs20;
+                    font-style: normal;
+                    padding: 0;
+                }
+            }
+            .premium-text{
+                width: 100%;
+                max-width: 320px;
+                margin-left: auto;
+                h5{
+                    color: $txtWhite;
+                    font-family:'Montserrat-SemiBold';
+                    font-size: $fs22;
+                }
+                h1{
+                    font-size: $fs30;
+                    font-family:'Montserrat-SemiBold';
+                    color: $txtWhite;
+                        sup{
+                            font-size: $fs12;
+                            top: -1.5em;
+                        }
+                }
+                a{
+                    color: $txtWhite;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+        }
+}
+
+.product-navbar { border-bottom: 1px solid #e2e2e2; padding-top: 20px; }
+.product-navbar  .nav-item { margin: 0 15px; white-space: nowrap; }
+.product-navbar  .nav-item  a { padding: 10px 0; border-bottom: 3px solid #fff; display: inline-block; color: #3c3c3c; font-size: 14px; }
+.product-navbar  .nav-item.active a { border-bottom: 3px solid $bgBlue; color: $bgBlue; }
+
+
+
+.e-nach-single-box{
+    width: 100%;
+    padding: 0px 0px 30px;
+        .edto-ideal-box{
+            max-width: 320px;
+            margin: auto;
+            position: relative;
+        }
+}
+
+.e-nach-double-box{
+    width: 100%;
+    padding: 30px 0px 30px;
+        .double-box-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            .edto-ideal-box{
+                max-width: 320px;
+              position: relative;
+            } 
+        }
+}
+
+
+// award flip 
+
+.flip-container {
+	cursor: pointer;
+	-o-object-fit: contain;
+	object-fit: contain;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transition: all 600ms;
+	-o-transition: all 600ms;
+	transition: all 600ms;
+	margin-right: 18px;
+	margin-bottom: 12px;
+	width: 32%;
+	height: 410px;
+	&:nth-child(3n+0) {
+		margin-right: 0;
+	}
+	
+	.flipper {
+		transition: 0.6s;
+		position: relative;
+		width: 100%;
+		height: 100%;
+			.back {
+				transform: rotateY(-180deg);
+				.card {
+					background-color: #fff6e1;
+					border-radius: 10px;
+					-webkit-box-shadow: 0 0 12px -3px rgba(0, 0, 0, 0.25);
+					box-shadow: 0 0 12px -3px rgba(0, 0, 0, 0.25);
+					height: 100%;
+					.h4 {
+						line-height: 1.39;
+						margin-bottom: 10px;
+					}
+				}
+			}
+			.front {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-transition: all 600ms;
+				-o-transition: all 600ms;
+				transition: all 600ms;
+				z-index: 2;
+				transform: rotateY(0deg);
+                .card {
+					
+					border-radius: 10px;
+					-webkit-box-shadow: 0 0 12px -3px rgba(0, 0, 0, 0.25);
+					box-shadow: 0 0 12px -3px rgba(0, 0, 0, 0.25);
+					height: 100%;
+					.h4 {
+						line-height: 1.39;
+						margin-bottom: 10px;
+					}
+				}
+			}
+			.card-body {
+				img {
+					margin: 20px auto;
+					height: 130px;
+                    width: 100%;
+				}
+			}
+	}
+    &:hover {
+        .flipper{
+            .back {
+                z-index: 1;
+                transform: rotateY(0deg);
+            }
+            .front {
+                transform: rotateY(180deg);
+            }
+        }   
+		
+	}
+}
+
+
+.web-background {
+	background-color: #034EA2;
+	min-height: 410px;
+	width: 45%;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	position: relative;
+	z-index: 1;
+}
+.awards-banner {
+	&:after {
+		content: " ";
+		position: absolute;
+		display: block;
+		width: 40%;
+		height: 100%;
+		top: 0px;
+		left: 22%;
+		background: #034EA2;
+		transform-origin: top right;
+		-ms-transform: skew(-26deg, 0deg);
+		-webkit-transform: skew(-26deg, 0deg);
+		transform: skew(-26deg, 0deg );
+	}
+}
+.front {
+	width: 32%;
+	min-height: 410px;
+}
+.back {
+	width: 32%;
+	min-height: 410px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all 600ms;
+	-o-transition: all 600ms;
+	transition: all 600ms;
+}
+
+
+// scroll popupe
+
+.veryHigh{
+    height: 2000px;
+  }
+  #popup{ /* 浮動視窗的css語法 */
+      font-size: 16px;
+      display: none;
+      background-color: $bgWhite;
+      width: 95%;
+      padding: 15px 15px;
+      left: 45px;
+      top: 100px;
+      position: fixed;
+      z-index: 2;
+      box-shadow: $boxShadowbox;
+  }
+
+.scroll-popupe-main-wrapper{
+    width: 100%;
+    background-color: $bgWhite;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+        .scroll-popupe-text{
+            width: 25%;
+        }
+        .scroll-box{
+            width: 23%;
+            background-color: $bgWhite;
+            border-radius: 8px;
+            box-shadow: $boxShadowbox;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+                p{
+                    font-size: 12px;
+                }
+                h4{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .edto-btn-primary{
+                    margin-top: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+        }
+}
+
+
+// responsive
+
+@include for-1200{
+    .e-nach-double-box .double-box-wrapper{
+        flex-wrap: wrap;
+    }
+    .e-nach-double-box{
+        padding-top: 0;
+    }
+}
+
+@include for-1080{
+    .claim-philosophyy-box .philosophy-text p{
+        font-size: 18px;
+    }
+}
+@include for-991{
+    .award-main-wrapper{
+        flex-direction: column;
+    }
+    .edto-team-block .team-main-wrapper {
+        width: 33% !important;
+    }
+    .claim-philosophyy-box .letter-form:after{
+        display: none;
+    }
+    .claim-philosophyy-box .letter-form{
+        height: 66px;
+    }
+    .claim-philosophyy-box .philosophy-text p {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .claim-philosophyy-box .letter-form .edto-outline-btn{
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    .cliam-processing-box-wrapper{
+        flex-wrap: wrap;
+    }
+    .testimonial-wrapper .new-testi-main-box .test-main-box{
+        width: 100%;
+    }
+    .scalling-nner-text{
+        text-align: center;
+    }
+    .product-footer .edto-btn-primary{
+        transform: translate(0%, 0%);
+        position: inherit;
+        bottom: inherit;
+        text-align: center;
+    }
+    // .product-footer{
+    //     padding: 0;
+    // }
+    .product-slider .product-footer {
+        padding-bottom: 12px;
+    }
+    .awards-wrapper-full .awards-card-wrapper .flip-container{
+        width: 100%;
+        min-height: 300px;
+        margin-right: 0;
+    }
+}
+@include for-767{
+    .claim-philosophyy-box{
+        flex-direction: column;
+    }
+    .ideal-box-wrapper .ideal-box{
+        width: 100%;
+    }
+     .ideal-box-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .edto-ideal-box{
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+    }
+    .ideal-text {
+        padding-top: 0;
+    }
+    .claim-philosophyy-box.summary-claim{
+        height: 100%;
+    }
+    .claim-philosophyy-box.summary-claim .philosophy-text{
+        padding: 20px 20px 0px 20px;
+    }
+    .claim-philosophyy-box.summary-claim .premium-text{
+        max-width: 100%;
+        margin-left: 0;
+        padding: 7px 0px 10px 20px;
+    }
+    .claim-philosophyy-box.summary-claim .letter-form {
+        height: 66px;
+    }
+    .edto-claim-philosophy-wrapper .premium-box{
+        top: -16px;
+        left: 4%;
+    }
+    .scroll-popupe-main-wrapper .scroll-popupe-text{
+        width: 100%;
+    }
+    .scroll-popupe-main-wrapper .scroll-box{
+        width: 100%;
+    }
+}
+@include for-576{
+ .edto-team-block .team-main-wrapper {
+        width: 48% !important;
+    }
+    .return-single-strip .right-sum p{
+        font-size: 14px !important;
+    }
+    .claim-philosophyy-box.summary-claim .philosophy-text p{
+        font-size: 12px !important;
+    }
+}
+
+@include for-480{
+     .edto-team-block .team-main-wrapper {
+        width: 100% !important;
+    }
+    .test-main-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .testimonial-wrapper .new-testi-main-box .test-main-box .new-testi-text{
+        width: 100%;
+    }
+    .test-main-box .new-testi-text{
+        width: 100%;
+    }
+}
+
+@include for-380{
+   
+}

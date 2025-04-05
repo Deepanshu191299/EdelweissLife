@@ -1,0 +1,6 @@
+Bundle-Name: edelweiss-product-summary-web
+Bundle-SymbolicName: edelweiss.product.summary.web
+Bundle-Version: 1.0.0
+Export-Package: \
+	edelweiss.product.summary.web.constants,\
+	in.edelweiss.product.quote.web.util

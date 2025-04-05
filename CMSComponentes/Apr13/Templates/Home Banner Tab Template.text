@@ -1,0 +1,113 @@
+<div class="edel-inner-content-main-wrapper">
+	<div class="container px-0">
+		<div class="document-tabs-wrapper center-product-navbar">
+<nav role="navigation" id="nav-main">
+			<ul class="nav nav-tabs nav-active-tab-ul" id="myTab" role="tablist">
+				<#if stickyNavbarMenu.getSiblings()?has_content>
+				<#list stickyNavbarMenu.getSiblings() as curEntry>
+				<#if curEntry?index == 0>
+						<#assign tabMenuActive = "active"/>
+						</#if>
+					<#if curEntry?index != 0 >
+						<#assign tabMenuActive = ""/>
+					</#if>
+				<li class="nav-item">
+					<a class="nav-link ${tabMenuActive}" href="#${curEntry.id.getData()}" data-toggle="tab" role="tab" aria-controls="${curEntry.id.getData()}" aria-selected="true">
+						<#if (curEntry.title.getData())??>
+							${curEntry.title.getData()}
+						</#if>
+					</a> 
+				</li>
+				</#list>
+				</#if>
+<li class="nav-item dropdown more hidden" data-width="80" style="display: none;">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="6" viewBox="0 0 26 6">
+                                      <g fill="#484848" fill-rule="evenodd">
+                                         <circle cx="3" cy="3" r="3"></circle>
+                                         <circle cx="13" cy="3" r="3"></circle>
+                                         <circle cx="23" cy="3" r="3"></circle>
+                                      </g>
+                                   </svg>
+                                </a>
+                                <ul class="dropdown-menu"></ul>
+                             </li>
+			</ul>
+	</div>
+		</div>
+	</div>
+</div>
+<script>
+
+$( document ).ready(function() {
+    $('.hidden-col').addClass('hidden');
+    $($('.hidden-col')[0]).removeClass('hidden');
+$(".nav-active-tab-ul li a").click(function(e) {
+    e.preventDefault();
+    $('.hidden-col').addClass('hidden');
+    $($(this).attr('href')).removeClass('hidden');
+}); 
+
+});
+$( document ).ready(function() {
+ var hrefid = window.location.href;
+var lastten = hrefid.substr(hrefid.length - 10);
+ $('#myTab li a').each(function() {
+      console.log( this.href);
+  if (this.href == hrefid) {     
+      console.log( this.href);
+    $('#myTab li a').removeClass("active");  
+   $(this).addClass('active');
+        $(this).click();
+  }
+ });
+ });
+$(".header ul li:first-child .sub-menu li a").click(function(){
+ var hrefid = window.location.href;
+var lastten = hrefid.substr(hrefid.length - 10);
+ $('#myTab li a').each(function() {
+      console.log( this.href);
+  if (this.href == hrefid) {     
+      console.log( this.href);
+    $('#myTab li a').removeClass("active");  
+   $(this).addClass('active');
+        $(this).click();
+  }
+ });
+});
+</script>
+<style>
+    .signed-in .page-editor .hidden{
+        display: block !important; 
+    }
+    .hidden{
+        display: none;
+    }
+		.center-product-navbar .nav-tabs {
+		    justify-content: left;
+		}
+		.edto-document-sub-tabs-wrapper .document-tabs-wrapper .nav-tabs {
+		    border-bottom: 0;
+		}
+		.edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body ul li.custom-option {
+	    position: relative;
+    opacity: 1;
+    font-family: "Montserrat-SemiBold";
+    border: 1px solid #124093;
+    border-radius: 30px;
+    padding: 2px 5px;
+    color: #124093;
+}
+
+.edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body ul li .select_mate select {
+	  position: relative;
+    opacity: 1;
+    font-family: "Montserrat-SemiBold";
+    border: 0;
+    color: #124093;
+}
+
+.edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body ul li .select_mate select:focus-visible {
+    outline: none;
+}
+</style>

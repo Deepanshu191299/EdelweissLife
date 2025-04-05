@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-become-an-advisor-web
+Bundle-SymbolicName: in.edelweiss.become.an.advisor
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.become.an.advisor.constants

@@ -1,0 +1,100 @@
+
+<#if (headingSection.getData())?has_content>
+        <h4 class="fs20 textsub-title text-center pt-3 pb-3">${headingSection.getData()}</h4>
+                                </#if>  
+        <div class="wealth-text-slider top-border">
+            <div class="owl-carousel owl-theme">
+                                        <#if planBoxSlider.getSiblings()?has_content>
+    <#list planBoxSlider.getSiblings() as curEntry>
+                <div class="item">
+                    <div class="wealth-text-box">
+                                                        <#if (curEntry.image.getData())?? && curEntry.image.getData() != "">
+                        <div class="wealth-text-icon">
+                            <span> <img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${curEntry.image.getAttribute("fileEntryId")}" src="${curEntry.image.getData()}" /> </span>
+                        </div>
+                                                                    </#if>
+                        <div class="wealth-txt-content">
+                                                                <#if (curEntry.title.getData())??>
+                            <h1 class="fs18 fontbold pt-3 pb-3">${curEntry.title.getData()}</h1>
+                                                                            </#if> 
+                                                                            <#if (curEntry.description.getData())??>
+                            <div class="para1 text-center pb-2">
+                                ${curEntry.description.getData()}
+                            </div>
+                                                                        </#if>
+                        </div>
+                    </div>
+                </div>
+                </#list>
+</#if>  
+            </div>
+            
+        </div>
+                
+<style>
+    .wealth-text-slider .owl-dots .owl-dot span {
+        margin: 0;
+    }
+    @media (max-width: 480px) {
+        .edto-wealth-inner-wrapper .wealth-text-sec h4 {
+            display: none;
+        }
+    }
+</style>
+<script>
+	$( document ).ready(function() {
+        $('.edto-box-slider .owl-carousel').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:false,
+            dots: true,
+            autoplay: false,
+            smartSpeed: 1200,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                911:{
+                    items:2
+                },
+                1300:{
+                    items:4
+                }
+                
+            }
+        })
+    });
+</script>
+<!-- <script>
+    setTimeout(
+  function() 
+  {
+    $('.edto-box-slider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:false,
+    dots: true,
+    autoplay: false,
+    smartSpeed: 1200,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        911:{
+            items:2
+        },
+        1300:{
+            items:4
+        }
+        
+    }
+})
+  }, 1000);
+   
+</script> -->

@@ -1,0 +1,350 @@
+components:
+  schemas:
+    LMS:
+      description: LMS application.
+      type: object
+      properties:
+        lead:
+          description: Lead Params.
+          type: object
+          properties:
+            phone:
+              type: string
+            name:
+              type: string
+            gender:
+              type: string
+            email:
+              type: string
+            dob:
+              type: string
+            nationality:
+              type: string
+            occupation:
+              type: string
+            webURL:
+              type: string
+            source:
+              type: string
+            siteSection:
+              type: string
+            leadFormType:
+              type: string
+            product:
+              type: string
+            visitorId:
+              type: string
+            channelId:
+              type: string
+            campaingId:
+              type: string
+            vendorId:
+              type: string
+        utm:
+          description: UTM Params.
+          type: object
+          properties:
+            utmSource:
+              type: string
+            utmMedium:
+              type: string
+            utmCampaign:
+              type: string
+            utmTerm:
+              type: string
+            gclid:
+              type: string
+            utmContent:
+              type: string
+            utmPlacement:
+              type: string
+            utmCreative:
+              type: string
+            adgroupId:
+              type: string
+            device:
+              type: string
+            campaignId:
+              type: string
+        interestSessions:
+          description: Interest Sessions Params.
+          type: object
+          properties:
+            recommendedObjectiveCategory:
+              type: string
+            recommendedObjective:
+              type: string
+            recommendedAnnualIncome:
+              type: string
+            recommendedProduct:
+              type: string
+            persona:
+              type: string
+            leadFormProductCode:
+              type: string
+            stage:
+              type: string
+            siteSection:
+              type: string
+            leadFormProductCategory:
+              type: string
+        quote:
+          description: Quote Params.
+          type: object
+          properties:
+            payoutOptions:
+              type: string
+            stage:
+              type: string
+    Ekyc:
+      description: Ekyc application.
+      type: object
+      properties:
+        txnId:
+          description: Ekyc Transaction ID.
+          type: string
+        ekycStatus:
+          description: Ekyc Status.
+          type: string
+        ekycMessage:
+          description: Ekyc Message.
+          type: string
+        ekycTimeStamp:
+          description: Ekyc Timestamp.
+          type: string
+        data:
+          description: The application's Logo URL.
+          type: object
+          properties:
+            uid:
+              description: uid.
+              type: string
+            photo:
+              description: photo.
+              type: string
+            poi:
+              description: photo.
+              type: object
+              properties:
+                dob:
+                  description: Date of Birth.
+                  type: string
+                gender:
+                  description: Gender.
+                  type: string
+                name:
+                  description: Name.
+                  type: string
+            poa:
+              description: POA Data.
+              type: object
+              properties:
+                country:
+                  description: Country.
+                  type: string
+                dist:
+                  description: District.
+                  type: string
+                house:
+                  description: House No.
+                  type: string
+                lm:
+                  description: LM.
+                  type: string
+                loc:
+                  description: LOC.
+                  type: string
+                pc:
+                  description: PC.
+                  type: string
+                po:
+                  description: PO.
+                  type: string
+                state:
+                  description: State.
+                  type: string
+                subdist:
+                  description: Sub District.
+                  type: string
+                vtc:
+                  description: VTC.
+                  type: string
+                co:
+                  description: CO.
+                  type: string
+                street:
+                  description: Street.
+                  type: string
+info:
+  description: EdelweissRestApiBuilder REST API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: EdelweissRestApiBuilder
+  version: v1.0
+openapi: 3.0.1
+paths:
+  /edelweiss/ekycDetails:
+    get:
+      description: Get ekycDetails
+      operationId: getEkycDetails
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Ekyc"
+                type: array
+            application/xml:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Ekyc"
+                type: array
+          description: default response
+      tags:
+        - Ekyc
+    post:
+      description: Adds ekyc details
+      operationId: addEkycDetails
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ekyc"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Ekyc"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  errorCode:
+                    type: string
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  errorCode:
+                    type: string
+          description: default response
+      tags:
+        - Ekyc
+  "/edelweiss/ekycDetails/{ekycDetailsId}":
+    delete:
+      description: Removes the ekycdetails
+      operationId: deletedEkycDetails
+      parameters:
+        - in: path
+          name: ekycDetailsId
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          content:
+            application/json: {}
+            application/xml: {}
+          description: default response
+      tags:
+        - Ekyc
+    get:
+      description: Retrieves the app
+      operationId: getEkycDetailsById
+      parameters:
+        - in: path
+          name: ekycDetailsId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ekyc"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Ekyc"
+          description: default response
+      tags:
+        - Ekyc
+    patch:
+      description: Updates ekyc Details
+      operationId: updateEkycDetails
+      parameters:
+        - in: path
+          name: ekycDetailsId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ekyc"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Ekyc"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ekyc"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Ekyc"
+          description: Ekyc details successfully updated
+      tags:
+        - Ekyc
+        
+  /edelweiss/leadDetails:
+    post:
+      description: Adds lead details
+      operationId: addLeadDetails
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LMS"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/LMS"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  errorCode:
+                    type: string
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  errorCode:
+                    type: string
+          description: default response
+      tags:
+        - LMS

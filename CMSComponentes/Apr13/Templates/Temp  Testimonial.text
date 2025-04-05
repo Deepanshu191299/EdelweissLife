@@ -1,0 +1,16 @@
+<#assign contentTitle = .vars['reserved-article-title'].data >
+
+                                    <div class="new-testi-img">
+                                        <span><img class="img-fluid" alt="${personImage.getAttribute("alt")}" data-fileentryid="${personImage.getAttribute("fileEntryId")}" src="${personImage.getData()}" /></span>
+                                    </div>
+                                    <div class="new-testi-text">
+                                        <p class="more-text">${shortNote.getData()}</p>
+                                        <h4>${contentTitle}</h4>
+                                        <span>(${designation.getData()})</span>
+                                    </div>
+																
+																		
+																		
+																		
+																		
+																		

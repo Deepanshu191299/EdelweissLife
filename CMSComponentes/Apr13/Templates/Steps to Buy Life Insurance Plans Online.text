@@ -1,0 +1,22 @@
+<div class="edto-step-by-main-wrapper" id="stepby">
+      <div class="container">
+         <#if verticalBorderColorCardGroup.getSiblings()?has_content>
+								<#list verticalBorderColorCardGroup.getSiblings() as curEntry>
+         <div class="know-terms-card">
+            <#if (curEntry.title.getData())??>
+            <h3 class="fontsemi fs20 pt-3 pb-2"> ${curEntry.title.getData()}</h3>
+                                                </#if>
+                                                <#if (curEntry.description.getData())??>
+                                                <div class="para1 pb-2 edto-bullet1 pl-0"> ${curEntry.description.getData()}</div>
+                                                </#if>
+               
+         </div>
+         </#list>
+         </#if>	
+         
+      </div>
+      
+   </div>
+	 <style>
+	 .edto-bullet1 ul{padding-left:20px}
+	 </style>

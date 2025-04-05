@@ -1,0 +1,48 @@
+ <div class="edto-body-content-wrapper">
+            <div class="container">
+<div class="edto-online-policy-main-wrapper">
+                <div class="container">
+								<#if (headingSection.getData())??>
+                    <h1 class="fontbold fs28 text-center pb-2">
+	${headingSection.getData()}
+</h1></#if>
+
+
+	
+
+                    <#if (subHeading.getData())??>
+										   <h5 class="fs18 text-center pt-2">${subHeading.getData()}</h5>
+									  </#if>
+                    <div class="edto-multi-online-wrapper">
+										<#if planBoxSlider.getSiblings()?has_content>
+                    <#list planBoxSlider.getSiblings() as curEntry>
+                        <div class="multi-box-card">
+                            <div class="multi-card-icon">
+                                
+	
+<#if (curEntry.image.getData())?? && planBoxSlider.image.getData() != "">
+<img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${planBoxSlider.image.getAttribute("fileEntryId")}" src="${planBoxSlider.image.getData()}" />
+</#if>
+                            </div>
+                            <div class="multi-card-text">
+														    <#if (curEntry.title.getData())??>
+                                   <h4 class="fontsemi fs16">${curEntry.title.getData()}</h4>
+																</#if>
+																<#if (curEntry.description.getData())??>
+                                  <div class="para1 pt-3">
+                                    ${curEntry.description.getData()}
+                                  </div>
+																</#if>
+                            </div>
+                        </div>
+                        </#list>
+                </#if>
+                    </div>
+                </div>
+                
+            </div>
+						</div>
+					</div>
+					<style>
+					 .edto-online-policy-main-wrapper {background-color:#fff !important}
+					</style>

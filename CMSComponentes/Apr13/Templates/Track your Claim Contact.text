@@ -1,0 +1,26 @@
+<div class="tracking-text">
+	<#if (content.getData())??>
+                                    <div class="para1 text-center pt-2 pb-2">
+                                        ${content.getData()}
+                                    </div>
+																		</#if>
+                                    <div class="mail-box">
+                                       <#if (email.getData())??> <p> <span><img src="/o/edelweisstokio-theme/images/mail.png" alt="img"></span> ${email.getData()}</p></#if>
+                                       <#if (helpLine.getData())??> <p> <span><img src="/o/edelweisstokio-theme/images/phone.png" alt="img"></span> ${helpLine.getData()}</p></#if>
+                                    </div>
+                                </div>
+																
+														
+<style>
+.mail-box {    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;}
+		@media only screen and (max-width: 767px) {
+		    .mail-box { 
+            flex-direction: column;
+            gap: 2px;
+            text-align: center;
+        }
+    }
+</style>

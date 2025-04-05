@@ -1,0 +1,21 @@
+{
+	"config": {
+		"imports": {
+            "@liferay/frontend-js-react-web": {
+            	"/": "*",
+                "react": ">=16.12.0",
+                "prop-types": "*",
+                "classnames": "*"
+            },
+            "frontend-js-web":{
+            	"/": "*"
+            },
+            "frontend-taglib-clay":{
+            	"/": "*",
+            	"@clayui/button": "*",
+            	"@clayui/icon": "*"
+            }
+        }
+     }
+
+}

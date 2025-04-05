@@ -1,0 +1,6 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	compile group: 'com.liferay', name: 'com.liferay.search.experiences.service', version: '3.0.31'
+	
+}

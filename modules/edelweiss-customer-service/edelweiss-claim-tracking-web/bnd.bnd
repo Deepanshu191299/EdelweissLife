@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-claim-tracking-web
+Bundle-SymbolicName: in.edelweiss.claim.tracking
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.claim.tracking.constants

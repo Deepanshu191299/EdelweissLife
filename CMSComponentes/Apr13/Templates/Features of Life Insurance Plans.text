@@ -1,0 +1,36 @@
+<div class="edto-benefit-wrapper" id="benefit">
+      <div class="container">
+            <div class="insurance-bloxk-wrapper card-grid">
+						<#if (headingSection.getData())??>
+               <h2 class="fontbold fs28 text-center pt-3 pb-0">
+	${headingSection.getData()}
+</h2></#if>
+               
+               
+               <div class="award-main-wrapper">
+							 <#if planBoxSlider.getSiblings()?has_content>
+                    <#list planBoxSlider.getSiblings() as curEntry>
+                  <div class="edto-award-box">
+                        <div class="award-text text-center">
+												   <#if (curEntry.title.getData())??>
+                            <h4 class="fontsemi fs16 pb-3">${curEntry.title.getData()}</h4>
+													 </#if>
+													 <#if (curEntry.description.getData())??>
+                              <div class="para1 pb-2">
+                                  ${curEntry.description.getData()}
+                             </div>
+													 </#if>
+                        </div>
+                  </div>
+				         </#list>
+                </#if>
+               </div>
+            </div>
+            
+      </div>
+   </div>
+<style>
+.card-grid .award-main-wrapper .edto-award-box {
+    width: 32.0%;
+}
+</style>

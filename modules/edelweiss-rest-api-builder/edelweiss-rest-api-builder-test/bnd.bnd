@@ -1,0 +1,5 @@
+Bundle-Name: edelweiss-rest-api-builder-test
+Bundle-SymbolicName: in.edelweiss.rest.api.builder.test
+Bundle-Version: 1.0.0
+-includeresource: in.edelweiss.rest.api.builder.client.jar=../edelweiss-rest-api-builder-client/build/libs/in.edelweiss.rest.api.builder.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

@@ -1,0 +1,4 @@
+// Check GETTING_STARTED.markdown for information regarding usage.
+plugins {
+  id "org.sonarqube" version "2.7"
+}

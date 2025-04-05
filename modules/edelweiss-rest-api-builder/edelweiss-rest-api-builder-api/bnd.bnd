@@ -1,0 +1,6 @@
+Bundle-Name: edelweiss-rest-api-builder-api
+Bundle-SymbolicName: in.edelweiss.rest.api.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	in.edelweiss.rest.api.builder.dto.v1_0,\
+	in.edelweiss.rest.api.builder.resource.v1_0

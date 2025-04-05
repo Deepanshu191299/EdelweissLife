@@ -1,0 +1,3 @@
+Bundle-Name: edelweiss-security-servlet-filter
+Bundle-SymbolicName: com.edelweiss.security.servlet.filter
+Bundle-Version: 1.0.0

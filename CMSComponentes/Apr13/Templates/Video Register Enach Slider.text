@@ -1,0 +1,23 @@
+<div class="container">
+<#if (headingSection.getData())??>
+	<h2 class="fontbold fs28 text-center pb-4">${headingSection.getData()}</h2>
+</#if>
+<div class="video-main-wrapper">
+<#if url.getSiblings()?has_content>
+                <#list url.getSiblings() as cur_url>
+                    <div class="video-left-block">
+                        <iframe width="560" height="300" src="${cur_url.getData()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                    </div>                 
+               						 
+								 </#list>
+                </#if>
+								 </div>
+								  </div>
+								 
+	<style>
+	.video-main-wrapper{
+    display: flex;
+    width: 100px;
+    gap: 30px;
+}
+	</style>

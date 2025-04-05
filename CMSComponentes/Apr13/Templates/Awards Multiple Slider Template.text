@@ -1,0 +1,114 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+ 
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<div class="edto-about-page-name-wrapper">
+    <div class="container">
+        
+        <div class="slider-for slider-single">
+            <#if awardsMultipleSliderCard.getSiblings()?has_content>
+            <#list awardsMultipleSliderCard.getSiblings() as curEntry>
+            <div>
+                <div class="history-container">
+                    <div class="history-text-wrapper">
+                        <#if (sectionTitle.getData())??>
+                            <h2 class="fontbold fs28 pt-3 pb-2">${sectionTitle.getData()}</h2>
+                        </#if>
+                        <#if (sectionDescription.getData())??>
+                            <h4 class="fs20 textsub-title pb-3">${sectionDescription.getData()}</h4>
+                        </#if>                        
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-data-wrapper">
+                                <div class="card-image">
+								    <#if (curEntry.cardImage.getData())?? && curEntry.cardImage.getData() != "">
+                                        <img alt="${curEntry.cardImage.getAttribute("alt")}" data-fileentryid="${curEntry.cardImage.getAttribute("fileEntryId")}" src="${curEntry.cardImage.getData()}" class="log-icon" />
+                                    </#if>
+                                </div>
+                                <div class="card-data">
+                                    <#if (curEntry.cardTitle.getData())??>
+                                        <div class="data-heading">${curEntry.cardTitle.getData()}</div>
+                                    </#if>                                        
+                                    <#if (curEntry.cardDescription.getData())??>                                    
+                                        <div class="data-text"> ${curEntry.cardDescription.getData()}</div>                                       
+                                    </#if>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </#list>
+            </#if>
+        </div>
+    </div>
+    <div class="slider-multiple-wrapper">
+        <div class="container">
+            <div class="slider-nav slider-multiple">
+                <#if awardsMultipleSliderCard.getSiblings()?has_content>
+                <#list awardsMultipleSliderCard.getSiblings() as curEntry>
+                <div>
+                    <#if (curEntry.year.getData())??>
+                        <h3> ${curEntry.year.getData()}</h3>
+                    </#if>
+                </div>
+                </#list>
+                </#if>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.slider-for').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        adaptiveHeight: true,
+        draggable: false,
+        asNavFor: '.slider-nav',
+    });
+    $('.slider-nav').slick({
+        arrows: true,
+        infinite: false,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        speed: 500,
+        dots: false,
+        initialSlide: 0,
+        focusOnSelect: true,
+        asNavFor: '.slider-for',
+        prevArrow: "<button type='button' class='slick-prev'><img src='/o/edelweisstokio-theme/images/left-arrow.svg'></button>",
+        nextArrow: "<button type='button' class='slick-next'><img src='/o/edelweisstokio-theme/images/right-arrow.svg'></button>",
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    // arrows: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            }
+
+        ]
+    });
+    $(window).resize(function () {
+        $('.slider-nav').not('.slick-initialized').slick('resize');
+        $('.slider-for').not('.slick-initialized').slick('resize');
+    });
+
+    $(window).on('orientationchange', function () {
+        $('.slider-for').not('.slick-initialized').slick('resize');
+        $('.slider-nav').not('.slick-initialized').slick('resize');
+    });
+</script>

@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-raise-a-claim-web
+Bundle-SymbolicName: in.edelweiss.raise.a.claim
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.raise.a.claim.constants

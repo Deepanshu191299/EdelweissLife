@@ -1,0 +1,88 @@
+$grey-color: #868686;
+$font-bold: "Montserrat-Bold";
+$bg-white: #fff;
+$bg-green: #7ed321;
+
+.updtFATCA-Form-field {
+	input[type='radio'] {
+		appearance: none;
+	    height: auto;
+	    width: auto;
+	    &:before {
+	    	content: "";
+		    display: inline-block;
+		    width: 20px;
+		    aspect-ratio: 1;
+		    border: 1px solid #ccc;
+		    border-radius: 50%;
+		    position: absolute;
+		    top: 50%;
+		    left: 0;
+		    transform: translateY(-50%);
+		    opacity: 1;
+		    transition: all 0.3s;
+	    }
+		&:after {
+			content: "";
+		    display: inline-block;
+		    width: 20px;
+		    aspect-ratio: 1;
+		    border: 1px solid #7ed321;
+		    background: #7ed321;
+		    border-radius: 50%;
+		    position: absolute;
+		    left: 0px;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    opacity: 0;
+		    transition: all 0.3s;
+		}
+		&:checked {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+.button-radio {
+	label {
+		display: inline-block;
+	    font-size: 14px;
+	    color: #868686;
+	    transition: 0.3s all;
+	    margin-right: 10px;
+	    cursor: pointer;
+	    position: relative;
+	    padding-left: 30px;
+	    line-height: 20px;
+	}
+}
+.radio-label {
+	font-size: 14px;
+	font-family: $font-bold;
+	padding: 0.5rem 0;
+}
+.country-label {
+	font-size: 12px;
+	color: $grey-color;
+	line-height: 20px;
+}
+.updtFATCA-Form-list.green-bullet-list {
+	li {
+		font-size: 14px;
+		color: $grey-color;
+		padding-left: 20px;
+		line-height: 20px;
+	}
+}
+.custom-field {
+	input {
+		&:focus {
+			+ {
+				.placeholder {
+					font-size: 13px !important;
+				}
+			}
+		}
+	}
+}

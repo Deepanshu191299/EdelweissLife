@@ -1,0 +1,34 @@
+
+
+
+								
+
+<div class="edto-sacling-main-wrapper">
+    <div class="container">
+        <div class="scaling-main-box">
+            <div class="scalling-nner-text">
+                <h2 class="fontbold fs28"><#if (mainTitle.getData())??>
+	${mainTitle.getData()}
+</#if></h2>
+            <p class="txtGray"><#if (subtext.getData())??>
+	${subtext.getData()}
+</#if></p>
+            </div>
+            <div class="inner-scaling-wrapper bgBlue">
+						<#if buttons.getSiblings()?has_content>
+                <#list buttons.getSiblings() as curEntry> 
+                <div class="edto-scaling-text">
+                    <h4 class="fs22 txtWhite"><#if (curEntry.buttonTitle.getData())??>
+	${curEntry.buttonTitle.getData()}
+</#if></h4>
+                    <h2 class="fs40 txtWhite"><#if (curEntry.buttonValue.getData())??>
+	${curEntry.buttonValue.getData()}
+</#if></h2>
+                </div>                
+           
+						</#list>
+						</#if>
+						 </div>
+        </div>
+    </div>
+</div>

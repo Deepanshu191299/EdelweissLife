@@ -1,0 +1,57 @@
+<#if ratingStar.getData()=="oneStar">
+    <#assign ratingClass="rating-1">
+<#elseif ratingStar.getData()=="twoStar">
+    <#assign ratingClass="rating-2">
+<#elseif ratingStar.getData()=="threeStar">
+    <#assign ratingClass="rating-3">
+<#elseif ratingStar.getData()=="fourStar">
+    <#assign ratingClass="rating-4">
+<#elseif ratingStar.getData()=="fiveStar">
+    <#assign ratingClass="rating-5">
+<#elseif ratingStar.getData()=="none">
+    <#assign ratingClass="rating-none">
+</#if>
+
+<section class="customers-wrapper" id="testimonials">
+<div class="edto-customer-main-wrapper">
+            <div class="container">
+                <h2 class="fs28 text-center  pb-3">	${heading.getData()}</h2>
+								<#if (oneLine.getData())?has_content>
+	                  <h5 class="fs18 text-center pt-2 pb-2">${oneLine.getData()}</h5>
+                </#if>
+								
+                <div class="customers-view">
+                    <div class="view-left-blk ${ratingClass}">
+                        <div class="small-text"> ${labelOurCustomersSay.getData()} </div>
+                        <div class="tag"> ${ansOurCustomersSay.getData()} </div>
+                    </div>
+                    <div class="view-right-blk">
+                        <div class="rating ${ratingClass}">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.5 9.757-5.278 4.354 1.649 7.389L12 17.278 6.129 21.5l1.649-7.389L2.5 9.757l6.333-.924L12 2.5l3.167 6.333z"/></svg></span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.5 9.757-5.278 4.354 1.649 7.389L12 17.278 6.129 21.5l1.649-7.389L2.5 9.757l6.333-.924L12 2.5l3.167 6.333z"/></svg></span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.5 9.757-5.278 4.354 1.649 7.389L12 17.278 6.129 21.5l1.649-7.389L2.5 9.757l6.333-.924L12 2.5l3.167 6.333z"/></svg></span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.5 9.757-5.278 4.354 1.649 7.389L12 17.278 6.129 21.5l1.649-7.389L2.5 9.757l6.333-.924L12 2.5l3.167 6.333z"/></svg></span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.5 9.757-5.278 4.354 1.649 7.389L12 17.278 6.129 21.5l1.649-7.389L2.5 9.757l6.333-.924L12 2.5l3.167 6.333z"/></svg></span>
+                        </div>
+                        <div class="tag number-rating ${ratingClass}"> ${selectOutOf5.getData()}/<span>5</span></div>
+                        <div class="small-text"><span class="${ratingClass}"> ${labelBasedOn.getData()}</span> <a href="${reviewsLinkToPage.getFriendlyUrl()}" class="link">${ansBasedOn.getData()}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<style>
+.edto-customer-main-wrapper h2 {
+    font-family: 'Montserrat-Bold';
+}
+.rating-none {
+    display: none !important;
+}
+#testimonials h5{
+font-size:18px;
+}
+ .owl-nav .owl-next img {
+    width: unset;
+}
+</style>

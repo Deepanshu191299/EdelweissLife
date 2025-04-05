@@ -1,0 +1,16 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+	
+	compileOnly project(":modules:edelweiss-tokio-common-api")
+	compileOnly project(":modules:edelweiss-http-core-api")
+	compileOnly project(":modules:edelweiss-system-configurations")
+	compileOnly project(":modules:edelweiss-common-util")
+	implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+	// https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java
+//compileInclude group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+	// https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+//compileInclude group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.2.0'
+	
+}

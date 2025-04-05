@@ -1,0 +1,472 @@
+{
+    "planOption": [
+        {
+            "label": "lumpsum",
+            "value": "1"
+        },
+        {
+            "label": "lumpsum + Income",
+            "value": "2"
+        }
+    ],
+    "planOptionDefVal": "2",
+    "lumpsum": {
+        "optionVal": "1",
+        "investmentAmt": "5000",
+        "paymentOption": [
+            {
+                "label": "Annual",
+                "value": "1"
+            },
+            {
+                "label": "Semi-Annual",
+                "value": "2"
+            },
+            {
+                "label": "Quarterly",
+                "value": "3"
+            },
+            {
+                "label": "Monthly",
+                "value": "4"
+            }
+        ],
+        "sumAssuredMultiple": {
+			"sumAssuredMultipleDefaultList":[
+				{"label": "5","value": "5"},
+				{"label": "7","value": "7"},
+				{"label": "10","value": "10"}
+			],
+			"sumAssuredMultipleScenario":[
+				{
+					"sadVal": [
+						{"label": "10","value": "10"},
+						{"label": "7","value": "7"}			
+					],
+					"defaultVal": "10",
+					"minAge": 0,
+					"maxAge": 49
+				},
+				{
+					"sadVal": [
+						{"label": "10","value": "10"},
+						{"label": "5","value": "5"}			
+					],
+					"defaultVal": "10",
+					"minAge": 50,
+					"maxAge": 65
+				},
+				{
+					"sadVal": [
+						{"label": "5","value": "5"}			
+					],
+					"defaultVal": "5",
+					"minAge": 66,
+					"maxAge": 70
+				}
+			]
+		},
+        "payFor": {
+			"payForVal":[
+				{
+					"min":5,
+					"max":8,
+					"ifPT":"10"
+				},
+				{
+					"min":5,
+					"max":8,
+					"ifPT":"11"
+				},
+				{
+					"min":5,
+					"max":8,
+					"ifPT":"12"
+				},
+				{
+					"min":5,
+					"max":8,
+					"ifPT":"13"
+				},
+				{
+					"min":5,
+					"max":8,
+					"ifPT":"14"
+				}
+			],
+			"payForDefault":{
+				"min":5,
+				"max":12
+			}
+        },
+        "isEdelWeissEmployee": [
+            {
+                "label": "No",
+                "value": "1"
+            },
+            {
+                "label": "Yes",
+                "value": "3"
+            }
+        ],
+        "investingFor": [
+            {
+                "label": "Myself",
+                "value": "Myself"
+            },
+            {
+                "label": "Family",
+                "value": "Family"
+            }
+        ],
+        "policyTerm": [
+            {
+                "payFor": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "min": 10,
+                "max": 40
+            },
+            {
+                "payFor": [
+                    "9",
+                    "10",
+                    "11",
+                    "12"
+                ],
+                "min": 15,
+                "max": 40
+            }
+        ],
+        "lumsumDefault": {
+            "investmentAmt": "5000",
+            "payFor": "8",
+            "paymentOption": "4",
+            "sumAssuredMultiple": "10",
+            "investingFor": "Myself",
+            "policyTerm": "15",
+            "isEdelWeissEmployee": "1"
+        }
+    },
+    "lumpsumPlusIncome": {
+        "optionVal": "2",
+        "investmentAmt": "5000",
+        "incomePayoutType": [
+            {
+                "value": "9",
+                "label": "Early"
+            }
+        ],
+        "payoutIncreasingPercentage": [
+            {
+                "label": "10",
+                "value": "10"
+            },
+            {
+                "label": "20",
+                "value": "20"
+            },
+            {
+                "label": "30",
+                "value": "30"
+            },
+            {
+                "label": "40",
+                "value": "40"
+            },
+            {
+                "label": "50",
+                "value": "50"
+            },
+            {
+                "label": "60",
+                "value": "60"
+            },
+            {
+                "label": "70",
+                "value": "70"
+            },
+            {
+                "label": "80",
+                "value": "80"
+            },
+            {
+                "label": "90",
+                "value": "90"
+            },
+            {
+                "label": "100",
+                "value": "100"
+            }
+        ],
+        "paymentOption": [
+            {
+                "label": "Annual",
+                "value": "1"
+            },
+            {
+                "label": "Semi-Annual",
+                "value": "2"
+            },
+            {
+                "label": "Quarterly",
+                "value": "3"
+            },
+            {
+                "label": "Monthly",
+                "value": "4"
+            }
+        ],
+        "sumAssuredMultiple": {
+			"sumAssuredMultipleDefaultList":[
+				{"label": "5","value": "5"},
+				{"label": "7","value": "7"},
+				{"label": "10","value": "10"}
+			],
+			"sumAssuredMultipleScenario":[
+				{
+					"sadVal": [
+						{"label": "10","value": "10"},
+						{"label": "7","value": "7"}			
+					],
+					"defaultVal": "10",
+					"minAge": 0,
+					"maxAge": 49
+				},
+				{
+					"sadVal": [
+						{"label": "10","value": "10"},
+						{"label": "5","value": "5"}			
+					],
+					"defaultVal": "10",
+					"minAge": 50,
+					"maxAge": 65
+				},
+				{
+					"sadVal": [
+						{"label": "5","value": "5"}			
+					],
+					"defaultVal": "5",
+					"minAge": 66,
+					"maxAge": 70
+				}
+			]
+		},
+        "incomeDuration": [
+            {
+                "label": "10",
+                "value": "3"
+            },
+            {
+                "label": "15",
+                "value": "4"
+            },
+            {
+                "label": "20",
+                "value": "5"
+            },
+            {
+                "label": "25",
+                "value": "6"
+            },
+            {
+                "label": "30",
+                "value": "7"
+            },
+            {
+                "label": "35",
+                "value": "8"
+            }
+        ],
+        "incomePayoutTime": [
+            {
+                "label": "Start Of Year",
+                "value": "37"
+            },
+            {
+                "label": "End Of Year",
+                "value": "38"
+            }
+        ],
+        "incomeStartPoint": [
+            {
+				"ifPpt": "5",
+				"defaultISPVal":"27",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "7",
+						"value": "27"
+					}
+				]
+            },
+			{
+				"ifPpt": "6",
+				"defaultISPVal":"28",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "8",
+						"value": "28"
+					}
+				]
+            },
+			{
+				"ifPpt": "7",
+				"defaultISPVal":"29",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "9",
+						"value": "29"
+					}
+				]
+            },
+			{
+				"ifPpt": "8",
+				"defaultISPVal":"30",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "10",
+						"value": "30"
+					}
+				]
+            },
+            {
+				"ifPpt": "9",
+				"defaultISPVal":"31",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "11",
+						"value": "31"
+					}
+				]
+            },
+			{
+				"ifPpt": "10",
+				"defaultISPVal":"32",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "12",
+						"value": "32"
+					}
+				]
+            },
+			{
+				"ifPpt": "11",
+				"defaultISPVal":"33",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "13",
+						"value": "33"
+					}
+				]
+            },
+			{
+				"ifPpt": "12",
+				"defaultISPVal":"34",
+				"ISPList":[
+					{
+						"label": "1",
+						"value": "21"
+					},
+					{
+						"label": "14",
+						"value": "34"
+					}
+				]
+            }
+        ],
+        "payFor": {
+            "min": 5,
+            "max": 12
+        },
+        "isEdelWeissEmployee": [
+            {
+                "label": "No",
+                "value": "1"
+            },
+            {
+                "label": "Yes",
+                "value": "3"
+            }
+        ],
+        "cashBack": [
+            {
+                "label": "No",
+                "value": "36"
+            },
+            {
+                "label": "Yes",
+                "value": "35"
+            }
+        ],
+        "cashBackPercentage": [
+            {
+                "label": "Select",
+                "value": ""
+            },
+            {
+                "label": "10",
+                "value": "10"
+            },
+            {
+                "label": "45",
+                "value": "45"
+            }
+        ],
+        "investingFor": [
+            {
+                "label": "Myself",
+                "value": "Myself"
+            },
+            {
+                "label": "Family",
+                "value": "Family"
+            }
+        ],
+        "lumpsumPlusIncomeDefault": {
+            "investmentAmt": "5000",
+            "incomePayoutType": "9",
+            "payoutIncreasingPercentage": "20",
+            "paymentOption": "4",
+            "sumAssuredMultiple": "10",
+            "incomeDuration": "4",
+            "incomePayoutTime": "38",
+            "incomeStartPoint": "22",
+            "payFor": "10",
+            "cashBack": "36",
+            "cashBackPercentage": "",
+            "investingFor": "Myself",
+            "isEdelWeissEmployee": "1"
+        }
+    }
+}

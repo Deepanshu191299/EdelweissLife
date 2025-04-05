@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-personality-quiz-web
+Bundle-SymbolicName: in.edelweiss.personality.quiz
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.personality.quiz.constants

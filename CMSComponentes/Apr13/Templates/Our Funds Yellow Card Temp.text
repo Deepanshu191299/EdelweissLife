@@ -1,0 +1,67 @@
+<div class="container no-padding">
+<div class="journal-description">
+<div class="row no-gutters rte-component">
+<div class="col journal-content rte-component">
+<div>
+<#if (title.getData())??>
+	<p class="fontbold fs12 pb-2 pt-3 text-center">${title.getData()}</p>
+</#if>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="our-funds-wrapper">
+<div class="container">
+<div class="our-funds text-center">
+<#if (cardHeading.getData())??>
+	<h1 class="fontbold fs32 mb-2">${cardHeading.getData()}</h1>
+</#if>
+<#if (description.getData())??>
+	<h4 class="fs18 mb-3">${description.getData()}</h4>
+</#if>
+
+<div class="d-flex flex-wrap justify-content-center justify-content-lg-around justify-content-md-around justify-content-sm-around our-fund-download">
+<#if (document1.documentName.getData())??>
+	<a class="d-flex align-items-center justify-center fs14" href="${document1.documentLink.getData()}">
+  <img class="mr-2" src="/o/edelweisstokio-theme/images/download-icon.svg"> ${document1.documentName.getData()}
+	</a>
+</#if>
+
+<#if (document2.factsheetName.getData())??>
+	<a class="d-flex align-items-center justify-content-center fs14" href="${document2.factsheetLink.getData()}">
+	${document2.factsheetName.getData()}
+	</a>
+</#if>
+</div>
+</div>
+</div>
+</section>
+
+
+<style>
+.our-funds {
+    border-radius: 5.8px;
+    box-shadow: 0 0 6px 0 rgba(151,151,151,0.53);
+    background-color: #fff6e1;
+    padding: 24px 60px 17px;
+    margin: 30px 130px 80px;
+}
+
+.our-funds h4 {
+    line-height: 1.56;
+		color: #6d6d6d;
+}
+
+@media only screen and (max-width: 991px) {
+    .our-funds {
+		    margin: 30px 30px 60px;
+		}
+}
+@media only screen and (max-width: 767px) {
+    .our-funds {
+		    margin: 0px;
+		}
+}
+</style>

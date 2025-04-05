@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-update-fatca
+Bundle-SymbolicName: in.edelweiss.update.fatca
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.update.fatca.constants

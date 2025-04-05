@@ -1,0 +1,65 @@
+<div class="container-fluid p-0 main-slider insurance-slider m-0">
+  <div class="owl-carousel">
+<#if banner.getSiblings()?has_content>
+	<#list banner.getSiblings() as cur_banner>
+   
+      
+<div class="inner-slide item">
+          <#if (cur_banner.BannerImage.getData())?? && cur_banner.BannerImage.getData() != "">
+	<img alt="${cur_banner.BannerImage.getAttribute("alt")}" data-fileentryid="${cur_banner.BannerImage.getAttribute("fileEntryId")}" src="${cur_banner.BannerImage.getData()}" />
+</#if>
+			<span class="mob-banner"><#if (cur_banner.BannerImageMobileView.getData())?? && cur_banner.BannerImageMobileView.getData() != "">
+	<img class="img-fluid" alt="${cur_banner.BannerImageMobileView.getAttribute("alt")}" data-fileentryid="${cur_banner.BannerImageMobileView.getAttribute("fileEntryId")}" src="${cur_banner.BannerImageMobileView.getData()}" />
+</#if></span>
+			<div class="container banner-text-box">
+				<div class="blog-text">
+					<h2 class="fs30 fontsemi mb-3 text-dark ">
+ <#if (cur_banner.BannerHeading.getData())??>
+	${cur_banner.BannerHeading.getData()}
+</#if>
+</h2>
+<h3 class="subHeading text-dark">
+<#if (cur_banner.BannerSubheading.getData())??>
+	${cur_banner.BannerSubheading.getData()}
+</#if>
+</h3>
+<p class="fs18 fontregular text-dark"> 
+<#if (cur_banner.BannerDescription.getData())??>
+	${cur_banner.BannerDescription.getData()}
+</#if>
+</p>
+				</div>
+		   </div>
+        </div>
+  
+   </#list>
+    </#if> 
+</div>
+  </div>
+
+<style>
+.inner-slide.item {
+    position: relative;
+}
+.container.banner-text-box {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+@media(min-width:991px){
+.container.banner-text-box {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+}
+.subHeading{
+font-size:22px;
+font-family:'Montserrat-SemiBold';
+opacity:0.9;
+
+}
+.edto-life-insurance-main-wrapper .insurance-slider .inner-slide img {
+    width: 100vw;
+}
+</style>

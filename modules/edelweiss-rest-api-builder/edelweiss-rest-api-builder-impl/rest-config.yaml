@@ -1,0 +1,9 @@
+apiDir: "../edelweiss-rest-api-builder-api/src/main/java"
+apiPackagePath: "in.edelweiss.rest.api.builder"
+application:
+    baseURI: "/edelweiss-rest-api"
+    className: "EdelweissRestApiBuilderApplication"
+    name: "EdelweissRestApiBuilder"
+author: "pramod.dk"
+clientDir: "../edelweiss-rest-api-builder-client/src/main/java"
+testDir: "../edelweiss-rest-api-builder-test/src/testIntegration/java"

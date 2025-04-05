@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-resume-application-web
+Bundle-SymbolicName: in.edelweiss.resume.application
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.resume.application.constants

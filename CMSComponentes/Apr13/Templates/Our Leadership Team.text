@@ -1,0 +1,55 @@
+<#assign contentTitle = .vars['reserved-article-title'].data >
+
+                    <div class="" data-toggle="modal" data-target="#${contentTitle?replace(" ","")}">
+                        <div class="team-img">
+                           <#if (teamImg.getData())?? && teamImg.getData() != "">
+	                            <img alt="${teamImg.getAttribute("alt")}" data-fileentryid="${teamImg.getAttribute("fileEntryId")}" src="${teamImg.getData()}" />
+                           </#if>
+                        </div>
+                        <div class="team-text">
+                            <h5 class="fs18 fontbold text-center pt-3 pb-2">${contentTitle}</h5>
+                            <p class="para1 text-center">
+                               <#if (designation.getData())??>
+	                                  ${designation.getData()}
+                                </#if>
+                            </p>
+                        </div>
+                    </div>
+                    
+              
+				
+				
+				
+				<div class="modal team-modal fade" id="${contentTitle?replace(" ","")}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="user-profile">
+                            <span> <#if (teamImg.getData())?? && teamImg.getData() != "">
+	                            <img alt="${teamImg.getAttribute("alt")}" data-fileentryid="${teamImg.getAttribute("fileEntryId")}" src="${teamImg.getData()}" />
+                           </#if> </span>
+                            <h5 class="fs18 fontbold text-center pt-3 pb-2">${contentTitle}</h5>
+                            <h5 class="fs18 fontbold text-center txtOrange pb-2"><#if (designation.getData())??>
+	                                  ${designation.getData()}
+                                </#if></h5>
+                        </div>
+                        <div class="profile-text">
+                            <div class="para-bold">
+							                <#if (content.getData())??>
+	                                ${content.getData()}
+                              </#if>
+							             </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+				<style>
+				 .team-modal.modal{display:none}
+				 .team-modal.modal.show{display:block}
+				 .team-modal .close {float:right;font-size: 1.5rem;}
+				</style?

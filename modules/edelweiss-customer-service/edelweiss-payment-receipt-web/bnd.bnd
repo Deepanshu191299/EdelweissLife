@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-payment-receipt-web
+Bundle-SymbolicName: in.edelweiss.payment.receipt
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.payment.receipt.constants

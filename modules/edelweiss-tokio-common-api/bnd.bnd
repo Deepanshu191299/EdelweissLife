@@ -1,0 +1,8 @@
+Bundle-Name: edelweiss-tokio-common-api
+Bundle-SymbolicName: com.edelweiss.tokio.common
+Bundle-Version: 1.0.0
+Export-Package: \
+	in.edelweiss.tokio.common.api,\
+	in.edelweiss.tokio.common.model,\
+	in.edelweiss.tokio.common.util,\
+	in.edelweiss.tokio.constants

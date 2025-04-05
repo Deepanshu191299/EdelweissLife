@@ -1,0 +1,34 @@
+<#assign contentTitle = .vars['reserved-article-title'].data >
+
+<div class="flipper">
+                                <div class="front">
+                                    <div class="card text-center">
+                                        <div class="card-body ">
+                                            <#if (awardImage.getData())?? && awardImage.getData() != "">
+	                                              <img alt="${awardImage.getAttribute("alt")}" data-fileentryid="${awardImage.getAttribute("fileEntryId")}" src="${awardImage.getData()}" />
+                                            </#if>
+                                            <h4 class="fs18 semibold">
+                                                ${contentTitle}
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card text-center">
+                                        <div class="card-body ">
+                                            <#if (awardImage.getData())?? && awardImage.getData() != "">
+	                                              <img alt="${awardImage.getAttribute("alt")}" data-fileentryid="${awardImage.getAttribute("fileEntryId")}" src="${awardImage.getData()}" />
+                                            </#if>
+                                            <h4 class="fs18 semibold">
+                                                ${contentTitle}  
+                                            </h4>
+                                            <div class="para1 py-3">
+                                                <#if (contents.getData())??>
+	                                                ${contents.getData()}
+                                                </#if>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+														

@@ -1,0 +1,80 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+ 
+<div class="How-works">
+<div class="edto-time-line-main-wrapper">
+   <div class="container">	
+	     
+       <h2 class="fontbold fs28 text-center pt-3 pb-4"><#if (title.getData())??>${title.getData()}</#if></h2>
+       <div class="inner-time-line-main-wrapper">
+           <div class="time-line-header-text">
+
+						  	 <input type="hidden" value='${(PR_PT.getData()??)?then("${PR_PT.getData()}","15")}' id="premiumCalPT"/>
+								 <input type="hidden" value='${(PR_PPT.getData()??)?then("${PR_PPT.getData()}","10")}' id="premiumCalDPPT"/>
+								 <input type="hidden" value='${(requestJson.getData()??)?then("${requestJson.getData()}","15")}' id="premiumCalRequestJson"/>
+	               <input type="hidden" value='${(PR_SA.getData()??)?then("${PR_SA.getData()}","0")}' id="premiumCalDAnnualPremium"/>		
+								 <input type="hidden" value='0' id="premiumCalAPIType"/>
+								 <input type="hidden" value='0' id="premiumCalProdId"/>
+               <div class="text-line">
+                   <p>${(SUM_ASSURED_TITLE.getData()??)?then("${SUM_ASSURED_TITLE.getData()}","Rahul Invested")}</p>
+                   <span class="field"> <strong>&#8377;</strong> <input type="text" onkeypress="return validate(event)" maxlength="10" id="premiumCalAnnualPremium" value="${(PR_SA.getData()??)?then("${PR_SA.getData()}","50,000")}" class="form-control" pattern="[0-9a-zA-Z_.-]*"/> </span>
+                   <p>${(PRD_PPT_TITLE.getData()??)?then("${PRD_PPT_TITLE.getData()}","every year for")}</p>
+                   <span class="field">
+                       <select name="" class="form-control" id="premiumCalPPT">
+											 <#list PR_PPT.getOptionsMap() as invoice,a>
+                            <#if (PR_PPT.getData())?? && PR_PPT.getData()?contains(a)>
+	                              <option value="${a}" ${(PRD_PPT.getData()?? && PRD_PPT.getData() == a )?then("selected","")} >${a}</option>
+														</#if>
+                       </#list>
+                       </select>
+                   </span>
+                   <p>Year</p> 
+               </div>
+               <div class="text-line"> 
+                   <p>${(FINAL_AMOUNT_PRE_TITLE.getData()??)?then("${FINAL_AMOUNT_PRE_TITLE.getData()}","Rahul Invested")}</p>
+                   <span class="field"> <strong>&#8377;</strong> <input type="text" id="premiumCalFinalValue" value="0" class="form-control" readonly="true"/> </span>
+									 <#if getterUtil.getBoolean(SHOW_RETURN_PRECENTAGE.getData())>
+										     <p>@</p>
+                   <span class="field">
+                       <select name="" class="form-control" id="premiumCalFundPercentage">
+											     <option value="4">4%</option>
+                           <option value="8" selected="true">8%</option>                               
+                       </select>
+                   </span>
+									 
+									<#else>
+										<p>${(FINAL_AMOUNT_POST_TITLE.getData()??)?then("${FINAL_AMOUNT_POST_TITLE.getData()}","Rahul Invested")} </p>
+									</#if>          
+               </div>
+							 <a class="edto-btn-primary" data-senna-off="true"id="premiumCalBuyNow"  href="${LinkToLayout31643411.getFriendlyUrl()}">Buy Now</a>
+           </div>
+					 <div id="premiumCalOverlay" class="premium-overlay" style="display:none;"><div class="preloader"></div></div>
+					 <div id="premiumCalGraphLoadrer">            
+           </div>					 
+           <div class="premium-timeline" id="premiumCalGraph" style="display:none;">
+               <div class="policy-title-list">
+                        <ul>
+                           <li>
+                              <p>Annual Premium <span id="p_annmPrem">Amount: Rs ${(PR_SA.getData()??)?then("${PR_SA.getData()}","0")}</span></p>
+                           </li>
+                           <li>
+                              <p>Policy Term <span id="p_PT">${(PR_PT.getData()??)?then("${PR_PT.getData()}","15")} Years</span></p>
+                           </li>
+                           <li>
+                              <p>Fund Value <span id="p_FV">Rs 0</span></p>
+                           </li>
+                        </ul>
+                     </div>
+										 <ul class="line" id="ul_graph">
+							       </ul>
+               </div>
+       </div>
+       <small class="text-left py-3">
+           <#if (description.getData())??>
+	            ${description.getData()}
+           </#if>
+       </small>
+   </div>
+</div>

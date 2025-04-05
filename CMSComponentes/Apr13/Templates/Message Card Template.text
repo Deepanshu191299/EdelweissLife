@@ -1,0 +1,20 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="edto-support-available-wrappper pt-0">
+    <div class="container">
+        <div class="center-text">
+            <div class="main-icon main-icon-fixd">
+                <#if (image.getData())?? && image.getData() != "">
+	                  <img alt="${image.getAttribute("alt")}" data-fileentryid="${image.getAttribute("fileEntryId")}" src="${image.getData()}" />
+                </#if>
+            </div>
+            <div class="main-text main-text-change">
+                <#if (messageInfo.getData())??>
+                    ${messageInfo.getData()}
+                </#if>
+            </div>
+        </div>
+    </div>
+</div>

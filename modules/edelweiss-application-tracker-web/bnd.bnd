@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-application-tracker-web
+Bundle-SymbolicName: in.edelweiss.application.tracker
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.application.tracker.constants

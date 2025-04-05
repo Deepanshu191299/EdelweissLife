@@ -1,0 +1,10 @@
+Bundle-Name: edelweiss-taglib
+Bundle-SymbolicName: in.edelweiss.taglib
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.taglib.constants
+Web-ContextPath: /edelweiss-taglib
+Provide-Capability:\
+	osgi.extender;\
+		osgi.extender="jsp.taglib";\
+		uri="http://edelweiss.in/tld/ui";\
+		version:Version="${Bundle-Version}"

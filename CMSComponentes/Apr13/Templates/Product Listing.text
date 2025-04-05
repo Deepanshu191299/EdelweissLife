@@ -1,0 +1,106 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+
+<#assign displayStyle = eHttpComponentsUtil.getParameter(themeDisplay.getURLCurrent(), "displayStyle") />
+
+<#if displayStyle == 0>
+<div class="product-listing-main-wrapper">
+					    <div class="listing-img">
+					        <div class="p-img">
+					            <#if (Fieldset24719074.mainCardImage.getData())?? && Fieldset24719074.mainCardImage.getData() != "">
+	                       <img alt="${Fieldset24719074.mainCardImage.getAttribute("alt")}" data-fileentryid="${Fieldset24719074.mainCardImage.getAttribute("fileEntryId")}" src="${Fieldset24719074.mainCardImage.getData()}" />
+                      </#if>
+					        </div>
+					        <div class="p-btn">			 
+										 <#if getterUtil.getBoolean(Fieldset18777379.purchaseOnline.getData())>
+                        <a class="edto-btn-primary" data-senna-off="true" href="${Fieldset18777379.getQuote.getFriendlyUrl()}">
+                      	  Get Quote
+                       </a>
+                     </#if>
+										 
+									    <a class="${getterUtil.getBoolean(Fieldset18777379.purchaseOnline.getData())?then('edto-btn-link','edto-btn-primary')}" data-senna-off="true" href="${Fieldset18777379.knowMore.getFriendlyUrl()}">
+	                      Know More
+                      </a>											
+					        </div>
+					    </div>
+					    <div class="listing-text">
+					        <h2 class="fs22 fontbold">
+					            <#if (Fieldset24719074.title.getData())??>
+	                        ${htmlUtil.stripHtml(Fieldset24719074.title.getData())}
+                      </#if>
+					        </h2>
+					        <p class="fs16 pt-2 pb-2">
+									    <#if (Fieldset24719074.description.getData())??>
+	                         ${htmlUtil.stripHtml(Fieldset24719074.description.getData())}
+                      </#if>
+                  </p>
+					        <h4 class="fs16 fontbold pb-2">
+									       <#if (Fieldset34165115.benefitTitle.getData())??>
+	                           ${Fieldset34165115.benefitTitle.getData()}
+                          </#if>:
+                  </h4>
+					        <ul class="edto-bullet1">
+									  <#if Fieldset34165115.benefits.getSiblings()?has_content>
+											<#list Fieldset34165115.benefits.getSiblings() as cur_Fieldset34165115_benefits>
+												<#if (cur_Fieldset34165115_benefits.getData())??>
+													<li>${cur_Fieldset34165115_benefits.getData()}</li>
+												</#if>
+											</#list>
+										</#if>
+					        </ul>
+					    </div>
+         </div>
+
+<#else>
+
+         <div class="">
+					    <div class="listing-img">
+					        <div class="p-img">
+					            <#if (Fieldset24719074.mainCardImage.getData())?? && Fieldset24719074.mainCardImage.getData() != "">
+	                       <img alt="${Fieldset24719074.mainCardImage.getAttribute("alt")}" data-fileentryid="${Fieldset24719074.mainCardImage.getAttribute("fileEntryId")}" src="${Fieldset24719074.mainCardImage.getData()}" />
+                      </#if>
+					        </div>
+					    </div>
+					    <div class="listing-text">
+					        <h4 class="fs22 fontbold">
+					            <#if (Fieldset24719074.title.getData())??>
+	                        ${Fieldset24719074.title.getData()}
+                      </#if>
+					        </h4>
+					        <p class="fs14 pt-2 pb-2">
+									    <#if (Fieldset24719074.description.getData())??>
+	                         ${Fieldset24719074.description.getData()}
+                      </#if>
+                  </p>
+					    </div>
+							<div class="p-btn mt-3">			 
+										 <#if getterUtil.getBoolean(Fieldset18777379.purchaseOnline.getData())>
+                        <a class="edto-btn-primary" data-senna-off="true" href="${Fieldset18777379.getQuote.getFriendlyUrl()}">
+                      	  Get Quote
+                       </a>
+                     </#if>
+										 
+									    <a class="${getterUtil.getBoolean(Fieldset18777379.purchaseOnline.getData())?then('edto-btn-link','edto-btn-primary')}" data-senna-off="true" href="${Fieldset18777379.knowMore.getFriendlyUrl()}">
+	                      Know More
+                      </a>											
+					    </div>
+         </div>
+
+</#if>
+
+<style>
+.listing-text {
+    padding-top: 15px;
+}
+.listing-img .p-img {
+    width: 168px;
+    height: 149px;
+    line-height: 149px;
+    text-align: center;
+    background-color: #F2F7FF;
+    border-radius: 10px;
+}
+</style>
+          

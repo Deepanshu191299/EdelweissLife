@@ -1,0 +1,5572 @@
+// ========================inner pager header
+.edel-inner-content-main-wrapper{
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 80px;
+        .custom-tabs-wrapper{
+            .nav-tabs{
+                li{
+                    a{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .tab-content{
+                .tab-pane{
+                    position: relative;
+                    .invest-form-wrapper{
+                        width: 100%;
+                        background-image: url('../images/inves-back.jpg');
+                        background-position: top center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        padding: 16px 0px 40px;
+                        height: 527px;
+                        .banner1-text {
+                            border-radius: 35px;
+                            box-shadow: 0 4px 20px 0 #00000026;
+                            border: solid 1px #ebebeb;
+                            width: 870px;
+                            -webkit-border-radius: 35px;
+                            -moz-border-radius: 35px;
+                            -ms-border-radius: 35px;
+                            -o-border-radius: 35px;
+                            margin: 0px 0 0 20px;
+                                .card-body{
+                                    padding: 25px 35px;
+                                        ul{
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 12px;
+                                                li{
+                                                    font-size: $fs14;
+                                                    color: $txtGray;
+                                                    margin-right: 15px;
+                                                    .select_mate{
+                                                        position: relative;
+                                                        float: left;
+                                                        width: 100%;
+                                                        color: #777;
+                                                        font-family:'Montserrat-Light';
+                                                        border-radius: 3px;
+                                                        transition: all 375ms ease-in-out;
+                                                            select{
+                                                                position: absolute;
+                                                                overflow: hidden;
+                                                                height: 0px;
+                                                                opacity: 0;
+                                                                z-index: -1;
+                                                            }
+                                                            .cont_list_select_mate {
+                                                                position: relative;
+                                                                float: left;
+                                                                width: 100%;
+                                                                .cont_select_int {
+                                                                    position: absolute; 
+                                                                    left: 0px;
+                                                                    top: 4px;
+                                                                    z-index: 999;
+                                                                    overflow: hidden;
+                                                                    height: 0;
+                                                                    // width: 100%;
+                                                                    width: 132px;
+                                                                    row-gap: 0px;
+                                                                    flex-direction: column;
+                                                                    background-color: #fff;
+                                                                    padding: 0px;
+                                                                    margin-bottom: 0px;
+                                                                    margin-top: 0px;
+                                                                    border-radius: 0px 0px 8px 8px;
+                                                                    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+                                                                    transition: all 375ms ease-in-out;
+                                                                        li{
+                                                                            position: relative;
+                                                                            float: left;
+                                                                            width: 100%;
+                                                                            border-bottom: 1px solid #E0E0E0;
+                                                                            list-style-type: none;
+                                                                            padding: 10px 12px;
+                                                                            margin: 0px;
+                                                                            transition: all 275ms ease-in-out;
+                                                                            display: block;
+                                                                            cursor: pointer;
+                                                                            color: $txtGray;
+                                                                            
+                                                                                &:last-child{
+                                                                                    border-radius: 3px;
+                                                                                    border-bottom: 0px;
+                                                                                }
+                                                                                &:active{
+                                                                                    background-color: #EEEEEE;
+                                                                                }
+                                                                                &:hover{
+                                                                                    background-color: #EEEEEE;
+                                                                                }
+                                                                        }
+                                                                  }
+                                                              }
+                                                              .selecionado_opcion {
+                                                                padding: 2px 5px;
+                                                                width: 100%;
+                                                                display: block;
+                                                                margin: 0px;
+                                                                cursor: pointer;
+                                                                color: $bgBlue;
+                                                                font-family:'Montserrat-SemiBold';
+                                                              }
+                                                              .icon_select_mate{
+                                                                top: 2px;
+                                                                right: -12px;
+                                                                position: absolute;
+                                                              }
+                                                    }
+                                                    &.custom-option{
+                                                        // width: 113px;
+                                                        border: 1px solid $bgBlue;
+                                                        border-radius: 30px;
+                                                        padding: 0px 20px 0px 10px;
+                                                    }
+                                                }
+                                        }
+                                        .invest-text{
+                                            width: 100%;
+                                            padding: 20px 0px 10px;
+                                                h2{
+                                                    font-size: 18px;
+                                                    font-family:'Montserrat-SemiBold';
+                                                }
+                                                h4{
+                                                    font-size: 15px;
+                                                }
+                                        }
+                                        .multi-bullet{
+                                            display: flex;
+                                            gap: 3px;
+                                            .bullet2{
+                                                align-items: flex-start;
+                                                    li{
+                                                        font-size: 12px;
+                                                    }
+                                            }
+                                        }
+                                        
+                                        form{
+                                           
+                                            .custom-radio-btn{
+                                                width: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                padding-top: 10px;
+                                                .InputGroup{
+                                                    display: flex;
+                                                    padding-right: 12px;
+                                                    gap: 5px;
+                                                    input[type="radio"] {
+                                                        visibility: hidden; /* 1 */
+                                                        height: 0; /* 2 */
+                                                        width: 0; /* 2 */
+                                                    }
+                                                    label {
+                                                        display: flex;
+                                                        flex: auto;
+                                                        vertical-align: middle;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        text-align: center;
+                                                        cursor: pointer;
+                                                        background-color: $bgWhite;
+                                                        padding: 6px 15px;
+                                                        border-radius: 30px;
+                                                        border: 1px solid $textsub-title;
+                                                        color: $txtGray;
+                                                        transition: color --transition-fast ease-out, 
+                                                        background-color --transition-fast ease-in;
+                                                        -webkit-user-select: none;
+                                                        -moz-user-select: none;
+                                                        -ms-user-select: none;
+                                                        user-select: none;
+                                                       margin-right: 8px;
+                                                       font-size: $fs12;
+                                                       margin-bottom: 0;
+                                                       font-family:'Montserrat-SemiBold';
+                                                    }
+                                                    label:last-of-type {
+                                                        margin-right: 0;
+                                                    }
+                                                    input[type="radio"]:checked + label {
+                                                        border-color: $textBlue-btn;
+                                                        color: $textBlue-btn;
+                                                    }                                               
+                                                }
+                                                p{
+                                                    padding-right: 8px;
+                                                    padding-bottom: 0;
+                                                }
+                                            }
+                                            .multi-btn {
+                                                margin-top: 12px;
+                                            }
+                                        }
+                                }
+                                
+                        }
+                        &.zindagi-back{
+                            background-image: url('../images/zindagi.jpg');
+                        }
+                        &.renewal-back{
+                            background-image: url('../images/renewal.jpg');
+                            background-size: contain;
+                        }
+                        &.grow-money{
+                            
+                        }
+                        &.tax-saving{
+                            background-image: url('../images/slide2.jpg');
+                        }
+                        &.child-future{
+                            background-image: url('../images/child.jpg');
+                        }
+                        &.retirement{
+                            background-image: url('../images/retirement.jpg');
+                        }
+                    }
+                }
+            }
+        }
+}
+
+
+// personility scss
+
+.edto-personility-main-wrapper {
+    width: 100%;
+    padding: 30px 0px;
+    border-bottom: 1px solid $borderLightGrey;    
+}
+.personility-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding: 10px 0px;
+    align-items: center;
+        .personility-img{
+            border: 1px solid $borderLightGrey;
+            width: 50%;
+            overflow: hidden;
+            border-radius: 12px;
+            img{
+                width: 100%;
+            }
+        }
+        .personility-text{
+            padding-top: 20px;
+            max-width: 450px;
+            width: 50%;
+            p{
+                color: $textsub-title;
+                line-height: 26px;
+                padding: 13px 0px;
+            }
+            h2{
+                font-size: 20px;
+                padding-bottom: 6px !important;
+            }
+            h4{
+                font-size: 16px;
+            }
+        }
+}
+
+.edto-product-sec-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        
+}
+.product-box-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    position: relative;
+        
+}
+.product-annum {
+    text-align: center;
+    padding: 20px 0px;
+    background-color: $bgLightyellow;
+    margin-top: 20px;
+}
+.edto-idea-partner-wrapper{
+    width: 100%;
+    padding: 6px 0px 30px;
+    
+}
+.ideal-box-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+       
+}
+.edto-customer-main-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 0px;
+        h2{
+            padding-bottom: 0 !important;
+        }
+        h5{
+            font-size: 14px;
+        }
+}
+
+.edto-disclaimer-main-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+}
+
+// news page start
+.edto-page-name-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 22px 0px 0px;
+    border-bottom: 1px solid $borderLightGrey;
+}
+
+.page-tabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+        a{
+            color: $txtGray;
+            
+            padding: 12px;
+                &.active{
+                    color: $textBlue-btn;
+                    font-family:'Montserrat-SemiBold';
+                    border-bottom: 2px solid $textBlue-btn;
+                }
+        }
+}
+
+.edto-search-filter-wrappper{
+    width: 100%;
+    padding: 30px 0px 12px;
+}
+
+.blog-content-main-wrapper {
+    width: 100%;
+    padding-top: 20px;
+        .content-tabs-box{
+            width: 100%;
+            display: flex;
+        }
+}
+
+.left-text{
+    width: 100%;
+    padding-right: 0;
+    border-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            background-color: $borderLightGrey;
+        }
+}
+.inner-text {
+    border-bottom: 1px solid $borderLightGrey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0px 0;
+    width: 47%;
+    p{
+        color: $textsub-title;
+    }
+}
+.inner-news-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;     
+}
+.date-block{
+    display: flex;
+    margin-top: 3px;
+    gap: 5px;
+        span{
+            color: $textsub-title;
+            font-size: $fs14;
+        }
+        p{
+            color: $textsub-title;
+        }
+}
+.like-social {
+    display: flex;
+    align-items: center;
+        p{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-right: 10px;
+            border-right: 1px solid #ccc;
+            padding-top: 0;
+            padding-bottom: 0;
+            color: $textsub-title;
+        }
+}
+.social-media-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+// pegination
+.pegination-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        ul{
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+                li{
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    line-height: 26px;
+                    transition: $transition;
+                    a{
+                        color: #c2c2c2;
+                        font-size: $fs12;
+                    }
+                    &.active{
+                        background-color: $textpegi;
+                        border-color: $textpegi;
+                            a{
+                                color: $txtWhite;
+                            }
+                    }
+                    &:hover{
+                        background-color: $textpegi;
+                        border-color: $textpegi;
+                        transition: $transition;
+                            a{
+                                color: $txtWhite;
+                            }
+                    }
+                    &.previous{
+                        border: 0;
+                            img{
+                                width: 30px;
+                            }
+                            &:hover{
+                                background-color: transparent;
+                            }
+                    }
+                    &.next{
+                        border: 0;
+                            img{
+                                width: 30px;
+                                transform: rotateY(180deg);
+                            }
+                            &:hover{
+                                background-color: transparent;
+                            }
+                    }
+                }
+        }
+}
+
+// blog page css start
+
+.blog-sec-tab-news-wrapper{
+    width: 100%;
+    padding: 0px 0px 50px;
+    .edto-blog-news-wrapper{
+        width: 100%;
+        display: flex;
+            .blog-tabs-content{
+                width: 70%;
+                border-right: 1px solid #ccc;
+                    .custom-tabs-wrapper{
+                        .nav-tabs{
+                            border-bottom: 1px solid #ccc;
+                            .nav-item{
+                                .nav-link{
+                                    text-transform: capitalize;
+                                    font-size: 14px;
+                                    padding: 12px 9px;
+                                    font-family:'Montserrat-SemiBold';
+                                }
+                            }
+                        }
+                    }
+            }
+            .blog-top-text{
+                width: 30%;
+                padding-left: 30px;
+            }
+    }
+}
+
+// line strip
+
+.line-strip{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: $borderLightBlue;
+    position: relative;
+    text-align: center;
+       p{
+       
+        font-size: $fs14;
+       }
+}
+
+// 
+.edto-about-page-name-wrapper{
+    width: 100%;
+    background-color: $bgLightyellow;
+    position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #F2F7FF;
+        }
+}
+
+
+
+// small text
+
+small{
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 30px 0px;
+}
+.edto-testimonial-main-wrapper {
+    width: 100%;
+    padding: 30px 0px;
+        .center-btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            .edto-btn-primary{
+                text-align: center;
+            }
+        }
+        
+}
+.testimonial-wrapper{
+    width: 100%;
+    padding: 30px 0px 0px;
+        .new-testi-main-box{
+            flex-wrap: wrap;
+            .test-main-box{
+                width: 48%;
+            }
+        }
+}
+
+// about us slider
+
+.history-container { 
+    padding: 22px 12px 22px; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .history-text-wrapper{
+    width: 30%;
+  }
+  .history-container .card {
+    width: 70%; 
+    // margin: auto; 
+    border-radius: 10px;
+    box-shadow: 0 1px 10px 1px #00000033;
+    flex: 1;
+  }
+  .history-container .card-body { 
+    padding: 0px 15px; 
+  }
+  .history-container .card-data-wrapper { 
+    display: flex; 
+    align-items: center;
+  }
+  .history-container .card-image {
+   margin-right: 15px;
+   border-right: 1px solid $borderLightGrey;
+   padding: 12px;
+    }
+  .history-container .log-icon {
+   
+  }
+  .history-container .data-heading {
+   font-size: $fs28; 
+   font-family:'Montserrat-SemiBold';
+   margin-bottom: 5px; 
+   line-height: 30px;
+  }
+  .history-container .data-text {
+  
+   font-size: 16px; 
+   
+  }
+  .aboutslider .history-container .card-image img{
+    width: inherit;
+  }
+ 
+   /* background-color: #c00; */
+   .slick-slide h3 {   
+  margin: .5rem; 
+  padding: 2%; 
+  position: relative; 
+  text-align: center; 
+  font-size: 16px; 
+  color: $textsub-title; 
+  }
+  .history-container .card-data {
+   padding: 15px 24px; 
+  }
+  .slider-multiple-wrapper {
+   background-color: $borderLightBlue; 
+  }
+  .slider-multiple {
+   padding: 5px 0; 
+  
+  }
+  .slider-single h3 {
+   line-height: 10rem; 
+  }
+  
+  /* .slider-nav h3::before {
+    content: "";
+    display: block;
+  padding-top: 75%;
+  padding-top: 15px;
+  } */
+  .slider-nav h3 span {
+   position: absolute; 
+   top: 50%; 
+   left: 50%; 
+   transform: translate(-50%, -50%); 
+  }
+  .slider-nav .slick-slide {
+   cursor: pointer; 
+  }
+  .slick-slide.is-active h3 {
+   color: yellow; background-color: #fff 
+  }
+  .slider-multiple .slick-current h3 {
+    font-family:'Montserrat-SemiBold';
+   color: #262626; 
+  }
+  .section-header .section-subheading {
+   font-family: 'Montserrat-Medium'; 
+   font-size: 18px;
+  color: #5b5b5b; 
+  }
+  .slider-multiple .slick-next {
+   right: 100px; 
+  }
+  .slider-multiple .slick-prev {
+   left: 125px; 
+  }
+  .slider-multiple .slick-list {
+   margin: 0 150px; 
+  }
+  .view-all-stories { margin-top: 25px }
+  .js .slider-single > div:nth-child(1n+2) { display: none }
+  .js .slider-single.slick-initialized > div:nth-child(1n+2) { display: block }
+
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+// our mantra
+
+.edto-our-mantra-main-wrapper{
+    width: 100%;
+    padding: 20px 0px;
+}
+.edto-about-block-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px 10px;
+        .edto-ideal-box{
+            box-shadow: 0 1px 10px 1px #00000033;
+                .ideal-text{
+                    padding-left: 0px;
+                    padding-right: 0px;
+                        p{
+                            a{
+                                color: $textBlue-btn;
+                            }
+                        }
+                }
+        }
+}
+
+// reason
+
+.edto-reason-main-wrapper{
+    width: 100%;
+    padding: 20px 0px;
+    .reason-main-slider{
+        .reason-box-wrapper{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+                .edto-ideal-box{
+                    .ideal-icon{
+                        img{
+                            display: initial;
+                            width: initial;
+                        }
+                    }
+                }
+        }
+        .owl-dots {
+            display: flex;
+            gap: 7px;
+            justify-content: center;
+            width: 100%;
+            
+            margin-top: 20px;
+            .owl-dot {
+                span {
+                    display: inline-block;
+                    width: 11px;
+                    height: 11px;
+                    background: #d8d8d8;
+                    border: 1px solid #979797;
+                    border-radius: 50%;
+                }
+                &.active{
+                    span{
+                        background-color: $bgBlue;
+                        border-color: $bgBlue;
+                    }
+                }
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+    }  
+}
+
+// award recognition
+
+
+.edto-award-recognition-wrapper{
+    width: 100%;
+    padding: 30px 0px 50px;
+    border-top: 1px solid $borderLightGrey;   
+}
+
+
+// out team
+
+.edto-our-team-main-wrapper{
+    width: 100%;
+    padding: 30px 0px 0px;
+    cursor: pointer;
+}
+
+// product explore
+
+.edto-produt-explore-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+
+        .product-tabs{
+            .product-tab-title{
+                
+                .nav-tabs{
+                    justify-content: center;
+                        .nav-item{
+                            .nav-link{
+                                text-transform: capitalize;
+                            }
+                        }
+                }
+            }
+            
+            
+        }
+}
+.product-slider{
+    margin-top: 30px;
+    .product-explore-box{
+        width: 100%;
+        display: flex;
+        gap: 12px;
+            .edto-product-box{
+                border: 1px solid #ccc;
+                box-shadow: none;
+                    .product-text{
+                        h3{
+                            color: $txtLightBlack;
+                        }
+                    }
+            }
+    }
+    .owl-nav{
+        display: block;
+            .owl-prev{
+                position: absolute;
+                top: 50%;
+                left: -45px;
+                    &:focus{
+                        outline: none;
+                    }
+            }
+            .owl-next{
+                position: absolute;
+                top: 50%;
+                right: -45px;
+                transform: rotateY(180deg);
+                    &:focus{
+                        outline: none;
+                    }
+            }
+    }
+}
+
+// video-sec
+
+.edto-video-main-wrapper{
+    width: 100%;
+    padding: 20px 0px 30px;  
+    border-top: 1px solid $borderLightGrey; 
+}
+
+// login screen
+
+.edto-login-main-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+    margin-top: 75px;
+    border-bottom: 1px solid $borderLightGrey;
+    background-color: $bgLightyellow;
+        .login-form-page-wrapper{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: auto;
+           
+                .login-form{
+                    width: 50%;
+                    padding: 15px;
+                    border-radius: 12px;
+                    box-shadow: $box-shadow-testi;
+                    background-color: $bgWhite;
+                        h3{
+                            color: $txtBlue;
+                        }
+                        .edto-btn-primary{
+                            margin: auto;
+                            display: flex;
+                            max-width: 150px;
+                            justify-content: center;
+                        }
+                }
+                // useful-link page
+
+                .edto-useful-links-wrapper{
+                    width: 40%;
+                        h2{
+                            padding: 16px 20px;
+                            border-bottom: 1px solid $borderLightGrey;
+                        }
+                        .series{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 7px;
+                            padding-left: 40px;
+                            padding-top: 20px;
+                                li{
+                                    list-style: disc;
+                                    a{
+                                        
+                                        color: $txtLightBlack;
+                                    }
+                                }
+                        }
+                }
+        }
+}
+
+
+.edto-inner-text{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.edto-insurance-login-wrapper{
+    width: 100%;
+    padding: 30px 0px 30px;
+        .sub-text{
+            p{
+                max-width: 735px;
+                margin: auto;
+                text-align: center;
+                padding-top: 0;
+            }
+        }
+        .edto-login-box{
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin: 30px 0px 0px;
+                .edto-ideal-box{
+                    box-shadow: 0 1px 10px 1px #00000033;
+                    .ideal-text{
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                    .ideal-icon{
+                        img{
+                            width: 65px;
+                        }
+                    }
+                }
+        }
+        .para-bold{
+            padding-top: 30px;
+        }
+}
+
+.edot-login-bound-love-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.edto-support-available-wrappper{
+    width: 100%;
+    padding: 30px 0px;
+        .center-text{
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            background-color: $bgLightyellow;
+            padding: 30px;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+                .main-icon{
+                    svg{
+                        width: 100px;
+                    }
+                }
+                .main-text{
+                    h4{
+                        padding-bottom: 3px;
+                    }
+                }
+        }
+}
+
+.edto-useful-main-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .useful-links{
+            width: 100%;
+            background-color: $bgLightyellow;
+            padding-top: 12px;
+            border-radius: 12px;
+            box-shadow: $box-shadow;
+            overflow: hidden;
+                ul{
+                    width: 100%;
+                    display: flex;
+                    padding: 35px 12px;
+                    background: $bgWhite;
+                    justify-content: space-evenly;
+                        li{
+                            
+                            a{
+                                font-size: $fs14;
+                                color: $txtGray;
+                                
+                                    &:hover{
+                                        color: $bgBlue;
+                                    }
+                            }
+                        }
+                }
+        }
+
+}
+
+// renew success
+
+.edto-renew-success-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+    margin-top: 75px;
+        .renew-bloc-wrapper{
+            max-width: 600px;
+            box-shadow: $box-shadow;
+            padding: 30px 50px;
+            border-radius: 12px;
+            margin: auto;
+        }
+        .make-pay{
+            width: 100%;
+            display: flex;
+            padding: 40px 0px 30px;
+            justify-content: center;
+                a{
+                    color: $bgBlue;
+                    font-size: $fs14;
+                }
+        }
+}
+
+// claim page 
+
+.edto-covid-teat-wrappper{
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.covid-content-wrapper{
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    padding: 12px 20px 20px;
+    background-color: $bgLightBlue;
+}
+
+.edto-claim-pilosophy-wrapper{
+    width: 100%;
+    padding: 0px 0px;
+        .philosophy-form-wrapper{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            padding: 50px 0px;
+                .submit-form-wrapper{
+                    width: 70%;
+                    border-radius: 12px;
+                    background-color: $bgWhite;
+                    box-shadow: $box-shadow-testi;
+                    padding: 33px 20px;
+                    border: 1px solid #ebebeb;
+                        .edto-btn-primary{
+                            margin: auto;
+                            display: flex;
+                            max-width: 150px;
+                            justify-content: center;
+                        }
+                }
+                .sattlement-text{
+                    width: 30%;
+                    background-color: $bgLightyellow;
+                    padding: 30px 60px;
+                    border: 2px dashed #909090;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                }
+        }
+        .form-tiles-main-wrappper{
+            width: 100%;
+            border-radius: 12px;
+            background-color: $bgWhite;
+            box-shadow: $boxShadowbtn;
+            padding: 33px 20px;
+            border: 1px solid #ebebeb;
+            margin-top: 30px;
+                .claim-upload-doc-wrapper{
+                    width: 100%;
+                    table{
+                        width: 100%;
+                            thead{
+                                padding: 12px;
+                                tr{
+                                    background-color: $borderLightGrey;
+                                        th{
+                                            padding: 12px;
+                                        }
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    border-bottom: 1px solid $borderLightGrey;
+                                    td{
+                                        padding: 12px;
+                                        	&:last-child {
+	                                        	max-width: 200px;
+	                                        }
+                                    }
+                                }
+                            }
+                    }
+                }
+        }
+}
+
+.edto-cliam-process-wrapper{
+    width: 100%;
+}
+
+
+.edto-document-sub-tabs-wrapper{
+    width: 100%;
+    padding: 50px 0px 0px;
+    .document-tabs-wrapper{
+        .nav-tabs{
+            border-bottom: 1px solid #dee2e6;
+                .nav-item{
+                    .nav-link{
+                        text-transform: capitalize;
+                        
+                            &:hover{
+                                color: $txtBlue;
+                            }
+                    }
+                }
+        }
+        .doc-tab-body{
+            width: 100%;
+            padding: 15px 0px;
+             
+              .edto-claim-process-wrapper{
+                width: 100%;
+                padding: 30px 0px;
+                    .center-select{
+                        max-width: 300px;
+                        margin: auto;
+                            select{
+                                font-family:'Montserrat-SemiBold';
+                                font-size: $fs14;
+                                color: $textsub-title;
+                                padding: 11px 10px;
+                                height: 45px;
+                                appearance: none;
+                                position: relative;
+                                background-image: url(../images/down-arrow.svg);
+                                background-size: 16px 18px, contain;
+                                background-position: 92% 13px;
+                                background-repeat: no-repeat;
+                            }
+                    }
+              }
+              .tracking-form-wrapper{
+                width: 100%;
+                box-shadow: $boxShadowbtn;
+                border: solid 1px #ebebeb;
+                border-radius: 12px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                max-width: 850px;
+                margin: auto;
+                    input{
+                        height: 50px;
+                    }
+              }
+              .tracking-text{
+                padding-top: 30px;
+                    .mail-box{
+                        width: 100%;
+                        display: flex;
+                        gap: 30px;
+                        justify-content: center;
+                       
+                            p{
+                                span{
+                                    display: inline-block;
+                                    padding-right: 6px;
+                                }
+                            }
+                    }
+              }
+        }
+        
+    }
+}
+.claim-process-details{
+    width: 100%;
+    box-shadow: $boxShadowbtn;
+    border: solid 1px #ebebeb;
+    border-radius: 12px;
+    margin-top: 30px;
+        .claim-strip{
+            width: 100%;
+            display: flex;
+            padding: 12px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $borderLightGrey;
+                p{
+                    font-size: $fs14;
+                   
+                }
+                .download-icon{
+                    a{
+                        font-size: $fs14;
+                        display: inline-block;
+                            img{
+                                width: 12px;
+                                margin-right: 4px;
+                            }
+                    }
+                }
+                &:nth-child(even){
+                    background-color: $bgLightyellow;
+                }
+                &:last-child{
+                    border: none;
+                }
+        }
+}
+.list-content-wrapper{
+    width: 100%;
+    display: flex;
+        .left-tab-text{
+            width: 50%;
+            .para-bold{
+                padding: 10px 0px;
+                border-top: 1px solid $borderLightGrey;
+                border-bottom: 1px solid $borderLightGrey;
+                margin-bottom: 20px;
+            }
+        }
+  }
+.fire-ques-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .disclaimer-block{
+            ul{
+                li{
+                    position: relative;
+                    padding-left: 20px;
+                    padding-bottom: 6px;
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 8px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: $textsub-title;
+                        }
+                }
+            }
+            .help-text{
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                    p{
+                        padding: 0;
+                        font-size: 14px;
+                    }
+                    .down{
+                        transform: rotateX(180deg);
+                    }
+            }
+        }
+        .custom-accordian{
+            .card{
+                border-radius: 8.1px;
+                box-shadow: 0 0 8px 0 #97979787;
+                background-color: $bgWhite;
+                overflow: hidden;
+                margin-bottom: 20px;
+                    .card-header{
+                        background-color: $bgWhite;
+                        border-bottom: 0;
+                        position: relative;
+                        cursor: pointer;
+                            &:after{
+                                font-family: Fontawesome;
+                                content: '\f077';
+                                float: right;
+                                    font-size: 10px;
+                                    font-family:'Montserrat-Light';
+                                    color: $txtGray;
+                                    right: 0;
+                                    line-height: 20px;
+                            }
+                            h5{
+                                width: 100%;
+                            }
+                            &.collapsed{
+                                &:after{
+                                    font-family: Fontawesome;
+                                    content: '\f078';
+                                    float: right;
+                                    font-size: 10px;
+                                    font-family:'Montserrat-Light';
+                                    color: $txtGray;
+                                    right: 0;
+                                    line-height: 20px;
+                                }
+                            }
+                    }
+                    .card-body{
+                        padding-top: 0;
+                    }
+            }
+        }
+}
+.edto-claim-philosophy-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+    position: relative;    
+        .premium-box{
+            width: 300px;
+            background-color: $bgWhite;
+            border-radius: 4px;
+            position: absolute;
+            top: -50px;
+            left: 46%;
+            padding: 6px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px 0 #97979787;
+            display: none;
+                ul{
+                    li{
+                        padding: 10px;
+                        font-size: $fs12;
+                            span{
+                                display: inline-block;
+                                float: right;
+                                font-size: $fs18;
+                                font-family:'Montserrat-SemiBold';
+                            }
+                    }
+                    li + li{
+                        border-top: 1px solid $borderLightGrey;
+                    }
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 60px;
+                    width: 0;
+                    height: 0;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-top: 30px solid $bgWhite;
+                }
+        }
+}
+
+
+// news sing page
+.news-inner-wrapper{
+    background-image: url('../images/newsbanner.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding:60px 0px 85px 0px;
+    margin-top: 88px;
+    .news-inner-heading{
+          h1{
+            color: $txtWhite;
+            opacity: .9;
+            text-transform: uppercase;
+            font-size: 30px;
+          }
+    }
+    
+}
+.news-change-wrapper{
+    width: 100%;
+     height: 100%;
+     .change-one-box{
+        padding: 15px 60px 15px 20px;
+        border-bottom: 1px solid #e3e3e3;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        .news-common-btn{
+             margin: 0px;
+            .edto-btn-primary{
+                
+                align-items: center;
+                gap: 6px;
+                // min-width: 185px;
+                img{
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+         
+         .date-block{
+            font-size: 12px;
+            margin: 5px 0 14px;
+            color: $textsub-title;
+            opacity: .8;
+            
+                
+         }
+         .link-box{
+            margin: 20px 0px;
+            font-family:'Montserrat-SemiBold';
+             font-size: 12px;
+            a{
+                color: #317fff;
+                 text-decoration: none;
+            }
+         }
+        
+         .ul-news-list{
+              margin: 18px;
+            .bold-text{
+                font-family:'Montserrat-Bold';
+            }
+            ul{
+                list-style-type: disc;
+                li{
+                    margin-bottom: 15px;
+                }
+            }
+         }
+         .social-like-box{ 
+            position: relative;
+            ul{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                li{
+                     padding-right: 10px;
+                    .like-counter {
+                        text-decoration: none;
+                        margin-right: 2px;
+                        position: relative;
+                        img{
+                            width:18px;
+                            height: 18px;
+                        }
+                      }
+                      .liked {
+                        font-family:'Montserrat-Bold';
+                        color: $textsub-title;
+                      }
+                      .side-border{
+                        border-left:1px solid $textsub-title;
+                         padding-left: 10px;   
+                    }
+                }
+            }
+         }
+     }
+     .change-two-box{
+        width: 100%;
+        padding: 30px;
+        background-color: white;
+        border-radius: 8px;
+        margin-top: 30px;
+        box-shadow: 0px 1px 6px 0px #97979787;
+        margin-bottom: 30px;
+
+        h3{
+           font-size: $fs26;
+           font-family:'Montserrat-Bold';
+           padding-bottom: 8px;
+        }
+        .news-detail-box{
+            padding: 0px;
+            .news-gallery-1{
+                span{
+                    margin-top: 6px;
+                    display: inline-block; 
+                    font-size: 14px;
+                    
+                    font-style: italic;
+                    line-height: normal;
+                    color: #ffa35d;
+                    margin:10px 0px 6px 0px;
+                }
+                 p{
+                    font-size: 14px !important;
+                    line-height: 1.36;
+                    text-align: left;
+                    color: #3c3c3c;
+                    font-size: 18px;
+                    opacity: .9;
+                    font-family:'Montserrat-Bold';
+                    padding: 0;
+                    margin: 2px 0 0;
+                 }
+                 .news-ul{
+                    display: flex;
+                    justify-content:start;
+                    align-items: center;
+                    column-gap: 7px;
+                    color: $textsub-title;
+                    opacity: .8;
+                    font-size: 12px;
+                   
+                    margin-top: 12px;
+                 }
+            }
+        }
+     }
+}
+
+
+// register e-nach page
+
+.edto-how-register-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .video-main-wrapper{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+                .video-left-block{
+                    width: 100%;
+                    overflow: hidden;
+                        iframe{
+                            width: 100%;
+                            border-radius: 12px;
+                        }
+                }
+        }
+        .edto-journal-description{
+            padding: 30px 0px;
+        }
+}
+
+// Unclaimed amount
+
+.unclaimed-amount-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+    .wealth-form-box{
+        width: 100%;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        background-color: $bgWhite;
+        border-radius: 8px;
+            form{
+                margin-top: 30px;
+                    p{
+                        color: $txtGray;
+                        font-size: $fs14;
+                        font-family:'Montserrat-Regular';
+                        margin-bottom: 20px;
+                    }
+            }
+    }
+    .edto-ressume-form{
+        max-width: 600px;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        background-color: $bgWhite;
+        border-radius: 8px;
+        margin: auto;
+
+    }
+}
+
+// erroe page
+
+.error-banner{
+    width: 100%;
+    background-image: url(../images/404-desktop-img.jpg);
+    height: 450px;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+        .error-inner-wrapper{
+            position: relative;
+                .mob-banner{
+                    display: none;
+                        img{
+                            width: 100%;
+                        }
+                }
+            .error-text{
+                padding: 40px 0px;
+                position: absolute;
+                width: 100%;
+                
+                top: 0;
+                h1{
+                    color: $bgBlue;
+                }
+                p{
+                    font-size: $fs22;
+                }
+            }
+        }
+}
+
+// contact us
+.tabs-inner-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+}
+.branch-tiles{
+    width: 100%;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    background-color: $bgWhite;
+    border-radius: 8px;
+        form{
+            .contact-form-wrapper{
+                width: 100%;
+                display: flex;
+                gap: 15px;
+                    .form-group{
+                        width: 100%;
+                        position: relative;
+                            span{
+                                position: absolute;
+                                top: 1px;
+                                right: 4px;
+                                color: red;
+                            }
+                    }
+            }
+        }
+}
+.sms-box-wrapper{
+    box-shadow: $boxShadowbox;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: $bgWhite;
+    max-width: 320px;
+    margin-top: 20px;
+    display: none;
+        .center-btn{
+            .edto-btn-primary{
+                padding: 9px 20px;
+            }
+        }
+}
+.contact-img{
+    img{
+        width: 100%;
+    }
+}
+
+
+// site map page
+
+.edto-sitemap-wrapper{
+    width: 100%;
+    box-shadow: $box-shadow;
+    background-color: $bgWhite;
+    border-radius: 8px;
+    margin-bottom: 30px;
+        .title-name{
+            padding: 15px 20px;
+            background-color: $bgLightyellow
+        }
+        .inner-sitemap{
+            padding: 20px 20px 20px;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+               flex-direction: inherit;
+                li{
+                    width: 33%;
+                        a{
+                            color: $txtGray;
+                            font-size: $fs14;
+                        }
+                        &:before{
+                            width: 7px;
+                            height: 7px;
+                            top: 7px;
+                        }
+                }
+            }
+        }
+}
+
+// career page
+
+.edto-career-main-wrapper{
+    width: 100%;
+        .edto-carrer-banner{
+            width: 100%;
+            background-image: url('../images/careerpage-banner.jpg');
+            height: 345px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+                .banner-text{
+                    width: 100%;
+                    padding: 50px 0px 0px;
+                    transform: translate(0px, 18%);
+                        h4{
+                            font-size: $fs20;
+                            font-family:'Montserrat-SemiBold';
+                        }
+                        .mob-img{
+                            display: none;
+                        }
+                }
+        }
+}
+
+.edto-why-join-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+    text-align: center;
+        p{
+           padding: 0px 100px;
+        }
+        .edto-about-block-wrapper{
+                .edto-ideal-box{
+                    box-shadow: none;
+                    .ideal-text{
+                        p{
+                            padding: 20px 0px 0px 0px;
+                        }
+                    }
+                }
+        }
+}
+.edto-virtual-icon-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .virtualbox{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+           
+                .virtualtext{
+                    width: 60%;
+                    padding-right: 12px;
+                }
+                .virtualimg{
+                    width: 40%;
+                        img{
+                            width: 100%;
+                        }
+                }
+        }
+}
+
+.social-meadia{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+        li{
+            a{
+                img{
+                    width: 35px;
+                }
+            }
+        }
+}
+
+
+
+
+
+// cricket page css start
+
+.edto-inner-page-banner{
+    width: 100%;
+    margin-top: 88px;
+        .inner-slider{
+            width: 100%;
+            position: relative;
+                .caption{
+                    position: absolute;
+                    top: 25%;
+                    left: 70px;
+                    padding: 30px;
+                        h2{
+                            color: $txtWhite;
+                            text-transform: uppercase;
+                            font-family:'Montserrat-SemiBold';
+                        }
+                }
+                .mob-banner{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                }
+        }
+}
+
+
+// life insurance
+
+.edto-life-insurance-main-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .inner-slide{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .blog-text{
+                position: absolute;
+                top: 31%;
+                
+                h1 {
+                    font-size: $fs30;
+                    max-width: 600px;
+                    padding-bottom: 6px;
+                    font-family:'Montserrat-Bold';
+                }
+            }
+            
+            .mob-banner{
+                img{
+                    display: none;
+                }
+            }
+        }
+        .life-insu-inner-banner{
+            position: relative;
+            .life-insu-text{
+                position: absolute;
+                top: 31%;
+            }
+           
+        }
+       
+        
+}
+.mob-text{
+    display: none;
+}
+.edto-menu-content-main-wrapper{
+    width: 100%;
+    padding: 30px 0px 0px;
+    border-bottom: 1px solid $borderLightGrey;
+        .product-nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+                ul{
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                        li{
+                            a{
+                                padding: 12px 10px;
+                                color: $txtGray;
+                                font-size: $fs14;
+                                display: inline-block;
+                            }
+                            &.active{
+                                a{
+                                    color: $bgBlue;
+                                    border-bottom: 2px solid $bgBlue;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        
+                }
+                .start-btn{
+                    a{
+                        display: inline-block;
+                        background-color: $bgBlue;
+                        color: $txtWhite;
+                        border-radius: 50px;
+                        font-size: $fs14;
+                        min-width: 120px;
+                        text-align: center;
+                        height: 35px;
+                        line-height: 35px;
+                    }
+                }
+                
+        }
+        &.sticky{
+            position: fixed;
+            top: 60px;
+            background-color: #fff;
+            z-index: 10;
+        }
+}
+
+.edto-life-plans-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        h2{
+            margin-bottom: 20px;
+        }
+        .edto-blog-insurance-wrapper{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+                .insurance-content{
+                    width: 60%;
+                    padding-right: 30px;
+                        .bullet-list{
+                            li{
+                                margin-bottom: 30px;
+                            }
+                        }
+                }
+                .insurance-img{
+                    width: 40%;
+                        img{
+                            width: 100%;
+                        }
+                }
+        }
+}
+.edto-benefit-wrapper{
+    width: 100%;
+    padding-bottom: 30px;
+    .insurance-bloxk-wrapper{
+        
+    }
+}
+.insurance-bloxk-wrapper{
+    .award-main-wrapper{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+            .edto-award-box{
+                width: 48%;
+                .award-img{
+                    // background-color: $bgLightBlack;
+                    padding: 10px;
+                    border-radius: 8px;
+                    img{
+                        width: 90px;
+                        height: 80px;
+                    }
+                }
+            }
+    }
+}
+
+.edto-save-tax-main-wrapper{
+    .edto-box-main-wrapper{
+        .edto-box-slider{
+            .edto-ideal-box{
+                height: 234px;
+                .ideal-text{
+                    padding-top: 0;
+                    p{
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+// 
+.edto-why-buy-main-wrapper{
+    width: 100%;
+        .edto-about-block-wrapper{
+            flex-wrap: wrap;
+            justify-content: center;
+                .edto-ideal-box{
+                    width: 32%;
+                }
+        }
+        .custom-tble-wrapper{
+            table{
+                .bgLightgry {
+                    background-color: #d2d2d2 !important;
+                }
+                .bgWhite {
+                    background-color: $bgWhite !important;
+                }
+            }
+        }
+}
+
+// 
+.edto-step-by-main-wrapper{
+    width: 100%;
+       
+}
+.know-terms-card{
+    width: 100%;
+    padding: 12px;
+    box-shadow: $box-shadow-testi;
+    border-radius: 12px;
+    border-left: 5px solid $borderOrange;
+    margin-bottom: 12px;
+}
+
+
+// tesimonial news
+
+.edto-new-testimonial-wrapper {
+    width: 100%;
+    padding: 30px 0px;
+}
+.testi-slider{
+    .new-testi-main-box{
+        .test-main-box{
+            width: 100%;
+        }
+    }
+    .owl-nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 17px;
+            button{
+                &:focus{
+                    outline: none;
+                }
+            }
+            .owl-prev{
+                position: absolute;
+                left: 41%;
+            }
+            .owl-next{
+                position: absolute;
+                right: 41%;
+                transform: rotateY(180deg);
+            }
+    }
+    .owl-dots{
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7px;
+        .owl-dot{
+            span{
+                width: 11px;
+                height: 11px;
+                border: 1px solid $borderLightGrey;
+                background-color: $borderLightGrey;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        .active{
+            span{
+                background-color: $bgOrange;
+                border: 1px solid $bgOrange;
+            }
+        }
+    }
+}
+.new-testi-main-box{
+    width: 100%;
+    display: flex;
+    gap: 22px;
+       
+}
+.test-main-box{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: $bgWhite;
+    border: 1px solid $borderLightGrey;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    overflow: hidden;
+    padding: 40px;
+        .new-testi-img{
+            border: 3px solid $borderLightGrey;
+            display: flex;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            span{
+                
+            }
+        }
+        .new-testi-text{
+            position: relative;
+            width: calc(100% - 120px);
+            p{
+                padding-bottom: 12px;
+                &:before{
+                    background-image: url("../images/quote-right.svg");
+                    background-repeat: no-repeat;
+                    content: "";
+                    display: inline-block;
+                    float: left;
+                    height: 18px;
+                    width: 18px;
+                    margin-right: 5px;
+                    opacity: .3;
+                }
+                &:after{
+                    background-image: url("../images/quote-left.svg");
+                    background-repeat: no-repeat;
+                    content: "";
+                    display: inline-block;
+                    height: 18px;
+                    width: 18px;
+                    margin-left: 10px;
+                    opacity: .3;
+                    vertical-align: top;
+                }
+                a{
+                    color: $textBlue-btn;
+                }
+            }
+        }
+}
+.edto-annual-wrapper{
+    width: 100%;
+    padding: 30px;
+        .nav-tabs{
+            border-bottom: 1px solid $borderLightGrey;
+        }
+}
+.public-disclouse{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.edto-rider-main-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+        .rider-content{
+            width: 50%;
+            
+        }
+        .rider-icon{
+            display: flex;
+            justify-content: end;
+            width: 50%;
+                .pdf-text{
+                    width: 200px;
+                    text-align: center;
+                }
+        }    
+}
+
+// wealth plus buy
+
+.wealth-small-text {
+    margin-top: 68px;
+    width: 100%;
+    padding: 6px 0px;
+    background: $bgWhite;
+       
+}
+
+.edto-wealth-plus-buy-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.edto-wealth-inner-wrapper {
+    width: 100%;
+    display: flex;
+        .wealth-form-box{
+            width: 67%;
+            padding: 20px;
+            box-shadow: $box-shadow;
+            background-color: $bgWhite;
+            border-radius: 8px;
+            .edto-bullet1{
+                li{
+                    font-size: $fs12;
+                }
+            }
+            p{
+                font-size: $fs14;
+                font-family:'Montserrat-Bold';
+                padding-bottom: 6px;
+            }
+          
+        }
+        .wealth-text-sec{ 
+            width: 33%;
+            padding: 0px 30px;
+                h4{
+                    border-bottom: 1px dashed $borderLightGrey;
+                }
+        }
+}
+.wealth-text-slider{
+    border-bottom: 1px dashed $borderLightGrey;
+    padding-bottom: 20px;
+    .wealth-text-box{
+        text-align: center;
+        padding: 20px;
+        .wealth-text-icon{
+            span{
+                width: 80px;
+                height: 80px;
+                padding: 6px;
+                background-color: $bgWhite;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                box-shadow: $box-shadow;
+                    img{
+                        width: 50px;
+                    }
+            }
+        }
+    }
+    .owl-dots{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+       
+		.owl-dot{
+			display: block;
+				span{
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background: $borderLightGrey;
+					border: 1px solid $borderLightGrey;
+					display: inline-block;
+				}
+				&:focus{
+					outline: none;
+				}
+				&.active{
+					span{
+						background: $txtBlue;
+                        border-color: $txtBlue;
+					}
+				}
+		}
+	}
+    &.top-border{
+        border-top: 1px dashed $borderLightGrey;
+    }
+}
+
+
+// awards page
+
+.edto-award-banner-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        .award-banner{
+            width: 100%;
+            position: relative;
+               img{
+                width: 100%;
+               }
+                .award-text{
+                    padding: 35px;
+                    position: absolute;
+                    top: 0;
+                    width: 50%;
+                        h2{
+                            color: $txtWhite;
+                        }
+                        p{
+                            color: $txtWhite;
+                            font-family:'Montserrat-Regular';
+                        }
+                        .date{
+                            color: $bgLightgry;
+                            padding-top: 12px;
+                            font-size: $fs14;
+                        }
+                }
+                .award-mob-img{
+                    display: none;
+                }
+        }
+}
+
+
+
+.carres-footer{
+    width: 100%;
+    padding: 0px 0px 35px;
+        h2{
+            padding: 26px 0px;
+        }
+        .center-btn{
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+}
+
+
+/*18-01-2023*/
+.inner-content {
+
+
+    p {
+        color: $txtBlack;
+    }
+}
+
+.edelweissTokioDetails {
+    background-color: $bgLightBlack;
+
+    .edelweissTokioDetailsInner {
+        .edelweissTokioHeading {
+            h5 {
+                font-size: $fs16;
+                color: #034EA2;
+                margin-right: 15px;
+            }
+            h4 {
+                font-size: $fs16;
+                color: #034EA2;
+                margin-right: 15px;
+                display: none;
+            }
+        }
+        .editModel{
+            margin-left: auto;
+        }
+        .mob-text{
+            display: none;
+        }
+        .edelweissTokioFormDetails {
+            ul {
+                li {
+                    padding: 0 15px;
+                    font-size: $fs14;
+                    color: #3c3c3c;
+                    border-right: 1px solid #e2e2e2;
+                    font-family:'Montserrat-Bold';
+                }
+            }
+        }
+    }
+}
+
+.labelInputGroup {
+    .pform-title {
+        font-size: $fs16;
+        color: $textsub-title;
+    }
+
+    .premiuim-small-text {
+        color: $txtBlack;
+        font-size: 11px;
+        font-family:'Montserrat-Medium';
+    }
+    .select-container {
+        select{
+            font-size: 14px;
+        }
+    }
+
+}
+.tokio-tbl-detail{
+    .table{
+        thead{
+            th{
+                font-size: 12px;
+            }
+        }
+        tbody{
+            td{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.edelweissFormInner {
+    .edelweissTokioForm {
+        width: 76%;
+        padding: 0 15px;
+    }
+
+    .edelweissTokioTotalReturns {
+        width: 25%;
+        background-color: $bgLightyellow;
+    }
+}
+.edelweissForm {
+    width: 100%;
+    border-bottom: 1px solid $borderLightGrey;
+    padding-bottom: 14px;
+}
+.labelInputGroup {
+    padding: 10px 0;
+
+    .pos {
+        display: flex;
+        gap: 6px;
+        border-bottom: 1px solid #ced4da;
+        align-items: baseline;
+
+        &:focus {
+            border-bottom: 1px solid #ced4da;
+        }
+        label{
+            font-size: 14px;
+        }
+        input{
+            font-size: 14px;
+        }
+    }
+
+    .amt-words {
+        font-size: 16px;
+        color: #c7c7c7;
+        padding-top: 8px;
+    }
+}
+
+
+.select-container {
+    select {
+        border: 0;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        padding: 0;
+
+        &:focus {
+            border-bottom: 1px solid #ced4da;
+        }
+    }
+}
+
+.download-brochure {
+    .rise-plus-brochure {
+        font-size: $fs12;
+        cursor: pointer;
+        line-height: 1.2;
+        display: block;
+        color: #317fff;
+        transition: all .2s ease-in-out;
+    }
+
+    .premium-form-header {
+        .title {
+            font-size: 15px;
+            color: #3c3c3c;
+            padding: 3px 0;
+        }
+
+        .sub-title {
+            font-size: 11px;
+            color: $textsub-title;
+        }
+    }
+
+    .histy-amt-wrpr {
+        .histy-amt-content {
+            .return-amt {
+                margin-top: 0;
+                margin-bottom: 12px;
+                font-size: $fs28;
+                font-family:'Montserrat-SemiBold';
+            }
+        }
+    }
+}
+
+.download-brochure {
+    background-color: $bgLightyellow;
+    padding: 10px 15px 15px;
+
+    .button-wrap {
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        display: flex;
+        .totalnav-dropwdown {
+            width: 100%;
+
+            .labelInputGroup {
+                .select-container {
+                    select {
+                        background-color: $bgLightyellow;
+                    }
+                }
+            }
+        }
+
+        .btn-button-lg {
+            text-transform: uppercase;
+            padding: 10px 20px;
+            box-shadow: 1px 13px 0 rgba(0, 0, 0, 0.13);
+            border: 0;
+            font-size: $fs14;
+            line-height: 18px;
+            letter-spacing: .6px;
+            border-radius: 30px;
+        }
+    }
+}
+
+.fund-equity250-header {
+    .fund-equity250-inner {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 18px;
+
+        .fund-equity250-heading-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .fund-equity250-content {
+                .recomendedFundsStrongTag {
+                    font-size: 24px;
+                    color: #034EA2;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+.edto-capital-secure-wrapper{
+    width: 100%;
+    padding: 30px 0px;
+        h5{
+            color: $txtBlue;
+        }
+}
+.capital-inner-wrappper{
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-right: 2px dashed #ccc;
+            top: 0;
+        }   
+}
+.capital-box{
+    width: 412px;
+    background-color: $bgWhite;
+    box-shadow: $boxShadowbox;
+    border-radius: 8px;
+    
+        .top-tag{
+            width: 282px;
+            margin: 0 auto;
+            background-color: $bgBlue;
+            text-align: center;
+            padding: 12px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+                h4{
+                    color: $txtWhite;
+                }
+        }
+        .capital-text{
+            width: 100%;
+            padding: 12px 12px 0px;
+            display: flex;
+            justify-content: space-between;
+                .para1{
+                    width: 60%;
+                    font-size: $fs16;
+                }
+                h4{
+                    font-size: $fs16;
+                }
+                .equity-card-right{
+                    width: 50%;
+                    select{
+                        border: 0;
+                        font-family: 'Montserrat-Regular';
+                    }
+                }
+        }
+        .total-annum {
+            text-align: center;
+            padding: 20px 0px;
+            background-color: $bgLightyellow;
+            margin-top: 20px;
+        }
+        .total-return {
+            text-align: center;
+            padding: 20px 8px;
+            background-color: $borderLightBlue;
+            margin-top: 20px;
+                h4{
+                    color: $txtBlue;
+                }
+                h2{
+                    color: $txtBlue;
+                }
+        }
+        .pluse-icon{
+            text-align: center;
+            padding: 12px 0px;
+        }
+}
+
+
+
+
+
+
+
+
+.table-allocation-wrapper {
+    overflow: hidden;
+    width: 100%;
+    .table-responsive {
+        .table {
+            thead {
+                background: #f2f2f2;
+
+                tr {
+                    border-bottom: 0 !important;
+
+                    th {
+                        font-size: $fs12;
+                        &:first-child {
+                            border-top-left-radius: 0px;
+                        }
+
+                        &:last-child {
+                            border-top-right-radius: 0px;
+                        }
+
+                        &:nth-child(5) {
+                            background-color: #dfdfdf;
+                        }
+
+                        &:nth-child(6) {
+                            background-color: #dfdfdf;
+                        }
+                    }
+
+                    &:last-child {
+                        th {
+                            padding-top: 0;
+
+                            .select-container {
+                                select {
+                                    background-color: transparent;
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                background-color: #dfdfdf;
+                            }
+
+                            &:nth-child(6) {
+                                background-color: #dfdfdf;
+                            }
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        position: relative;
+                        vertical-align: middle;
+                        font-size: 12px;
+                        .first-line {
+                            display: block;
+                            font-size: $fs12;
+                        }
+
+                        .second-line {
+                            display: block;
+                            font-size: 11px;
+                            color: #999;
+                            line-height: 20px;
+                        }
+
+                        // .cs-color-ETTFD {
+                        //     position: absolute;
+                        //     background-color: #ffb6b2;
+                        //     display: block;
+                        //     height: 70%;
+                        //     left: 0;
+                        //     width: 4px;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);
+                        // }
+
+                        .vi-item-input-group {
+                            width: 150px;
+
+                            .input-group-prepend {
+                                .input-group-text {
+                                    border: 1px solid #ec703a;
+                                }
+                            }
+
+                            .form-control {
+                                border: 1px solid #ec703a;
+                                border-left: 0;
+                                border-right: 0;
+                            }
+
+                            .input-group-append {
+                                .input-group-text {
+                                    border: 1px solid #ec703a;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            border-bottom-left-radius: 0px;
+                        }
+
+                        &:last-child {
+                            border-bottom-right-radius: 0px;
+                        }
+
+                        &:nth-child(5) {
+                            background-color: #f5f5f5;
+                        }
+
+                        &:nth-child(6) {
+                            background-color: #f5f5f5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .table-dark-bg {
+//     background-color: #dfdfdf;
+// }
+
+.allocation-bar {
+    background: #fff;
+    width: 20px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse;
+    border: solid 1px #c9c9c9;
+    margin: 72px auto 0;
+}
+.customize-fund-wrapper {
+    margin-bottom: 22px;
+}
+.customize-fund-wrapper,
+.progress-allocation-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.customize-fund-wrapper {
+    display: none;
+}
+
+.customize-fund-wrapper.active {
+    display: flex;
+}
+
+.allocation-bar .color-ELCFD,
+.equity-section-tbody .cs-color-ELCFD {
+    background-color: #ffb6b2;
+}
+
+.allocation-bar .color-ETTFD,
+.equity-section-tbody .cs-color-ETTFD {
+    background-color: #ff9aa2;
+}
+
+.allocation-bar .color-BNDFD,
+.equity-section-tbody .cs-color-BNDFD {
+    background-color: #ffdac1;
+}
+
+.allocation-bar .color-EMCFD,
+.equity-section-tbody .cs-color-EMCFD {
+    background-color: #f4d7d7;
+}
+
+.allocation-bar .color-MGFND,
+.equity-section-tbody .cs-color-MGFND {
+    background-color: #e1f0cb;
+}
+
+.allocation-bar .color-GLTFD,
+.equity-section-tbody .cs-color-GLTFD {
+    background-color: #b4ead7;
+}
+
+.allocation-bar .color-EBCFD,
+.equity-section-tbody .cs-color-EBCFD {
+    background-color: #c7cdea;
+}
+
+
+.edelweiss-tokio-life-tab {
+    overflow: auto;
+    height: 390px;
+    padding-right: 10px;
+        /* width */
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                border: 1px solid #dbdbdb !important;
+                border-radius: 8px !important;  
+                margin-bottom: 10px;          
+                .tokio-tab-heading {
+                    display: flex;
+                    gap: 8px;
+                    .tokio-dots-left{
+                        .tokio-dots {
+                            background-color: $bgBlue;
+                            border-radius: 50%;
+                            display: inline-block;
+                            height: 8px;
+                            width: 8px;
+                        }
+                    }
+                    .tokio-tab-txt {
+                        h5 {
+                            font-size: 14px;
+                            font-family:'Montserrat-SemiBold';
+                            margin-bottom: 6px;
+                        }
+                        p{
+                            font-size: 12px;
+                            color: $textsub-title;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                .tokio-dots-right{
+                    display: flex;
+                    align-items: center;
+                    display: none;
+                }
+                &.active {
+                    border: 1px solid $bgBlue !important;
+                    font-family:'Montserrat-Regular';
+                    color: $textsub-title !important;
+                    .tokio-tab-heading {
+                        .tokio-tab-txt {
+                            h5 {
+                                color: $txtBlue;
+                            }
+                        }
+                    }
+                    .tokio-dots-right{
+                        display: flex;
+                    }
+                }
+                &:focus{
+                    border: 1px solid $bgBlue !important;
+                }
+            }
+        }
+    }
+}
+
+.tab-pane-img{
+    text-align: center;
+    padding: 40px 0;
+}
+.edelweiss-tokio-life-tab-content{
+    .tab-content{
+        .tab-pane {
+            .tokio-life-tab-pane{
+                .tokio-tab-pane{
+                    display: flex;
+                    justify-content: end;
+                    .nav-tabs{
+                        border: 1px solid $borderBlue;
+                        border-radius: 50px;
+                        .nav-item{
+                            .nav-link{
+                                padding: 5px 12px;
+                                background: #fff;
+                                border: 0 !important;
+                                &.active{
+                                    background: $bgBlue;
+                                    svg{
+                                        g{
+                                            fill: #fff;
+                                            stroke:#fff;
+                                        }
+                                    }
+                                }
+                            }
+                            &:first-child{
+                                    
+                                    .nav-link{
+                                        border-top-left-radius: 50px !important;
+                                        border-bottom-left-radius: 50px !important;
+                                        &.active{
+                                        border-top-left-radius: 50px !important;
+                                        border-bottom-left-radius: 50px !important;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                    
+                                    .nav-link{
+                                        border-top-right-radius: 50px !important;
+                                        border-bottom-right-radius: 50px !important;
+                                        &.active{
+                                        border-top-right-radius: 50px !important;
+                                        border-bottom-right-radius: 50px !important;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edto-policy-renew-wrapper {
+    width: 100%;
+    padding: 0px 0px 50px;
+    .edto-about-block-wrapper{
+        .edto-ideal-box{
+            position: relative;
+            .ideal-text{
+                // height: 140px;
+            }
+        }
+    }
+}
+
+// new product single page
+.ideal-partner{
+    h2{
+        padding-bottom: 30px !important;
+    }
+}
+.need-expert-wrapper{
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: $bgLightBlue;
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        .text-expert{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            span{
+                display: block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $bgWhite;
+                text-align: center;
+                line-height: 56px;
+            }
+            h2{
+                padding-bottom: 0px !important;
+            }
+        }
+}
+
+.edto-reason-bound-wrapper{
+    width: 100%;
+    background-color: $bgBlue;
+    padding: 50px 0px;
+        h2{
+            color: $txtWhite;
+        }
+        .edto-about-block-wrapper{
+            padding: 0;
+                .edto-ideal-box{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                        .ideal-text{
+                            padding-top: 0;
+                            text-align: left;
+                                p{
+                                    padding-top: 0;
+                                }
+                        }
+                }
+        }
+}
+
+.customers-wrapper{
+    .testi-slider{
+        margin-top: 30px;
+    }
+}
+.faqs-wrapper{
+    .video-slider-main-wraper{
+        padding: 0px 0px 30px;
+    }
+    .edto-panel-group{
+        margin-bottom: 30px;
+    }
+}
+
+
+// all product page css
+
+.edto-product-inner-top-wrapper{
+    width: 100%;
+    padding: 30px 0px 90px;
+    background-color: $bgBlue;
+        h2{
+            color: $txtWhite;
+            padding-bottom: 20px;
+        }
+}
+
+.edto-all-product-main-wrapper{
+    width: 100%;
+    position: relative;
+    z-index: 11;
+    margin-top: -80px;
+        // .edto-posi-form-wrapper{
+        //     .secure-life-form-wrapper{
+        //         .form-group{
+        //             width: inherit;
+        //         }
+        //         .edto-btn-primary{
+        //             width: inherit;
+        //             text-align: center;
+        //         }
+        //     }
+        // }
+}
+.edto-body-content-wrapper {
+    width: 100%;
+    padding: 30px 0px;
+        .edto-man-box-wrapper{
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            padding-bottom: 30px;
+                
+                .product-list-main-wrapper{
+                    width: 70%;
+                        .filter-main-box-wrapper{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 30px;
+                                .search-box{
+                                    width: 40%;
+                                    position: relative;
+                                        input{
+                                            background-color: $bgLightBlue;
+                                            border-color: $bgLightBlue;
+                                            padding-left: 35px;
+                                        }
+                                        span{
+                                            position: absolute;
+                                            top: 6px;
+                                            left: 9px;
+                                        }
+                                }
+                                .right-side-product-menubar{
+                                    display: flex;
+                                    gap: 12px;
+                                        .nav-tabs{
+                                            display: flex;
+                                            gap: 12px;
+                                            .nav-item{
+                                                .nav-link{
+                                                    border: 1px solid $txtGray !important;
+                                                    padding: 6px 9px !important;
+                                                    border-radius: 4px !important;
+                                                    span{
+                                                        svg{
+                                                            fill: $txtGray;
+                                                        }
+                                                    }
+                                                        &.active{
+                                                            border: 1px solid $bgBlue !important;
+                                                            background-color: $bgBlue;
+                                                                span{
+                                                                    svg{
+                                                                        fill: $txtWhite;
+                                                                    }
+                                                                }
+                                                        }
+                                                }
+                                            }
+                                        }
+                                        .select-drop{
+                                            width: 160px;
+                                            select{
+                                                font-size: 0.875rem;
+                                                color: #8e8e8e;
+                                                padding: 0px 10px;
+                                                height: 38px;
+                                                appearance: none;
+                                                position: relative;
+                                                background-image: url(../images/down-arrow.svg);
+                                                background-size: 16px 18px, contain;
+                                                background-position: 92% 10px;
+                                                background-repeat: no-repeat;
+                                            }
+                                        }
+                                }
+                        }
+                        
+                        .multi-grid-product{
+                            width: 100%;
+                            display: flex;
+                            gap: 24px;
+                            flex-wrap: wrap;
+                                .product-listing-main-wrapper{
+                                    flex-direction: column;
+                                    width: 31%;
+                                    margin-bottom: 0;
+                                    
+                                        .listing-img{
+                                            width: 100%;
+                                                .p-img{
+                                                    width: 100%;
+                                                }
+                                        }
+                                        .p-btn{
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            flex-direction: column;
+                                            text-align: center;
+                                            row-gap: 12px;
+                                        }
+                                }
+                        }
+
+                }
+
+        }
+        .edto-online-policy-main-wrapper{
+            width: 100%;
+            padding: 30px 0px;
+            background-color: $bgLightBlue;
+                .edto-multi-online-wrapper{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-top: 60px;
+                        .multi-box-card{
+                            width: 20%;
+                            text-align: center;
+                            padding: 12px;
+                            position: relative;
+                                .multi-card-icon{
+                                    margin-bottom: 10px;
+                                }
+                                &:after{
+                                    content: '';
+                                    background-image: url('../images/connecting-line.svg');
+                                    background-repeat: no-repeat;
+                                    position: absolute;
+                                    width: 157px;
+                                    height: 38px;
+                                    top: -25px;
+                                    left: 170px;
+                                    z-index: 1;
+                                }
+                                &:last-child{
+                                    &:after{
+                                        display: none;
+                                    }
+                                }
+                        }
+                }
+        }
+}
+.sidebar-panel-wrapper{
+    background-color: $bgWhite;
+    box-shadow: 1px 4px 20px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    width: 30%; 
+        .sidebar-bar{
+            padding: 20px;
+            border-bottom: 1px solid $borderLightGrey;
+        }
+        .product-select-box{
+            padding: 20px;
+            .form-group{
+                width: 100%;
+                padding-bottom: 8px;
+                margin-bottom: 0;
+                input {
+                    padding: 0;
+                    height: initial;
+                    width: initial;
+                    margin-bottom: 0;
+                    display: none;
+                    cursor: pointer;
+                }
+                label {
+                    position: relative;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: $fs14;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0;
+                        &:before{
+                            content: '';
+                            -webkit-appearance: none;
+                            background-color: #EFEFEF;
+                            border: 1px solid #EFEFEF;
+                            padding: 8px;
+                            display: inline-block;
+                            position: relative;
+                            cursor: pointer;
+                            margin-right: 10px;
+                        }
+                }
+                input:checked+label:before {
+                    background-color: #EFEFEF;
+                    border: 1px solid #EFEFEF;
+                }
+                input:checked+label:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 3px;
+                    left: 6px;
+                    width: 6px;
+                    height: 11px;
+                    border: solid $txtLightBlack;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                  }
+            }
+        }     
+}
+.product-listing-main-wrapper{
+    width: 100%;
+    background-color: $bgWhite;
+    border-radius: 15px;
+    box-shadow: 1px 4px 20px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+        .listing-img{
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            row-gap: 16px;
+            .p-img{
+                width: 168px;
+                height: 149px;
+                line-height: 149px;
+                text-align: center;
+                background-color: $bgLightBlue;
+                border-radius: 10px;   
+                padding: 0; 
+            }
+            .p-btn{
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                    .edto-btn-link{
+                        font-size: $fs14;
+                    }
+            }
+        }
+        .listing-text{
+            padding-top: 15px;
+            .edto-bullet1{
+                row-gap: 5px;
+                    li{
+                        font-size: $fs12;
+                        color: $txtLightBlack;
+                    }
+            }
+        }
+        &.seller-tag{
+            position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    background-image: url('../images/tag.png');
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    width: 109px;
+                    height: 21px;
+                    left: 0;
+                }
+        }
+}
+
+
+
+
+
+
+// new pages css 
+
+.bonus-rates-table {
+    .table {
+        text-align: center;
+
+        thead {
+            border: solid 1px #dbdbdb;
+
+            tr {
+                th {
+                    vertical-align: middle;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    padding: 6px;
+                }
+
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    vertical-align: middle;
+                    border: solid 1px #dbdbdb;
+                    font-size: 14px;
+                    padding: 6px;
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom-left-radius: 0px !important;
+                        border-bottom-right-radius: 0px !important;
+                    }
+                }
+
+                th {
+                    vertical-align: middle;
+
+                    &:first-child {
+                        border-left: solid 1px #dbdbdb;
+                    }
+
+                    &:last-child {
+                        border-right: solid 1px #dbdbdb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tblGray {
+    background-color: #d2d2d2;
+}
+
+.tblDark {
+    background-color: #f2f2f2;
+}
+
+.tblWhite {
+    background-color: #fff;
+}
+
+.tblPink {
+    background-color: #fff6e1;
+}
+
+.simplified-claim-process-table {
+    .table {
+        text-align: center;
+
+        thead {
+            tr {
+                th {
+                    padding: 6px;
+                    border-left: solid 1px #e9e7e7;
+                }
+
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: solid 1px #dbdbdb;
+                    font-size: 14px;
+                    padding: 6px;
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom-left-radius: 0px !important;
+                        border-bottom-right-radius: 0px !important;
+                    }
+                }
+
+                th {
+                    &:first-child {
+                        border-left: solid 1px #dbdbdb;
+                    }
+
+                    &:last-child {
+                        border-right: solid 1px #dbdbdb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-parameter-table {
+    .table {
+        &.table-bordered {
+            border: 1px solid #dee2e6 !important;
+        }
+
+        thead {
+            tr {
+
+                th {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    background-color: #fff;
+                    width: 50%;
+                    border: 1px solid #dee2e6 !important;
+                    font-size: $fs14;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    width: 50%;
+                    border: 1px solid #dee2e6 !important;
+                    font-size: $fs14;
+                }
+            }
+        }
+    }
+}
+
+.rides-card .edto-idea-partner-wrapper .ideal-box-wrapper .edto-ideal-box {
+  
+    box-shadow: $box-shadow;
+}
+
+
+.simplified-wrapper{
+    margin-top: 77px;
+}
+
+.rate-chart-wrapper{
+    width: 100%;
+    .table-responsive{
+        margin-top: 30px;
+    }
+}
+
+.form-slider {
+    padding: 0px 20px;
+}
+
+.form-slider {
+    .owl-nav{
+        .owl-next {
+            transform: rotate(180deg);
+            position: absolute;
+            right: 0;
+            top: 37px;
+            right: -33px;
+                img{
+                    width: 30px;
+                }
+                &:focus{
+                    outline: none;
+                }
+        }
+        .owl-prev {
+            position: absolute;
+            right: 0;
+            top: 37px;
+            left: -33px;
+            width: 20px;
+                img{
+                    width: 30px;
+                }
+                &:focus{
+                    outline: none;
+                }
+        }
+        .disabled{
+            display: none;
+        }
+    }
+    
+}
+
+.broucher-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+// --------------- wealth pluse page mobile code start----------------
+
+.edto-mob-tab-main-wrapper {
+    width: 100%;
+    padding: 30px 0px;
+    display: none;
+        .bolck-heading-wraper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+                .left-side{
+                    margin-bottom: 20px;
+                    h4{
+                        font-size: $fs18;
+                        color: $bgBlue;
+                        font-family:'Montserrat-Bold';
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                .right-side{
+                    margin-bottom: 20px;
+                    .fund-equity250-customize-wrapper{
+                        a{
+                            background-color: $bgBlue;
+                            color: $txtWhite;
+                            border-radius: 50px;
+                            padding: 10px 20px;
+                            font-size: $fs14;
+                        }
+                    }
+                }
+        }
+        .customize-fund-wrapper {
+            margin-top: 20px;
+                .select-form{
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+                    background-color: #f2f2f2;
+                    padding: 12px;
+                        form{
+                            width: 50%;
+                            select{
+                                background-position: 97% 13px;
+                                background-color: transparent;
+                                border: none;
+                                border-bottom: 1px solid $borderBlack;
+                                border-radius: 0;
+                            }
+                        }
+                }
+                .card-block{
+                    width: 100%;
+                    box-shadow: $box-shadow;
+                    border-radius: 8px;
+                    background-color: $bgWhite;
+                    padding: 12px;
+                    margin-bottom: 12px;
+                        h4{
+                            font-size: 14px;
+                            padding-bottom: 10px;
+                        }
+                        .card-label{
+                            p{
+                                font-size: 12px;
+                                color: $txtGray;
+                            }
+                            span{
+                                font-size: 14px;
+                                font-family:'Montserrat-Regular';
+                            }
+                        }
+                        .allocation-increase {
+                            width: 100%;
+                            display: flex;
+                            gap: 20px;
+                            p{
+                                font-size: 12px;
+                                color: $txtGray;
+                            }
+                            .vi-item-input-group{
+                                width: 150px;
+                            }
+                        }
+                }
+        }
+        .mob-accordian-wrapper{
+            width: 100%;
+            
+            .edto-panel-group{
+                box-shadow: none;
+                padding: 0;
+                .panel{
+                    .panel-heading{
+                        .panel-title{
+                            a{
+                                font-size: 14px;
+                                color: $bgBlue
+                            }
+                        }
+                    }
+                    .panel-body{
+                        padding: 12px 0px;
+                        p{
+                            font-size: 12px;
+                            font-family:'Montserrat-Regular';
+                        }
+                        .panel-img {
+                            padding-top: 24px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+// ------award paage------
+
+.awards-wrapper-full {
+	padding: 25px 0;
+	.awards-card-wrapper { 
+	}
+}
+.card-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+// Customize your plan start
+.customizeProtectionCard {
+    padding: 12.5px;
+    box-shadow: $boxShadowbox;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.headingProtection h3 {
+    font-size: 16px;
+}
+.download-rider-wrap .download-rider .dwnLdTxt {
+    display: none;
+}
+.download-rider-wrap .download-rider:hover .dwnLdTxt {
+    display: block;
+}
+.download-rider-wrap .download-rider:hover img {
+    display: none;
+}
+a.download-rider, .customizeProtectionCard p {
+    font-size: 14px;
+}
+a.download-rider img {
+    width: 22px;
+}
+.download-rider-wrap{
+    margin: 10px 0;
+}
+.riderContent {
+    gap: 14px;
+    margin-top: 14px;
+}
+.customizeProtectionSelect {
+    width: calc(100% - 180px);
+}
+.riderContentInner {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.riderContentInner h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.customizeProtectionSelect select {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+.customizeProtectionCard {
+    padding: 12.5px;
+    box-shadow: $boxShadowbox;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.customizeProtection .customizeProtectionRow {
+    gap: 30px 0;
+}
+.customizeProtection{
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    display: none;
+}
+.customizeProtection.active{
+    display: block;
+}
+.customizeProtInner{
+    margin-top: 40px;
+}
+// custom checkbox start
+.checkbox {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .checkbox__input {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+  }
+   
+  .checkbox__inner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #626262;
+    background: transparent no-repeat center;
+  }
+  
+  .checkbox__input:checked + .checkbox__inner {
+    border-color: #66bb6a;
+    background-color: #66bb6a;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='14px' height='10px' viewBox='0 0 14 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 59.1 (86144) - https://sketch.com --%3E%3Ctitle%3Echeck%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ios_modification' transform='translate(-27.000000, -191.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Group-Copy' transform='translate(0.000000, 164.000000)'%3E%3Cg id='ic-check-18px' transform='translate(25.000000, 23.000000)'%3E%3Cpolygon id='check' points='6.61 11.89 3.5 8.78 2.44 9.84 6.61 14 15.56 5.05 14.5 4'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 14px 10px;
+  }
+// custom checkbox end
+.planSummaryInner {
+    box-shadow: $boxShadowbox;
+    border-radius: 12px;
+}
+.planSummaryHeading h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+.planSummaryHeading {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+    background-color: #dde9ff;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.pre-benefits {
+    background-color: white;
+    position: relative;
+    padding: 0 20px;
+}
+.basePlan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ececec;
+}
+.additionalBenefitsContent h5 {
+    font-size: 14px;
+    color: #343434;
+    text-align: left !important;
+    padding-left: 0 !important;
+    font-weight: 600;
+}
+.additionalBenefitsPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.additionalBenefitsPrice p, .additionalBenefitsPrice span{
+    font-size: 14px;
+}
+.additionalBenefitsPrice span{
+    font-weight: 600;
+}
+.additionalBenefits {
+    padding: 20px 0;
+}
+.custm-btn {
+    background-color: #dde9ff;
+    padding: 11px;
+    text-align: center;
+}
+.headingProtectionInner {
+    justify-content: space-between;
+}
+.additionalGstPrice p {
+    margin-bottom: 10px;
+}
+.bold-txt {
+    font-family: Montserrat-SemiBold;
+    font-size: 15px;
+    margin-right: 2px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #e74c08;
+    display: block;
+    margin: 0 -15px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 7px 30px;
+    border-radius: 15px;
+}
+.custm-link{
+    padding: 20px;
+    text-align: center;
+}
+.custm-link a {
+    color: #317fff;
+    font-size: 14px;
+}
+// Customize your plan end
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .tokio-tbl-detail{
+        .table {
+            thead{
+                display: table;
+                width: 100%;
+            }
+            .scrl-tbl-hgt {
+                display: block;
+                max-height: 260px;
+                overflow: auto;
+                /* width */
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+                
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #888;
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+                tr{
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    td{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .edelweissFormInner {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .edelweissFormInner .edelweissTokioTotalReturns, .edelweissFormInner .edelweissTokioForm {
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .edelweiss-tokio-life-tab-content {
+        margin-top: 20px;
+    }
+    .fund-equity250-header .fund-equity250-inner .fund-equity250-heading-box {
+        align-items: self-start;
+        flex-direction: column;
+        gap: 11px;
+    }
+}
+
+/*18-01-2023*/
+
+
+
+
+
+
+
+
+
+@include for-1920{
+    .fs28 {
+        font-size: 26px !important;
+    }
+    .fs30 {
+        font-size: 26px !important;
+    }
+    .fs20 {
+        font-size: 16px !important;
+    }
+    
+}
+
+
+@include for-1366{
+    .edel-inner-content-main-wrapper{
+        margin-top: 75px;
+    }
+    .edto-login-main-wrapper .login-form-page-wrapper .edto-useful-links-wrapper .series{
+        gap: 0px;                
+        padding-top: 9px;
+    }
+    .edto-login-main-wrapper .login-form-page-wrapper .edto-useful-links-wrapper .series li a{
+        font-size: 14px;
+    }
+    .edto-login-main-wrapper {
+        margin-top: 75px;
+    }
+    .edto-breadcrumb-wrapper-wrapper{
+        margin-top: 75px !important;
+    }
+    .history-container .data-heading{ 
+        font-size: 20px;
+    }
+    .edto-life-insurance-main-wrapper{
+        margin-top: 33px !important;
+    }
+    .edto-main-insurence {
+        margin-top: 0 !important;
+    }
+    .edto-page-name-wrapper{
+        padding-top: 0px;
+        margin-top: 0px !important;
+    }
+    .edto-welath-main-page {
+        margin-top: 0px !important;
+    }
+    .wealth-small-text{
+        margin-top: 75px;
+    }
+    .product-slider .owl-nav img {
+        width: 22px;
+    }
+    .product-slider .owl-nav .owl-prev{
+        left: -27px;
+    }
+    .product-slider .owl-nav .owl-next{
+        right: -27px;
+    }
+
+    .product-term .owl-nav img {
+        width: 22px;
+    }
+    .product-term .owl-nav .owl-prev{
+        left: -27px !important;
+    }
+    .product-term .owl-nav .owl-next{
+        right: -27px !important;
+    }
+    .edto-customer-main-wrapper {
+        padding: 10px 0px 0px;
+    }
+    .edto-disclaimer-main-wrapper{
+        padding: 10px 0px 30px;
+    }
+    .edto-produt-explore-wrapper {
+       
+        padding: 30px 0px 0px;
+    }
+    .award-main-wrapper .edto-award-box .award-img img{
+        width: 100%;
+        height: inherit;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs li a {
+       font-size: 15px;
+        padding: 20px 12px 12px;
+    }
+    .personility-wrapper .personility-text{
+        max-width: 100%;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .blog-text{
+        left: 4%;
+        top: 10%;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text h1{
+        font-size: 22px !important;
+        max-width: 100%;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text h4{
+        font-size: 16px !important;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text p{
+        font-size: 14px;
+    }
+   
+    .insurance-from-wraaper{
+        padding: 20px !important;
+    }
+    .main-slider .slide-one{
+        min-height: 405px !important;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper{
+        height: 425px;
+    }
+   
+}
+@media only screen and (max-width: 1280px)  {
+    .edto-box-slider .owl-nav .owl-next{
+        right: 37%;
+    }
+}
+
+@include for-1200 {
+   
+    .edto-produt-explore-wrapper .product-tabs .product-slider .owl-nav img {
+        width: 35px;
+    }
+   
+    .edto-produt-explore-wrapper .product-tabs .product-slider .owl-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-slider .owl-nav .owl-prev{
+        position: inherit;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-slider .owl-nav .owl-next{
+        position: inherit;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-term .owl-nav img {
+        width: 35px;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-term .owl-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-term .owl-nav .owl-prev{
+        position: inherit;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-term .owl-nav .owl-next{
+        position: inherit;
+    }
+    .edto-body-content-wrapper .edto-online-policy-main-wrapper .edto-multi-online-wrapper .multi-box-card:after{
+        left: 155px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1199px)  {
+    .planSummary {
+        margin-top: 30px;
+    }
+}
+
+@include for-1080{
+    .edto-body-content-wrapper .edto-online-policy-main-wrapper .edto-multi-online-wrapper .multi-box-card:after {
+        left: 125px;
+    }
+}
+
+
+@include for-991{
+    .product-box-wrapper .product-box{
+        width: 48%;
+    }
+    .product-box-wrapper{
+        flex-wrap: wrap;
+    }
+     .ideal-box-wrapper .ideal-box .ideal-text{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .scaling-main-box .scaling-text h4{
+        font-size: 18px;
+    }
+    .edto-personility-main-wrapper .personility-wrapper{
+        flex-direction: column;
+    }
+    .edto-personility-main-wrapper .personility-wrapper .personility-img{
+        width: 100%;
+    }
+    .edto-personility-main-wrapper .personility-wrapper .personility-img img{
+        width: 100%;
+    }
+    .edto-personility-main-wrapper .personility-wrapper .personility-text{
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+        text-align: center;
+    }
+    .main-slider .slide-one{
+        min-height: 370px !important;
+    }
+    .main-slider .slide-one .caption-text{
+        width: 650px !important;
+    }
+    
+    // .main-slider .slide-one {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    .inner-scaling-wrapper{
+        width: 100% !important;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper{
+        // background-image: none;
+        height: 100%;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text{
+       
+        margin: 0;
+        
+        width: 100%;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body {
+        padding: 20px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body form .custom-radio-btn .InputGroup{
+        gap: 0px;
+    }
+    .edto-inner-page-banner .inner-slider img {
+        display: none;
+    }
+    .edto-inner-page-banner .inner-slider .mob-banner{
+        display: block;
+    }
+    .edto-inner-page-banner .inner-slider .mob-banner img{
+        display: block;
+        width: 100%;
+    }
+    .testimonial-wrapper .edto-testi-box{
+        width: 48%;
+    }
+    .edto-testimonial-main-wrapper .testimonial-wrapper{
+        gap: 20px;
+    }
+    
+    .blog-sec-tab-news-wrapper .edto-blog-news-wrapper{
+        flex-direction: column;
+    }
+    .blog-sec-tab-news-wrapper .edto-blog-news-wrapper .blog-tabs-content{
+        width: 100%;
+        border-right: 0;
+    }
+    .blog-sec-tab-news-wrapper .edto-blog-news-wrapper .blog-top-text {
+        width: 100%;
+        padding-left: 0;
+    }
+    .blog-sec-tab-news-wrapper .edto-blog-news-wrapper .blog-top-text .blog-nave-box .blog-img {
+        width: 20%;
+    }
+    .inner-text{
+        width: 100%;
+    }
+    .left-text:after{
+        display: none;
+    }
+    .product-slider .product-text h3{
+        padding-top: 14px;
+    }
+    .product-term .product-explore-box .edto-product-box{
+        text-align: left;
+    }
+    .product-term .product-icon span{
+        margin: 0;
+    }
+    .product-term .product-text h3{
+        text-align: left !important;
+        padding-top: 14px;
+    }
+
+    .product-slider .product-explore-box .edto-product-box{
+        text-align: left;
+    }
+    .text-div .product-text{
+        text-align: left;
+    }
+    .product-slider .product-text h3{
+        text-align: left !important;
+        padding-top: 14px;
+    }
+    .product-slider .product-icon span{
+        margin: 0;
+    }
+    .edto-login-main-wrapper .login-form-page-wrapper{
+       flex-direction: column;
+        
+    }
+    .edto-login-main-wrapper .login-form-page-wrapper .login-form{
+        width: 100%;
+        padding: 30px;
+    }
+    .edto-login-main-wrapper .login-form-page-wrapper .edto-useful-links-wrapper{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .edto-insurance-login-wrapper .edto-login-box{
+        flex-direction: column;
+    }
+    .edto-useful-main-wrapper .useful-links ul{
+        flex-direction: column;
+    }
+    .history-container .card{
+        width: 100%;
+    }
+    .news-change-wrapper .change-one-box{
+        padding: 15px 15px 15px 20px;
+    }
+    .edto-breadcrumb-wrapper-wrapper{
+        display: none !important;
+    }
+    .edto-page-name-wrapper, .edto-about-page-name-wrapper{
+        margin-top: 75px !important;
+    }
+    .edto-testimonial-main-wrapper{
+        margin-top: 63px;
+    }
+    .scaling-main-box{
+        flex-direction: column;
+    }
+    .customers-view{
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 10px;
+    }
+    .customers-view .view-left-blk{
+        border-right: 0 !important;
+    }
+    .edto-covid-teat-wrappper{
+        margin-top: 75px;
+    }
+    .list-content-wrapper{
+        flex-direction: column;
+    }
+    .list-content-wrapper .left-tab-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .document-tabs-wrapper .nav-tabs li a{
+        font-size: 13px;
+        padding: 8px 6px;
+    }
+    .testi-slider .owl-nav .owl-prev {
+        left: 36%;
+    }
+    .testi-slider .owl-nav .owl-next {
+        right: 36%;
+    }
+    // .edto-life-insurance-main-wrapper .insurance-from-wraaper{
+    //     display: none;
+    // }
+    .edto-life-insurance-main-wrapper .insurance-from-wraaper .secure-life-form-wrapper {
+        align-items: self-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        // display: none;
+    }
+    .edto-life-insurance-main-wrapper .insurance-from-wraaper .secure-life-form-wrapper .form-group {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .blog-text h4{
+        font-size: 22px;
+        font-family:'Montserrat-SemiBold';
+        max-width: 100%;
+    }
+    // .edto-life-insurance-main-wrapper .inner-slide .blog-text{
+    //     left: inherit;
+    //     width: 100%;
+    //     text-align: center;
+    //     position: inherit;
+    //     padding-top: 20px;
+    // }
+    .terms-condition-wrapper {
+        margin-top: 68px;
+    }
+    .edto-annual-wrapper{
+        margin-top: 75px;
+    }
+    .edto-wealth-inner-wrapper{
+        flex-direction: column;
+    }
+    .edto-wealth-inner-wrapper .wealth-form-box{
+        width: 100%;
+    }
+    .edto-wealth-inner-wrapper .wealth-text-sec {
+        width: 100%;
+    }
+    .edto-life-insurance-main-wrapper .insurance-from-wraaper .form-details-review-wrappper{
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .edto-life-insurance-main-wrapper .insurance-from-wraaper .form-details-review-wrappper .rating-wrapper {
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+    .history-container{
+        flex-direction: column;
+    }
+    .history-text-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    .mob-spc {
+        margin-top: 40px;
+    }
+    
+    .video-slider .owl-nav .owl-prev{
+        left: 35% !important;
+    }
+    .video-slider .owl-nav .owl-next{
+        right: 35% !important;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide img{
+        display: none;
+    }
+    .edto-life-insurance-main-wrapper .life-insu-inner-banner {
+        position: relative;
+       
+    }
+    .edto-life-insurance-main-wrapper .life-insu-inner-banner img{
+        display: block;
+    }
+    .edto-life-insurance-main-wrapper .mob-same img {
+        display: block;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .mob-banner img{
+        display: block;
+    }
+    .edto-body-content-wrapper .edto-online-policy-main-wrapper .edto-multi-online-wrapper .multi-box-card:after{
+        display: none;
+    }
+    .edto-body-content-wrapper .edto-online-policy-main-wrapper .edto-multi-online-wrapper .multi-box-card{
+        width: 50%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper{
+        flex-direction: column;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper{
+        width: 100%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .sidebar-panel-wrapper{
+        width: 100%;
+    }
+    .edto-product-inner-top-wrapper{
+        margin-top: 75px;
+    }
+    .edto-all-product-main-wrapper{
+        display: none;
+    }
+    .edto-product-inner-top-wrapper{
+        padding: 30px 0px;
+    }
+    .card-layout{
+        flex-wrap: wrap;
+        gap: 20px !important;
+    }
+    .card-layout .card{
+        width: 48% !important;
+         margin-bottom: 40px;
+    }
+    .card-layout .card .card-body .card-text-box {
+        text-align: left !important;
+    }
+    .new-product-box .product-footer {
+      
+        padding-top: 0px;
+        padding-bottom: 30px;
+    }
+    .edelweissTokioDetails .edelweissTokioDetailsInner .edelweissTokioFormDetails ul li{
+        padding: 0 9px;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .blog-text{
+        position: inherit;
+        padding: 16px 16px 0px;
+    }
+    .riders-annual-wrapper {
+        margin-top: 75px;
+    }
+    .edto-product-inner-top-wrapper h2{
+        padding-bottom: 0;
+    }
+    .edto-policy-renew-wrapper .product-footer .edto-btn-primary{
+        position: absolute;
+        min-width: 200px;
+        transform: translate(-50%, -50%);
+        bottom: 0;
+    }
+    .double-box-wrapper .product-footer .edto-btn-primary{
+        position: absolute;
+        min-width: 200px;
+        transform: translate(-50%, -50%);
+        bottom: 0;
+    }
+    .unclaimed-amount-wrapper{
+        margin-top: 75px;
+    }
+    .error-banner{
+        background-image: none;
+        height: inherit;
+    }
+    .error-banner .error-inner-wrapper .mob-banner{
+        display: block;
+       
+    }
+    .branch-tiles{
+        margin-bottom: 24px;
+    }
+    .tabs-inner-wrapper .branch-tiles{
+        text-align: center;
+    }
+    .tabs-inner-wrapper .branch-tiles .edto-bullet1{
+        text-align: left;
+    }
+    .form-title h4 {
+        font-size: 16px;
+    }
+    .form-title p {
+        font-size: 14px;
+    }
+    .contact-img{
+        display: none;
+    }
+    .edto-virtual-icon-wrapper .virtualbox .virtualtext{
+        width: 100%;
+    }
+    .edto-virtual-icon-wrapper .virtualbox .virtualimg{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .edto-career-main-wrapper {
+        margin-top: 75px;
+    }
+    .edto-why-join-wrapper p{
+        padding: 0;
+    }
+    .edto-career-main-wrapper .edto-carrer-banner .banner-text{
+        text-align: center;
+        transform: translate(0px, 0px);
+    }
+    .edto-career-main-wrapper .edto-carrer-banner .banner-text span.mob-img{
+        display: block;
+        padding-top: 20px;
+    }
+    .edto-career-main-wrapper .edto-carrer-banner{
+        background-image: none;
+        height: inherit;
+    }
+    .error-banner .error-inner-wrapper .error-text{
+        text-align: center;
+    }
+    .cliam-processing-box-wrapper .essay-simple-box:after{
+        transform: rotate(-49deg) !important;
+        top: 100% !important;
+        right: 50% !important;
+    }
+    .cliam-processing-box-wrapper .essay-simple-box{
+        margin-right: 0 !important;
+        margin-bottom: 12px !important;
+    }
+    .customize-fund-wrapper.active{
+        flex-direction: column;
+    }
+    .allocatifund-allocation-mobon-tooltip.allocation-left {
+        display: none;
+    }
+    .allocation-bar{
+        width: 95%;
+        margin: 0;
+        border: none;
+        padding: 12px;
+    }
+    // .allocation-bar .color-ELCFD, .equity-section-tbody .cs-color-ELCFD{
+    //     height: 20px !important;
+    // }
+    .mob-none {
+        display: none;
+    }
+    .edelweissTokioDetails .edelweissTokioDetailsInner .edelweissTokioHeading h5{
+        display: none;
+    }
+    .edto-mob-tab-main-wrapper{
+        display: block;
+    }
+    .edelweissTokioDetails .edelweissTokioDetailsInner .edelweissTokioHeading h4{
+        display: block;
+    }
+    .edelweissTokioDetails .edelweissTokioDetailsInner .editModel{
+        margin: 0;
+    }
+    .edelweissTokioDetailsInner .mob-text {
+        font-size: 12px;
+        position: absolute;
+        right: 24px;
+    }
+    .edelweissTokioDetails .edelweissTokioDetailsInner .mob-text{
+        display: block;
+    }
+    .download-brochure .rise-plus-brochure{
+        display: none;
+    }
+    .edelweissTokioTotalReturns .download-brochure {
+        background: $bgBlue;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 99;
+        display: flex;
+    justify-content: space-between;
+    }
+    .download-brochure .histy-amt-wrpr .histy-amt-content .return-amt{
+        color: $txtWhite;
+    }
+    .download-brochure .premium-form-header .title{
+        color: $txtWhite;
+    }
+    .download-brochure .premium-form-header .sub-title{
+        color: $txtWhite;
+    }
+    .download-brochure .button-wrap .totalnav-dropwdown .labelInputGroup .select-container select {
+        background-color: $bgBlue;
+        color: $txtWhite;
+    }
+    // .edto-menu-content-main-wrapper .product-nav ul{
+    //     overflow: scroll;
+    //     flex-wrap: nowrap;
+    //     justify-content: inherit;
+    // }
+    // .edto-menu-content-main-wrapper .product-nav ul li{
+    //     flex: none;
+    // }
+    .insurance-bloxk-wrapper .award-main-wrapper{
+        flex-direction: inherit;
+    }
+    .blg-sngl {
+        padding-top: 0;
+        margin-top: 77px !important;
+    }
+    .text-div {
+        width: 100%;
+        display: flex;
+        gap: 12px;
+    }
+    .text-div .product-text p{
+        font-size: 13px;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text{
+        text-align: center;
+        width: 98%;
+    }
+    .mob-text {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .mob--para3 {
+        margin-top: 77px;
+    }
+    .edto-award-banner-wrapper .award-banner .award-text h2 {
+        font-size: 20px !important;
+    }
+    .edto-award-banner-wrapper .award-banner .award-text p{
+        font-size: 13px;
+    }
+    .perks-info {
+        display: none;
+        text-align: center;
+    }
+  .perks-images {
+    height: 270px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    }
+    .perks-info.active {
+        display: block;
+    }
+    .card-layout .card .card-body .steps-number{
+        transform: translate(150%, -86%);
+    }
+    #fixed-image-scroll{
+        display: none;
+    }
+    .edto-custom-accordian-wrapper {
+        display: block !important;
+    }
+    .wealth-banner-popupe-wrapper{
+        display: block !important;
+    }
+    .edto-discovery-tiles .high-risk-investor{
+        width: 100% !important;
+    }
+    .edto-discovery-result-banner-wrapper .discovery-result-content #div4{
+        display: none;
+    }
+    .edto-discovery-tiles .title-content-wrapper{
+        flex-direction: column-reverse;
+    }
+    .edto-discovery-tiles .title-content-wrapper .tiles-img {
+        width: 100% !important;
+        margin-bottom: 16px;
+    }
+    .edto-discovery-tiles .title-content-wrapper .tiles-content{
+        width: 100% !important;
+    }
+    .custom-scroll-section-wrapper {
+        display: none;
+    }
+    .page-discovery {
+        margin-top: 75px;
+    }
+    .edto-money-person .small-text {
+        width: 60% !important;
+        
+    }
+    .onix-question-list .unclaimed-amount-wrapper {
+        margin-top: 0px !important;
+    }
+    .onix-question-list .unclaimed-amount-wrapper .wealth-form-box{
+        width: 100% !important;
+    }
+    /*.select2-container--open .select2-dropdown{
+        top: auto !important;
+    }*/
+    .edto-box-slider .owl-nav .owl-prev{
+       left: 25% !important;
+    }
+    .edto-box-slider .owl-nav .owl-next{
+        right: 25% !important;
+    }
+}
+
+@include for-767{
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body form .custom-radio-btn {
+        align-items: inherit;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper.retirement{
+        background-image: none;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper.child-future{
+        background-image: none;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper{
+        background-image: none;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper.zindagi-back{
+        background-image: none;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper.renewal-back{
+        background-image: none;
+    }
+    .customers-slider .slick-slide:not(.slick-center) {
+        opacity: 0;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .main-slider .slide-one .caption-text h2{
+        font-size: 18px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .main-slider .slide-one .caption-text p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .invest-text h2{
+        font-size: 18px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text{
+        box-shadow: none;
+        border: none;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body {
+        padding: 10px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .main-slider .slide-one .caption-text h2{
+        font-size: 18px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .main-slider .slide-one .caption-text p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .edto-personility-main-wrapper .personility-wrapper .personility-text h2 {
+        font-size: $fs16;
+    }
+   
+    .edto-personility-main-wrapper .personility-wrapper .personility-text p {
+        font-size: 14px;
+        padding: 0px 0px;
+    }
+    .edto-product-sec-wrapper .title, .product-box .product-text h3, .edto-idea-partner-wrapper .title, .edto-sacling-main-wrapper .title, .edto-customer-main-wrapper .title{
+        font-size: 18px;
+    }
+    .scaling-text h2 {
+        font-size: 30px;
+    }
+    .testimonial-wrapper .edto-testi-box{
+        width: 100%;
+    }
+    .blog-nave-box{
+        flex-direction: column;
+    }
+    .blog-nave-box .blog-text {
+        width: 100% !important;
+        padding: 18px 0px 0px 0px !important;
+        text-align: center;
+    }
+    .blog-sec {
+        padding-right: 0 !important;
+    }
+    .blog-nave-box .blog-img {
+        width: 100% !important;
+    }
+    .blog-nave-box .blog-text .multi-btn, .date-block {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .blog-sec-tab-news-wrapper .edto-blog-news-wrapper .blog-top-text .blog-nave-box .blog-img {
+        width: 100% !important;
+    }
+   
+    .edto-about-block-wrapper{
+        flex-direction: column;
+    }
+    .edto-support-available-wrappper .center-text{
+        flex-direction: column;
+    }
+    .edto-support-available-wrappper .center-text .main-text {
+        text-align: center;
+    }
+    .edto-support-available-wrappper .center-text .main-text h4 {
+        font-size: 15px;
+    }
+    .edto-support-available-wrappper .center-text .main-text h5 {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+    .history-container .card-data-wrapper{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .slider-multiple .slick-prev {
+        left: -1px;
+    }
+    .slider-multiple .slick-next {
+        right: -2%;
+    }
+    .slider-multiple .slick-list {
+        margin: 0 15px;
+    }
+    .fs28 {
+        font-size: 18px !important;
+    }
+    .fs30 {
+        font-size: 18px !important;
+    }
+    .history-container .data-heading{
+        font-size: 20px;
+    }
+    .fs18{
+        font-size: 16px;
+    }
+    .history-container {
+      
+        margin-bottom: 40px;
+    }
+    .history-container .data-text{
+        font-size: 14px;
+    }
+    .history-container .card-image{
+        border-right: 0;
+        width: 150px;
+        margin: auto;
+    }
+    .slider-multiple-wrapper {
+      
+        margin-top: -35px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .multi-bullet{
+        flex-direction: column;
+        gap: 0;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .multi-bullet .edto-bullet2 {
+        margin-bottom: 0px !important;
+        gap: 4px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper.zindagi-back form {
+        margin-top: 20px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper{
+        padding: 20px 0px 40px;
+    }
+    .page-tabs{
+        justify-content: flex-start;
+    }
+    .page-tabs a {
+        padding: 9px;
+        font-size: 14px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .invest-text h4{
+        font-size: 12px !important;
+    }
+    .philosophy-form-wrapper{
+        flex-direction: column;
+    }
+    .philosophy-form-wrapper .submit-form-wrapper{
+        width: 100% !important;
+    }
+    .philosophy-form-wrapper .sattlement-text{
+        width: 100% !important;
+    }
+    // .document-tabs-wrapper .nav-tabs {
+    //     overflow: scroll;
+    //     flex-wrap: nowrap;
+    // }
+    // .document-tabs-wrapper .nav-tabs .nav-item{
+    //    flex: none;
+    // }
+    .edto-life-insurance-main-wrapper .insurance-from-wraaper {
+        margin-top: 25px;
+    }
+    .left-text .inner-news-heading .date-block {
+        justify-content: flex-start;
+    }
+    .radio_container{
+        flex-wrap: wrap;
+    }
+    .video-slider .owl-nav .owl-prev{
+        left: 30% !important;
+    }
+    .video-slider .owl-nav .owl-next{
+        right: 30% !important;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .blog-text h1{
+        font-size: 20px;
+    }
+    .edto-body-content-wrapper .edto-online-policy-main-wrapper .edto-multi-online-wrapper .multi-box-card {
+        width: 100%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .sidebar-panel-wrapper {
+        width: 100%;
+    }
+    .edto-all-product-main-wrapper .edto-posi-form-wrapper .secure-life-form-wrapper{
+        flex-wrap: wrap;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .multi-grid-product .product-listing-main-wrapper{
+        width: 48%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .multi-grid-product{
+        gap: 20px;
+    }
+    .ideal-partner .edto-box-slider .edto-ideal-box .ideal-text h4 {
+        text-align: left !important;
+    }
+    .edto-multi-wealth-wrapper .wealth-img {
+        width: 100% !important;
+    }
+    .edto-multi-wealth-wrapper .wealth-text{
+        width: 100% !important;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .time-line-header-text .text-line{
+        flex-direction: column;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline{
+        max-width: 100% !important;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline .line{
+        flex-direction: column;
+        align-items: self-start !important;
+        margin-top: 0 !important;
+    }
+    .ideal-partner .product-footer {
+        padding-top: 20px;
+    }
+    .need-expert-wrapper{
+        flex-direction: column;
+    row-gap: 10px;
+    }
+    .line li{
+        margin-bottom: 30px;
+    }
+    .line li.active:after {
+        border-bottom: 1.5px dashed #ffa35d;
+        height: 0px !important;
+        width: 224px;
+        left: 9px !important;
+        top: 4px;
+    }
+    .line li.active:before {
+        bottom: 0 !important;
+        z-index: -1;
+        top: 1px;
+        right: -232px;
+    }
+    .timelne-card:after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent !important;
+        border-bottom: 10px solid #fff !important;
+        border-top: none !important;
+        border-top: none !important;
+        top: -10px !important;
+        bottom: auto;
+        left: 0 !important;
+        right: 0;
+    }
+    .timelne-card::before {
+        top: -8px;
+        bottom: auto;
+        left: 0;
+        right: 0;
+    }
+    .breakup-amount li{
+        padding: 4px 5px;
+        margin-bottom: 0;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline .policy-title-list{
+        border-bottom: 0 !important;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline .policy-title-list:after{
+        display: none;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline .policy-title-list:before{
+       display: none;
+    }
+    .How-works .edto-time-line-main-wrapper .inner-time-line-main-wrapper .premium-timeline .policy-title-list ul{
+        flex-direction: column;
+    row-gap: 12px;
+    }
+    .premium-timeline .line:after {
+        position: absolute;
+        top: 0;
+        left: 4px !important;
+        width: 1px !important;
+        content: "";
+        background: #ffa35d;
+        height: 100% !important;
+        z-index: -1;
+        transform: rotate(180deg);
+    }
+    .edto-insurance-login-wrapper .para-bold {
+        padding-top: 10px;
+    }
+    .edto-annual-wrapper .nav-tabs {
+        border-bottom: 1px solid #dbdbdb;
+       
+        width: 100%;
+        justify-content: inherit !important;
+    }
+    .edto-annual-wrapper .nav-tabs li {
+        margin-bottom: 0 !important;
+       
+    }
+    .public-disclouse-wrapper .nav-tabs li{
+        width: auto;
+    }
+    .news-change-wrapper .change-one-box .date-block {
+        justify-content: flex-start;
+    }
+    .slider-multiple{
+        margin-top: 30px;
+    }
+    .first-year, .last-year {
+        margin-left: -3px !important;
+    }
+    .edto-rider-main-wrapper{
+        align-items: start;
+        flex-direction: column;
+    }
+    .edto-rider-main-wrapper .rider-content{
+        width: 100%;
+    }
+    .edto-rider-main-wrapper .rider-icon{
+        width: 100%;
+        justify-content: start;
+        padding-top: 30px;
+    }
+    .mobile-change .edto-login-box .edto-ideal-box{
+        align-items: center;
+    }
+    .edto-award-box{
+        flex-direction: column;
+    }
+    .award-main-wrapper .edto-award-box .award-img img{
+        width: 90px;
+    height: 80px;
+    }
+    .award-main-wrapper .edto-award-box .award-img{
+        text-align: center;
+    }
+    .award-main-wrapper .edto-award-box  .award-text{
+        text-align: center;
+    }
+    .custom-tabs-wrapper .sha-mob {
+        box-shadow: 0px 3px 8px #ccc;
+        position: relative;
+        z-index: 1;
+    }
+    .edto-policy-renew-wrapper .product-footer .edto-btn-primary {
+        position: inherit;
+        min-width: inherit;
+        transform: inherit;
+        bottom: 0;
+        display: block;
+    }
+    .edto-policy-renew-wrapper .product-footer{
+        padding: 0;
+    }
+    .edto-policy-renew-wrapper .edto-about-block-wrapper .edto-ideal-box{
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .double-box-wrapper .edto-ideal-box{
+        padding: 30px;
+        text-align: center;
+        display: block;
+    }
+    .e-nach-single-box .edto-ideal-box{
+        padding: 30px;
+        text-align: center;
+        display: block;
+    }
+    .edto-how-register-wrapper .video-main-wrapper{
+        flex-direction: column;
+    }
+    .edto-sitemap-wrapper .inner-sitemap ul li {
+        width: 100%;
+    }
+    .edto-sitemap-wrapper .inner-sitemap ul {
+        gap: 10px;
+    }
+    .edto-document-sub-tabs-wrapper .document-tabs-wrapper .doc-tab-body .tracking-text .mail-box{
+        flex-direction: column;
+        gap: 2px;
+        text-align: center;
+    }
+    .edto-document-sub-tabs-wrapper .document-tabs-wrapper .doc-tab-body .tracking-text .mail-box p{
+        font-size: $fs14;
+    }
+    .edto-life-plans-wrapper .edto-blog-insurance-wrapper{
+        flex-direction: column;
+    }
+    .edto-life-plans-wrapper .edto-blog-insurance-wrapper .insurance-content{
+        width: 100%;
+    }
+    .edto-life-plans-wrapper .edto-blog-insurance-wrapper .insurance-img {
+        width: 100%;
+    }
+    .edto-life-plans-wrapper .edto-blog-insurance-wrapper .insurance-content .bullet-list li {
+        margin-bottom: 10px;
+    }
+    .edto-box-slider .owl-dots{
+        transform: translate(-50%, 10%);
+    }
+    .edto-award-banner-wrapper .award-banner{
+        background-color: $bgBlue;
+        background-image: none;
+        height: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .edto-award-banner-wrapper .award-banner .award-text{
+        width: 100%;
+        position: inherit;
+    }
+    .edto-award-banner-wrapper .award-banner img{
+        display: none;
+    }
+    .edto-award-banner-wrapper .award-banner .award-mob-img {
+        display: block;
+    }
+    .edto-award-banner-wrapper .award-banner .award-mob-img img{
+        display: block;
+        margin: auto;
+        width: inherit;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text h1 {
+        font-size: 18px !important;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text h4 {
+        font-size: 14px !important;
+        margin-bottom: 5px !important;
+    }
+    .edto-life-insurance-main-wrapper .inner-slide .life-insu-text p {
+        font-size: 12px;
+    }
+    .edto-life-insurance-main-wrapper .life-insu-inner-banner .life-insu-text {
+        top: 20%;
+        border: 0;
+        width: 90%;
+        text-align: center;
+        position: inherit;
+        left: 0;
+        right: 0;
+        margin: 25px auto 0;
+    }
+    
+    .capital-inner-wrappper{
+        flex-direction: column;
+        gap: 30px;
+    }
+   
+    .capital-inner-wrappper .capital-box{
+        width: 100%;
+    }
+    .capital-inner-wrappper:after{
+        display: none;
+    }
+    label.radio-card{
+        width: 48%;
+    }
+    .perks-detials {
+        height: auto;
+        overflow-y: scroll !important;
+    }
+    .perks-benefit-img .img-fluid {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .perks-benefit-img {
+        width: 100%;
+        height: 100%;
+    }
+    .fixed-benefits {
+        position: static !important;
+    }
+    .perks-images {
+        height: 40vh;
+    }
+    .edto-custom-accordian-wrapper .custom-accordian .card .card-body .disclaimer-block{
+        flex-direction: column;
+    }
+    .edto-custom-accordian-wrapper .custom-accordian .card .card-body .disclaimer-block .scroll-img{
+        width: 100% !important;
+    }
+}
+
+
+@include for-576{
+  
+   
+    .customers-view .view-left-blk{
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+    .customers-view .view-right-blk .rating {
+        margin-right: 9px !important;
+    }
+    .customers-view .view-right-blk .small-text{
+        padding-left: 9px !important;
+    }
+    .customers-view .view-right-blk .tag, .customers-view .view-left-blk .tag{
+        min-width: 56px !important;
+        padding: 8px 7px !important;
+    }
+    .customers-view .view-left-blk .tag{
+        font-size: 13px !important;
+    }
+    .customers-view .view-right-blk .small-text, .customers-view .view-left-blk .small-text{
+        font-size: 12px !important;
+    }
+    .customers-view .view-right-blk .tag.number-rating{
+        font-size: 16px !important;
+    }
+    .customers-view .view-right-blk .rating span svg {
+        width: 17px !important;
+        height: 17px !important;
+        
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body ul {
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body ul li{
+        font-size: 12px;
+        margin-right: 4px;
+    }
+   
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .invest-text h5{
+        font-size: 16px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body form p{
+        font-size: 14px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs li a{
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .bullets-text{
+        flex-direction: column;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body .bullets-text p{
+        width: 100%;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper{
+        padding: 12px 0px;
+    }
+   
+    .ideal-text{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .inner-scaling-wrapper {
+        flex-direction: column;
+        border-radius: 16px !important;
+    }
+    .testi-slider .owl-nav .owl-prev {
+        left: 26%;
+    }
+    .testi-slider .owl-nav .owl-next {
+        right: 26%;
+    }
+    // .claim-process-details .claim-strip{
+    //     flex-direction: column;
+    // }
+    .claim-process-details .claim-strip .download-icon a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 3px;
+    }
+    .video-slider .owl-nav .owl-prev{
+        left: 25% !important;
+    }
+    .video-slider .owl-nav .owl-next{
+        right: 25% !important;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-tab-title{
+        flex-direction: column;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .multi-grid-product .product-listing-main-wrapper{
+        width: 100%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper{
+        flex-direction: column;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper .search-box{
+        width: 100%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper .right-side-product-menubar{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .product-listing-main-wrapper{
+        flex-direction: column;
+    }
+    .product-listing-main-wrapper .listing-img{
+        width: 100%;
+    }
+    .product-listing-main-wrapper .listing-img .p-img{
+        width: 100%;
+        height: auto;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper .right-side-product-menubar .nav-tabs{
+        display: none;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper .right-side-product-menubar .select-drop{
+        width: 100%;
+    }
+    .edto-body-content-wrapper .edto-man-box-wrapper .product-list-main-wrapper .filter-main-box-wrapper .right-side-product-menubar .select-drop select{
+        background-position: 97% 10px;
+    }
+    .card-layout .card {
+        width: 100% !important;
+    }
+    header .right-side li a img {
+        width: 100%;
+    }
+    .fund-equity250-header .fund-equity250-inner .fund-equity250-heading-box .fund-equity250-content .recomendedFundsStrongTag{
+        font-size: 16px;
+    }
+    .fund-equity250-header .fund-equity250-inner .fund-equity250-heading-box .fund-equity250-conten p{
+        font-size: 14px;
+    }
+    .progress-allocation-wrapper span {
+        font-size: 12px;
+    }
+    .e-nach-double-box .double-box-wrapper{
+        flex-direction: column;
+    }
+    .e-nach-double-box .double-box-wrapper .edto-ideal-box{
+        max-width: 100% !important;
+    }
+    .e-nach-single-box .edto-ideal-box{
+        max-width: 100% !important;
+    }
+    .error-banner .error-inner-wrapper .error-text{
+        padding: 0;
+    }
+    .error-banner .error-inner-wrapper .error-text p{
+        font-size: 14px;
+    }
+    .branch-tiles form .contact-form-wrapper{
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+    .form-title{
+        flex-direction: column;
+    }
+    .insurance-bloxk-wrapper .award-main-wrapper .edto-award-box {
+        width: 100%;
+    }
+    .edto-life-insurance-main-wrapper .life-insu-inner-banner .life-insu-text{
+        top: 8%;
+    }
+    .mob--para3{
+        font-size: 9px;
+    }
+    .custm-link {
+        padding: 12px;
+    }  
+    .custm-link a {
+        font-size: 12px;
+    }  
+    .edto-money-person .small-text {
+        width: 100% !important;
+    }
+    .shape-text-wrapper .discovery-risk-text h2{
+        font-size: 15px !important;
+        padding: 10px !important;
+    }
+    .edto-box-slider .owl-nav .owl-prev{
+        left: 0% !important;
+     }
+     .edto-box-slider .owl-nav .owl-next{
+         right: 0% !important;
+     }
+     .dropdown-menu.show{
+        left: -28px !important;
+     }
+}
+
+@include for-480{
+    .product-box-wrapper .product-box {
+        width: 100%;
+    }
+   
+   .multi-btn {
+        flex-direction: column;
+    }
+    .branch-tiles .multi-btn{
+        flex-direction: row;
+    }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs li a{
+        font-size: 12px;
+    }
+    // .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs {
+    //     flex-wrap: nowrap;
+    //     overflow: scroll;
+    // }
+    // .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs .nav-item {
+    //     width: 40%;
+    //     flex: none;
+    // }
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .nav-tabs li a.active{
+        width: inherit;
+    }
+   
+    .fs40 {
+        font-size: 24px;
+    }
+    .fs22 {
+        font-size: 16px;
+    }
+    .edto-btn-primary{
+        font-size: 13px !important;
+    }
+    .video-slider .owl-nav .owl-prev{
+        left: 20% !important;
+    }
+    .video-slider .owl-nav .owl-next{
+        right: 20% !important;
+    }
+    .edto-produt-explore-wrapper .product-tabs .product-tab-title .nav-tabs .nav-item .nav-link{
+        padding: 7px 5px;
+    }
+    .cliam-processing-box-wrapper .essay-simple-box .essay-text {
+        width: 60% !important;
+    }
+    .flabel{
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+    .flabel p{
+        width: 100%;
+    }
+    .flabel span{
+        width: 100%;
+    }
+    .flabel .product-select-box {
+        width: 100%;
+    }
+    .edto-new-testimonial-wrapper .center-btn .edto-btn-primary {
+        margin-bottom: 12px;
+    }
+    .edto-career-main-wrapper .edto-carrer-banner .banner-text span.mob-img img{
+        width: 100%;
+    }
+    .edto-mob-tab-main-wrapper .customize-fund-wrapper .select-form label {
+        font-size: 13px;
+    }
+    label.radio-card {
+        width: 100%;
+    }
+    .line li.dot-year.active .timelne-card{
+        width: 235px;
+        right: -253px !important;
+    }
+   
+}
+@include for-380{
+    .edel-inner-content-main-wrapper .custom-tabs-wrapper .tab-content .tab-pane .invest-form-wrapper .banner1-text .card-body form .custom-radio-btn .InputGroup {
+        gap: 6px;
+        flex-direction: column;
+    }
+   
+    .slider-multiple-wrapper {
+        margin-top: -50px;
+    }
+    .testi-slider .owl-nav .owl-prev {
+        left: 11%;
+    }
+    .testi-slider .owl-nav .owl-next {
+        right: 11%;
+    }
+    .testi-slider .new-testi-main-box .test-main-box {
+        flex-direction: column;
+    }
+    .new-testi-main-box .test-main-box .new-testi-text {
+        width: 100%;
+    }
+    .video-slider .owl-nav .owl-prev{
+        left: 10% !important;
+    }
+    .video-slider .owl-nav .owl-next{
+        right: 10% !important;
+    }
+   
+    .award-main-wrapper .edto-award-box .award-img{
+        text-align: center;
+    }
+    .award-main-wrapper .edto-award-box .award-img img{
+        width: inherit;
+    }
+    .additionalBenefitsPrice p, .additionalBenefitsPrice span, .additionalBenefitsContent h5 {
+        font-size: 12px;
+    }
+}

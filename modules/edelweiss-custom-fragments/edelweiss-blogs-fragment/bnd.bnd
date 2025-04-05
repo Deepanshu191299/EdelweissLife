@@ -1,0 +1,5 @@
+Bundle-Name: edelweiss-blogs-fragment
+Bundle-SymbolicName: edelweiss.blogs.fragment
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.blogs.web;bundle-version="6.0.78"
+Portal-Bundle-Version: 7.4.13

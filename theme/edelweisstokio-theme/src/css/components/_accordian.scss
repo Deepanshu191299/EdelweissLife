@@ -1,0 +1,72 @@
+// com accordian
+
+.edto-panel-group{
+	border-radius: 8.1px;
+	box-shadow: $box-shadow;
+	padding: 12px 20px; 
+	.panel{
+		.panel-heading{
+			.panel-title{
+				a{
+					width: 100%;
+					display: block;
+					color: $txtLightBlack;
+					text-decoration: none;
+					font-size: $fs18;
+						span{
+							float: right;
+						}
+				}
+			}
+		}
+		.panel-body{
+			.disclaimer-block{
+				width: 100%;
+				padding-top: 12px;
+					p{
+						line-height: 26px;
+						padding: 0 24px 10px 5px;
+						cursor: pointer;
+						position: relative;
+						font-size: $fs14;
+						color: $txtLightBlack;
+					}
+			}
+		}
+	} 
+	.panel-title a[aria-expanded="true"]:after {
+		font-family:Fontawesome;
+		content:'\f077';
+		float:right;
+		font-size:10px;
+		font-weight:300;
+		color: $txtGray;
+		line-height: 20px;
+	}
+	.panel-title a[aria-expanded="false"]:after {
+		font-family:Fontawesome;
+		content:'\f078';
+		float:right;
+		font-size:10px;
+		font-weight:300;
+		color: $txtGray;
+		line-height: 20px;
+	}                           
+}
+
+.fire-ques-wrapper .custom-accordian .card .card-header[aria-expanded="true"]:after {
+	font-family:Fontawesome;
+	content:'\f077';
+	float:right;
+	font-size:10px;
+	font-weight:300;
+	color: $txtGray;
+}
+.fire-ques-wrapper .custom-accordian .card .card-header[aria-expanded="false"]:after{
+	font-family:Fontawesome;
+		content:'\f078';
+		float:right;
+		font-size:10px;
+		font-weight:300;
+		color: $txtGray;
+}

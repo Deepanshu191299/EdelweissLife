@@ -1,0 +1,33 @@
+
+            <#if Fieldset08900629.getSiblings()?has_content>
+                <#list Fieldset08900629.getSiblings() as curEntry>
+                <#if (curEntry.Content.getData())?? && (Fieldset08900629.Image.getData())?? && (Fieldset08900629.Image.getData() != "")>
+								<li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#${curEntry.Content.getData()}">
+                        <div class="tokio-tab-heading">
+            <div class="tokio-dots-left">
+                <span class="tokio-dots"></span>
+            </div>
+            <div class="tokio-tab-txt">
+                <h5>Customized Life Cover - According to Your Needs!</h5>
+                <p>${curEntry.Content.getData()}</p>
+            </div>
+            <div class="tokio-dots-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                    <g fill="none" fill-rule="evenodd" transform="translate(1 .274)">
+                        <circle cx="13" cy="13.726" r="13" stroke="#124093" stroke-width="1.3"></circle>
+                        <path fill="#124093" fill-rule="nonzero" stroke="#124093" stroke-width=".65" d="M14.615 9.135a.452.452 0 0 0-.645 0 .455.455 0 0 0 0 .639l3.269 3.269H6.45a.45.45 0 0 0-.451.451c0 .252.2.458.451.458H17.24l-3.27 3.263a.463.463 0 0 0 0 .645c.181.18.472.18.646 0l4.043-4.043a.444.444 0 0 0 0-.638l-4.043-4.044z"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>                                           
+			 </a>
+</li>					
+								<div class="tab-pane fade" id="{curEntry.Content.getData()">
+                                            <div class="tab-pane-img">
+                                                <img alt="${curEntry.Image.getAttribute("alt")}" data-fileentryid="${curEntry.Image.getAttribute("fileEntryId")}" src="${curEntry.Image.getData()}" />
+                                            </div>
+                                        </div>
+	</#if>
+            </#list>
+            </#if>

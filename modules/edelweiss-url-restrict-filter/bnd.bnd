@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-url-restrict-filter
+Bundle-SymbolicName: edelweiss.url.restrict.filter
+Bundle-Version: 1.0.0
+Export-Package: edelweiss.url.restrict.filter.constants

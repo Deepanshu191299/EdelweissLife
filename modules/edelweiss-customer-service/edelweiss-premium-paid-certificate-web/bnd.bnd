@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-premium-paid-certificate-web
+Bundle-SymbolicName: in.edelweiss.premium.paid.certificate
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.premium.paid.certificate.constants

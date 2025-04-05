@@ -1,0 +1,88 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+
+<div class="video-slider-main-wraper">
+    <#if (headingSection.getData())??>
+	<h2 class="fw700 fs28 text-center pb-3">${headingSection.getData()}</h2>
+</#if>
+    <div class="container">		       
+        <div class="video-slider">
+            <div class="owl-carousel owl-theme">
+                <#if url.getSiblings()?has_content>
+                <#list url.getSiblings() as cur_url>
+                <div class="item">
+                    <div class="video-block-wrapper">
+                        <div class="video-left-block">
+                            <#if (cur_url.getData())??>
+                            <iframe width="560" height="300" src="${cur_url.getData()}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </#if>
+                        </div>
+                    </div>
+                </div>
+                </#list>
+                </#if>
+            </div>
+        </div>
+    </div>
+</div>   
+<script>
+	$( document ).ready(function() {
+        $('.video-slider .owl-carousel').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:true,
+            navText: ['<img src="/o/edelweisstokio-theme/images/prev-arrow.svg">', '<img src="/o/edelweisstokio-theme/images/prev-arrow.svg">'],
+            dots: true,
+            autoplay: false,
+            smartSpeed: 1200,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                911:{
+                    items:2
+                },
+                1300:{
+                    items:3
+                }
+                
+            }
+        })
+    });
+</script>  
+<!-- <script>
+    setTimeout(
+  function() 
+  {
+    $('.video-slider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    navText: ['<img src="/o/edelweisstokio-theme/images/prev-arrow.svg">', '<img src="/o/edelweisstokio-theme/images/prev-arrow.svg">'],
+    dots: true,
+    autoplay: false,
+    smartSpeed: 1200,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        911:{
+            items:2
+        },
+        1300:{
+            items:3
+        }
+        
+    }
+})
+  }, 1000);
+   
+</script> -->

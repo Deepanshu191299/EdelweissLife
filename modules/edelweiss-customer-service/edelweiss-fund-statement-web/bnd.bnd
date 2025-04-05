@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-fund-statement-web
+Bundle-SymbolicName: in.edelweiss.fund.statement
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.fund.statement.constants

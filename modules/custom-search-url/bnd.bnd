@@ -1,0 +1,11 @@
+Bundle-Name: custom-search-url
+Bundle-SymbolicName: custom.search.url
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.search.experiences.internal.suggestions.spi
+
+Import-Package:\
+!com.liferay.search.experiences.internal.configuration.*,\
+!com.liferay.search.experiences.internal.util.*,\
+!com.liferay.search.experiences.internal.web.*,\
+\
+*

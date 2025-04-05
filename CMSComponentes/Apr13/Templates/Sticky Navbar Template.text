@@ -1,0 +1,99 @@
+    <#-- Add elements from the sidebar to define your template. Type "${" to use the autocomplete feature. -->
+    <section class="product-navbar center-product-navbar">
+        <div class="container">
+            <nav role="navigation" id="nav-main">
+                <ul class="nav nav-tab" id="myTab">
+                    <#if stickyNavbarMenu.getSiblings()?has_content>
+                    <#list stickyNavbarMenu.getSiblings() as curEntry>
+										<#if curEntry?index == 0>
+						<#assign tabMenuActive = "active"/>
+						</#if>
+					<#if curEntry?index != 0 >
+						<#assign tabMenuActive = ""/>
+					</#if>
+                    <li class="nav-item ${tabMenuActive}">
+                        <a href="${curEntry.id.getData()}" onclick="return clickAnchor();">
+                            <#if (curEntry.title.getData())??>
+                               ${curEntry.title.getData()}
+                            </#if>
+                        </a> 
+                    </li>
+                    </#list>
+                    </#if>
+                    <li class="nav-item dropdown more hidden" data-width="80">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="6" viewBox="0 0 26 6">
+                                <g fill="#484848" fill-rule="evenodd">
+                                    <circle cx="3" cy="3" r="3"/>
+                                    <circle cx="13" cy="3" r="3"/>
+                                    <circle cx="23" cy="3" r="3"/>
+                                </g>
+                            </svg>
+                            </a>
+                        <ul class="dropdown-menu"></ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+		<script>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 480) {
+                    $('.product-navbar').addClass('sticky');
+                }
+                else {
+                    $('.product-navbar').removeClass('sticky');
+                }
+            });
+
+
+            $('.product-nav .nav-item').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+
+            $('.product-navbar a ,.view-example a').click(function () {
+                var sectionTo = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(sectionTo).offset().top - 130
+                }, 1500);
+            });
+
+            $('.product-navbar .nav-item').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+               $('#myTab li a').each(function() { 
+                if ($(this).text().trim() == "Save Now" || $(this).text().trim() == "Start Saving") {     
+                   $(this).parent().addClass('navbar-btn'); 
+             }
+             });
+$(document).ready(function() {
+  const sections =  $(' .journal-content-article1 > section[id]');
+  const tabs = $("#nav-main ul li");
+
+  function highlightTab() {
+    sections.each(function(index) {
+      const rect = this.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        tabs.removeClass('active');
+        tabs.eq(index).addClass('active');
+      }
+    });
+  }
+
+  $(window).on('scroll', highlightTab);
+});
+        </script>
+<style>
+.product-navbar .navbar-btn{
+background:#2c51a2;
+padding:0 15px;
+border-radius:22px;
+font-weight:700;
+}
+.product-navbar .navbar-btn a{
+border-bottom:none !important;
+color:#fff !important;
+line-height:20px;
+}
+</style>

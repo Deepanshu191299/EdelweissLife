@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-product-enquiry-web
+Bundle-SymbolicName: in.edelweiss.product.enquiry.web
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.product.enquiry.web.constants

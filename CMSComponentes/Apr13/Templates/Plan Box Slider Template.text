@@ -1,0 +1,143 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="container">
+    <#if (headingSection.getData())??>
+        <h2 class="fontbold fs28 text-center pt-3 pb-4">${headingSection.getData()}</h2>
+    </#if>  
+		
+			<#if (subHeading.getData())??>
+	<div class="text-center mb-4">${subHeading.getData()}	</div>
+</#if>
+	
+	
+    <div class="edto-box-main-wrapper">
+        <div class="edto-box-slider">
+            <div class="owl-carousel owl-theme">
+                <#if planBoxSlider.getSiblings()?has_content>
+                    <#list planBoxSlider.getSiblings() as curEntry>
+                    <div class="item">
+                        <div class="edto-ideal-box mx-2">
+                            <div class="ideal-icon text-center">
+                                <#if (curEntry.image.getData())?? && curEntry.image.getData() != "">
+                                    <img alt="${curEntry.image.getAttribute("alt")}" data-fileentryid="${curEntry.image.getAttribute("fileEntryId")}" src="${curEntry.image.getData()}" />
+                                </#if>
+                            </div>
+                            <div class="ideal-text">        
+                                <#if (curEntry.title.getData())??>
+                                    <h4 class="fw600 fs16 text-center">${curEntry.title.getData()}</h4>
+                                </#if>        
+                                <#if (curEntry.description.getData())??>
+                                    <div class="para1 fw500 txtGray"> ${curEntry.description.getData()}</div>
+                                </#if>
+
+								<#if (curEntry.url.getData())?? && curEntry.url.getData() != "">
+									<p><a href="${planBoxSlider.url.getData()}">Know More</a></p>
+								</#if>
+								<#if (curEntry.popupDescription.getData())?? && curEntry.popupDescription.getData() != ""  && curEntry.url.getData() == "">									
+									<p><a href="javascript:void(0)" data-toggle="modal" data-target="#KnowMorepopup-${.vars["reserved-article-id"].data}-${curEntry?index+1}" tabindex="${curEntry?index+1}">Know More</a></p>
+								</#if>								
+                            </div>
+                        </div>						
+                    </div>
+                    </#list>
+                </#if>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<#if planBoxSlider.getSiblings()?has_content>
+	<#list planBoxSlider.getSiblings() as curEntry>
+	<div class="modal wealth-modal fade" id="KnowMorepopup-${.vars["reserved-article-id"].data}-${curEntry?index+1}" tabindex="${curEntry?index+1}" role="dialog" aria-labelledby="KnowMorepopupTitle-${curEntry?index+1}" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close close-right" data-dismiss="modal" onclick="closeStatusDiv();" aria-label="Close"> 
+						<span aria-hidden="true">
+							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="#999" fill-rule="nonzero" d="M8.827 7.5l5.898-5.899A.938.938 0 1 0 13.4.275L7.5 6.174 1.601.274A.938.938 0 1 0 .275 1.602l5.899 5.9-5.9 5.898a.938.938 0 1 0 1.327 1.326l5.9-5.899 5.898 5.9a.935.935 0 0 0 1.326 0 .938.938 0 0 0 0-1.327L8.827 7.5z"></path></svg> 
+						</span>
+					 </button>
+                     <div class="user-profile text-center">
+                        <#if (curEntry.popupTitle.getData())??>
+                        <h5 class="fs18 fw700 text-center pt-3 pb-2">  ${curEntry.popupTitle.getData()} </h5>
+                        </#if>
+                    </div>
+					<div class="profile-text">					   
+						<#if (curEntry.popupDescription.getData())??>
+							${curEntry.popupDescription.getData()}
+						</#if>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</#list>
+</#if>
+
+<script>
+	$( document ).ready(function() {
+        $('.edto-box-slider .owl-carousel').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:false,
+            dots: true,
+            autoplay: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                911:{
+                    items:2
+                },
+                1300:{
+                    items:4
+                }
+                
+            }
+        })
+    });
+</script>
+<!-- <script>
+    setTimeout(
+  function() 
+  {
+    $('.edto-box-slider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:false,
+    dots: true,
+    autoplay: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        911:{
+            items:2
+        },
+        1300:{
+            items:4
+        }
+        
+    }
+})
+  }, 1000);
+   
+</script> -->
+<style>
+.edto-box-slider .owl-carousel .owl-stage{
+    direction: revert;
+}
+.close:focus {
+    box-shadow: unset;
+}
+</style>

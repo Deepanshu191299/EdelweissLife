@@ -1,0 +1,40 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="container">                
+    <div class="need-expert-wrapper mt-3">
+        <div class="text-expert">
+            <span> 
+                <#if (Image21008198.getData())?? && Image21008198.getData() != "">
+	                <img alt="${Image21008198.getAttribute("alt")}" data-fileentryid="${Image21008198.getAttribute("fileEntryId")}" src="${Image21008198.getData()}" />
+                </#if>
+            </span>
+            <h2 class="fw700 fs28">
+                <#if (title.getData())??>
+                    ${title.getData()}
+                </#if>
+            </h2>
+        </div>
+        <div class="chat-btn">
+            <a class="edto-outline-btn chat-bot-move"  id="chat-bot-move" href="javascript:void(0)">
+                <#if (labelButton.getData())??>
+                    ${labelButton.getData()}
+                </#if>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+$( ".chat-bot-move" ).click(function() {
+  $( "#chat-bot" )[0].click();
+})
+</script>
+<style>
+.need-expert-wrapper {
+    background-color: #124093;
+}
+.need-expert-wrapper .text-expert h2 {
+    color: white;
+}
+</style>

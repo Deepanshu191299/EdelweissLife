@@ -1,0 +1,50 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="item">
+  <div class="slide-one" style="background-image: url(${bannerImage.getData()});">
+<div class="container px-0">
+    <div class="caption-text">
+	<#if (Heading.getData())??>
+		<h2 class="fontbold fs28">${htmlUtil.stripHtml(Heading.getData())}</h2> 
+	</#if>
+	<#if (Discription.getData())??>
+		${Discription.getData()}
+	</#if>
+	<div class="multi-btn">	
+		<#if (firstLinkLabel.getData())??>
+			<a  class="edto-btn-primary btn-md" data-senna-off="true" href="${firstLink.getFriendlyUrl()}"> 
+				${firstLinkLabel.getData()}
+			</a>								
+		</#if>			
+		<#if (secondLinkLabel.getData())??>
+			<a class="edto-btn-link" data-senna-off="true" href="${secondLink.getFriendlyUrl()}">
+				${secondLinkLabel.getData()}
+			</a>
+		</#if>
+	</div>
+</div>
+
+<!--
+    <div class="inner-slide">
+        <#if (bannerImage.getData())?? && bannerImage.getData() != "">
+            <img alt="${bannerImage.getAttribute("alt")}" data-fileentryid="${bannerImage.getAttribute("fileEntryId")}" src="${bannerImage.getData()}" />
+        </#if>
+        <span class="mob-banner">
+            <#if (bannerMobileImage.getData())?? && bannerMobileImage.getData() != "">
+                <img alt="${bannerMobileImage.getAttribute("alt")}" data-fileentryid="${bannerMobileImage.getAttribute("fileEntryId")}" src="${bannerMobileImage.getData()}" />
+            </#if>
+        </span>			
+    </div>
+		-->
+</div>
+
+<div class="mob-slide">
+  <#if (bannerMobileImage.getData())?? && bannerMobileImage.getData() != "">
+    <img alt="${bannerMobileImage.getAttribute("alt")}" data-fileentryid="${bannerMobileImage.getAttribute("fileEntryId")}" src="${bannerMobileImage.getData()}" />
+  </#if>
+</div>
+
+</div>
+</div>

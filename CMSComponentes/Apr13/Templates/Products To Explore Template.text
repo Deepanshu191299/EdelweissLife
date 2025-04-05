@@ -1,0 +1,43 @@
+
+                    <div class="edto-product-box m-1">
+                        <div class="text-div">
+                            <div class="product-icon">
+                                <span><#if (productList.image.getData())?? && productList.image.getData() != "">
+	<img alt="${productList.image.getAttribute("alt")}" data-fileentryid="${productList.image.getAttribute("fileEntryId")}" src="${productList.image.getData()}" />
+</#if></span>
+                            </div>
+                            <div class="product-text">
+                                <h3 class="fontsemi fs20"><#if (productList.productTitle.getData())??>
+	${productList.productTitle.getData()}
+</#if></h3>
+                                
+                                <p class="para1"><#if (productList.subTitle.getData())??>
+	${productList.subTitle.getData()}
+</#if> </p>
+                            </div>
+                        </div>
+                        
+                        <div class="scroll-text">
+												 <div class="edto-bullet1">
+<#if (productList.benefits.getData())??>
+	${productList.benefits.getData()}
+</#if>
+</div>
+                        </div>
+                        <div class="product-footer">
+                            <a class="edto-btn-primary" href="${productList.button.getFriendlyUrl()}"><#if (productList.buttonName.getData())??>
+	${productList.buttonName.getData()}
+</#if></a>
+                        </div>
+                    </div>                  
+                    
+
+
+ <style>
+    .edto-product-box .scroll-text .edto-bullet1{
+padding-left:0
+}
+.edto-product-box .scroll-text .edto-bullet1 ul{
+padding-left:21px
+}
+    </style>

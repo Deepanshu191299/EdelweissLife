@@ -1,0 +1,4 @@
+Bundle-Name: elelweiss-renewal-policy-web
+Bundle-SymbolicName: in.edelweiss.renewal.policy.web
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.renewal.policy.web.constants

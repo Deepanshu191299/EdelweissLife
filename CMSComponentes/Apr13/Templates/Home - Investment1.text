@@ -1,0 +1,198 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+
+<#assign ListTypeDefinitionLocalService = serviceLocator.findService("com.liferay.list.type.service.ListTypeDefinitionLocalService")/>
+<#assign ListTypeEntryLocalService = serviceLocator.findService("com.liferay.list.type.service.ListTypeEntryLocalService")/>
+<#assign listTypeDefinition = ListTypeDefinitionLocalService.getListTypeDefinitionByExternalReferenceCode("investmentObjective", companyId)/>
+<#assign listEntries = ListTypeEntryLocalService.getListTypeEntries(listTypeDefinition.listTypeDefinitionId)/>
+
+<div class="invest-form-wrapper grow-money">
+  <div class="container">
+     <div class="card banner1-text">
+         <div class="card-body">
+             <ul>
+                 <li>objective</li>
+                 <li class="custom-option">
+                     <div class="select_mate" data-mate-select="active" data-indx-select="0" data-selec-open="false">
+                         <select name="" onchange="a1()" onclick="return false;" id="select_interest">
+												   <#list listEntries as entry>
+													      <option value="${entry.key}" ${(entry.key == 'growMoney' )?then("selected","")} data-id="${entry.key}">${entry.nameCurrentValue}</option>
+													 </#list>
+                         </select>
+
+                      </div>
+                 </li>
+                 <li>Risk</li>
+                 <li class="custom-option">
+                     <div class="select_mate" data-mate-select="active" data-indx-select="1" data-selec-open="false">
+                         <select name="" onchange="riskAppetite()" onclick="return false;" id="select_risk">
+                            <option value="0">High</option>
+                            <option value="1">Medium</option>
+                            <option value="2">Low</option>
+                         </select>
+    
+                      </div>
+                 </li>
+             </ul>
+             <div class="invest-text"> 
+                 <h2 class="fontbold fs28">${(Content.Title.getData()?? && Content.Title.getData()?has_content)?then(Content.Title.getData(),"Please add title")}</h2>
+                
+                 <h4 class="fontsemi fs20 pt-2 pb-2">${(Content.Description.getData()?? && Content.Description.getData()?has_content)?then(Content.Description.getData(),"Please add Description")}</h4>
+             </div>
+            <@liferay_aui.form name="investmentfm" onSubmit='event.preventDefault(); generateInvestmentLead(event);'>
+                <h5 class="fs18 pb-2">${(FM.Form_Title.getData()?? && FM.Form_Title.getData()?has_content)?then(FM.Form_Title.getData(),"Please add form title")}</h5>
+                 <div class="row">
+                      <div class="col-md-3 col-12 px-2">
+                              <@liferay_aui.input type="text" name="fullName" placeholder='${(FM.Full_Name.getData()?? && FM.Full_Name.getData()?has_content)?then("${FM.Full_Name.getData()}","Full Name")}' label="" required=true >
+                                <@liferay_aui.validator name="custom" errorMessage="please-enter-your-full-name">
+                                    function(val){
+                                      val = val.trim();
+                
+                                      var regex = new RegExp("^[a-zA-z]+([\\s][a-zA-Z]+)+$");
+                                        return regex.test(val);
+                                    }
+                                </@liferay_aui.validator>
+                              </@liferay_aui.input>
+                      </div>
+											 <div class="col-md-3 col-12 px-2">
+                          <@liferay_aui.input type="text" name="mobileNumber" placeholder='${(FM.Mobile_Number.getData()?? && FM.Mobile_Number.getData()?has_content)?then("${FM.Mobile_Number.getData()}","Mobile Number")}' label="" required=true maxlength="10" onkeydown="return IsNumeric(event);">
+                              <@liferay_aui.validator name="custom" errorMessage="please-enter-a-valid-mobile-number">
+                              function(val){
+                                val = val.trim();
+          
+                                var regex = new RegExp("^[6-9][0-9]{9}$");
+                                  return regex.test(val);
+                              }
+                          </@liferay_aui.validator>
+                          </@liferay_aui.input>
+                      </div>
+											<div class="col-md-3 col-12 px-2">
+											    <@liferay_aui.select name="annualIncome" label="">
+													     <@liferay_aui.option value="Annual Income">Annual Income</@liferay_aui.option>
+															  <@liferay_aui.option value="< 5 Lacs">&lt; 5 Lacs</@liferay_aui.option>
+                                <@liferay_aui.option value="5 Lac - 7,99,999">5 Lac - 7,99,999</@liferay_aui.option>
+                                <@liferay_aui.option value="8 Lac - 9,99,999">8 Lac - 9,99,999</@liferay_aui.option>
+                                <@liferay_aui.option value="10 Lac - 11,99,999">10 Lac - 11,99,999</@liferay_aui.option>
+                                <@liferay_aui.option value="=> 12 Lacs">=&gt; 12 Lacs</@liferay_aui.option>
+															 <@liferay_aui.validator name="custom" errorMessage="this-field-is-required">
+                                    function(val){
+                                        return !(val == 'Annual Income');
+                                    }
+                            </@liferay_aui.validator>
+													</@liferay_aui.select>										
+											</div>
+											<div class="col-md-3 col-12 px-2">
+                          <@liferay_aui.input type="text" autocomplete="off" name="dateOfBirth" placeholder='${(FM.DOB.getData()?? && FM.DOB.getData()?has_content)?then("${FM.DOB.getData()}","DOB(DD/MM/YYYY)")}' label="" required=true maxlength="10" onkeypress="return IsNumeric(event);" onkeydown="return formatDate(event);">
+                            <@liferay_aui.validator name="custom" errorMessage="please-enter-a-valid-date">
+                              function(val){
+                                val = val.trim();
+          
+                                var regex = new RegExp("^(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/[0-9]{4}$");
+                                    return regex.test(val);
+                              }
+                            </@liferay_aui.validator>
+                            <@liferay_aui.validator name="date"></@liferay_aui.validator>
+														<@liferay_aui.validator name="custom" errorMessage="the-age-should-be-between-18-to-100">
+                              function(val){
+                                var today = new Date();
+                                var birthDate = new Date(val);
+                                var age = today.getFullYear() - birthDate.getFullYear();
+																var m = today.getMonth() - birthDate.getMonth();
+                                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                                       age--;
+                                }
+																return !(age < 18 || age > 100);
+                              }
+                            </@liferay_aui.validator>
+                          </@liferay_aui.input>
+                      </div>
+											<div class="col-md-3 col-12 d-none px-2">
+                          <@liferay_aui.input type="text" autocomplete="off" name="assuranceDob" placeholder='${(FM.DOB.getData()?? && FM.DOB.getData()?has_content)?then("${FM.DOB.getData()}","Childs DOB(DD/MM/YYYY)")}' label="" maxlength="10" onkeypress="return IsNumeric(event);" onkeydown="return formatDate(event);">
+                            <@liferay_aui.validator name="custom" errorMessage="please-enter-a-valid-date">
+                              function(val){
+                                val = val.trim();
+                                var regex = new RegExp("^(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/[0-9]{4}$");
+                                    return regex.test(val);
+                              }
+                            </@liferay_aui.validator>
+														<@liferay_aui.validator name="required" errorMessage="this-field-is-required">
+                              function(val){
+                                var conceptName = $('#select_interest').val();
+                                return conceptName == 2;
+                              }
+                            </@liferay_aui.validator>
+                            <@liferay_aui.validator name="date"></@liferay_aui.validator>
+														<@liferay_aui.validator name="custom" errorMessage="the-age-should-be-between-0-to-17">
+                              function(val){
+                                var today = new Date();
+                                var birthDate = new Date(val);
+                                var age = today.getFullYear() - birthDate.getFullYear();
+																var m = today.getMonth() - birthDate.getMonth();
+                                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                                       age--;
+                                }
+																return !(age < 0 || age > 17);
+                              }
+                            </@liferay_aui.validator>
+                          </@liferay_aui.input>
+                      </div>
+									
+								</div>
+								 <div class="custom-radio-btn ">
+                     <p>You are</p>
+                     <div class="InputGroup">
+                         <@liferay_aui.input type="radio" name="occupation" id="size_1" value="Self-employed" checked=true wrappedField=true label=""></@liferay_aui.input>
+                         <label for="size_1">Self-employed</label>
+                         <@liferay_aui.input type="radio" name="occupation" id="size_2" value="Salaried" wrappedField=true label=""></@liferay_aui.input>
+                         <label for="size_2">Salaried</label>
+                     </div>
+                     <p>You want your pay-out</p>
+                     <div class="InputGroup">
+                         <@liferay_aui.input type="radio" name="payoutOptions" id="size_3" value="Lumpsum" checked=true wrappedField=true label=""></@liferay_aui.input>
+                         <label for="size_3">Lumpsum</label>
+                         <@liferay_aui.input type="radio" name="payoutOptions" id="size_4" value="Monthly" wrappedField=true label=""></@liferay_aui.input>
+                         <label for="size_4">Monthly</label>
+                     </div>
+                 </div>							
+                <ul class="edto-bullet1 mt-2">
+                    <li>${(FM.Terms_Condition.getData()?? && FM.Terms_Condition.getData()?has_content )?then(FM.Terms_Condition.getData(),"Please add Terms and Condition")}</li>
+                </ul>
+                 <div class="multi-btn">                    
+										 <button type="submit" class="edto-btn-primary" data-href="${Content.Show_Plans.getFriendlyUrl()}" id="investment-home-submit-btn">${(FM.Show_Plans_Label.getData()?? && FM.Show_Plans_Label.getData()?has_content)?then("${FM.Show_Plans_Label.getData()}","Show Best Plans")}</button>
+                     <a class="edto-btn-link" href="${Content.Choose_Plans.getFriendlyUrl()}">${(FM.Choose_Plans_Label.getData()?? && FM.Choose_Plans_Label.getData()?has_content)?then("${FM.Choose_Plans_Label.getData()}","Help me choose a plan")}</a>
+                 </div>
+								 <@liferay_aui.input type="hidden" name="investmentObjective" value="growMoney" cssClass="inp-interest"/>
+								  <@liferay_aui.input type="hidden" name="riskAppetite" value="High" cssClass="inp-risk"/>
+								 <@liferay_aui.input type="hidden" name="requestType" value="homeInvestment"/>
+								 <@liferay_aui.input type="hidden" name="productCategory" value="${Content.Product_Category.getData()}"/>
+								 <@liferay_aui.input type="hidden" name="investmentObjectiveCategory" value="${Content.Investment_Objective_Category.getData()}"/>
+            </@liferay_aui.form>
+         </div>
+     </div>
+  </div>
+</div>
+
+<div class="modal team-modal wealth-modal fade" id="homeInvestmentModal" tabindex="-1" role="dialog" aria-labelledby="homelmsTitle" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+    <path fill="#999" fill-rule="nonzero" d="M8.827 7.5l5.898-5.899A.938.938 0 1 0 13.4.275L7.5 6.174 1.601.274A.938.938 0 1 0 .275 1.602l5.899 5.9-5.9 5.898a.938.938 0 1 0 1.327 1.326l5.9-5.899 5.898 5.9a.935.935 0 0 0 1.326 0 .938.938 0 0 0 0-1.327L8.827 7.5z"/>
+</svg></span>
+                    </button>
+                </div>
+
+                <div class="wealth-form-box text-center w-100"> 
+                    <h4 class="text-center mb-3 error-msg">No Response From Server, Please try again.</h4> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id='home-investment-loader' style='display: none;'>
+	<div class="preloader"></div>
+</div>

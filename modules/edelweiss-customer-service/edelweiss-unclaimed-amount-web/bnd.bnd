@@ -1,0 +1,4 @@
+Bundle-Name: edelweiss-unclaimed-amount-web
+Bundle-SymbolicName: in.edelweiss.unclaimed.amount
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.unclaimed.amount.constants

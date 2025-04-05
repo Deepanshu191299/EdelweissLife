@@ -1,0 +1,5 @@
+Bundle-Name: edelweiss-premium-returns-caculator-web
+Bundle-SymbolicName: in.edelweiss.premium.returns.caculator.web
+Bundle-Version: 1.0.0
+Export-Package: in.edelweiss.premium.returns.caculator.web.constants
+Web-ContextPath: /edelweiss-premium-returns-caculator-web

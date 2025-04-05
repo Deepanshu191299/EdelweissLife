@@ -1,0 +1,22 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<div class="claim-process-details">
+	<#if pdfDownloadList.getSiblings()?has_content>
+    <#list pdfDownloadList.getSiblings() as curEntry>
+	<div class="claim-strip">
+		<div> 
+			<p>
+			<#if (curEntry.PdfTitle.getData())??>
+				${curEntry.PdfTitle.getData()}
+			</#if>
+			</p>
+		</div>
+		<div class="download-icon">
+			<a href="${curEntry.pdfUpload.getData()}" download="">  Download</a>
+		</div>
+	</div>
+	</#list>
+    </#if>
+</div>

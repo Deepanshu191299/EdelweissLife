@@ -1,0 +1,37 @@
+<div class="branch-tiles">
+<#if (title.getData())??>
+	<h2 class="fontbold fs28 mb-2">${title.getData()}</h2>
+</#if>
+<#if (description.getData())??>
+	<p class="mb-3">${description.getData()}</p>
+</#if>
+	<form>
+		<div class="contact-form-wrapper">
+			<div class="form-group">
+<#if (nameLabel.getData())??>
+	<label>${nameLabel.getData()}</label>
+</#if>
+<#if (name.getData())??>
+	<p class="fs14">${name.getData()}</p>
+</#if>
+			</div>
+			<div class="form-group">
+			<#if (emailLabel.getData())??>
+	         <label>${emailLabel.getData()}</label>
+      </#if>
+			<#if (email.getData())??>
+	        <p class="fs14">${email.getData()}</p>
+      </#if>
+			</div>
+			<div class="form-group">
+			<#if (phoneLabel.getData())??>
+	        <label>${phoneLabel.getData()}</label>
+      </#if>
+      <#if (phone.getData())??>
+	        <p class="fs14">${phone.getData()}</p>
+      </#if>
+			</div>
+		</div>
+	</form>
+	
+</div>

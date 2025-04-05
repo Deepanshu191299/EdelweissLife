@@ -1,0 +1,15 @@
+dependencies {
+	compile project(":modules:edelweiss-rest-api-builder:edelweiss-rest-api-builder-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "javax.annotation", name: "javax.annotation-api", version: "1.3.2"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	compileOnly project(":modules:edelweiss-system-configurations")
+    compileOnly project(":modules:edelweiss-common-util")
+    compileOnly project(":modules:edelweiss-tokio-common-api")
+	compileOnly project(":modules:edelweiss-http-core-api")
+
+	restBuilder group: "com.liferay", name: "com.liferay.portal.tools.rest.builder", version: "1.0.222"
+}
+
+group = "in.edelweiss.rest.api.builder"

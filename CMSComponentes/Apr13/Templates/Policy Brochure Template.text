@@ -1,0 +1,61 @@
+<#--
+Add elements from the sidebar to define your template. Type "${" to use the
+autocomplete feature.
+-->
+<section class="ideal-partner" id="wealth">
+    <div class="container">
+        <div class="edto-multi-wealth-wrapper">
+            <div class="wealth-img">
+                <#if (image.getData())?? && image.getData() != "">
+                    <img alt="${image.getAttribute("alt")}" data-fileentryid="${image.getAttribute("fileEntryId")}" src="${image.getData()}" />
+                </#if>
+            </div>
+            <div class="wealth-text">
+                <h5 class="fs20 fw700 pb-3">
+                    <#if (title.getData())??>
+                        ${title.getData()}
+                    </#if>
+                </h5>
+                <div class="icon-list-wrapper">
+                    <div class="we-icon">
+                        <img src="/o/edelweisstokio-theme/images/w-icon1.png" alt="icon">
+                    </div>
+                    <div class="we-text">
+                        <h6>Product Brochure</h6>
+                        <a href="${productBrochure.getData()}" target="_blank"> <img src="/o/edelweisstokio-theme/images/down-file.png" alt="icon"> View Download</a>
+                    </div>
+                </div>
+                <div class="icon-list-wrapper">
+                    <div class="we-icon">
+                        <img src="/o/edelweisstokio-theme/images/w-icon2.png" alt="icon">
+                    </div>
+                    <div class="we-text">
+                        <h6>Sample Contract</h6>
+                        <a href="${sampleContract.getData()}" target="_blank"> <img src="/o/edelweisstokio-theme/images/down-file.png" alt="icon"> View Download</a>
+                    </div>
+                </div>
+                <div class="icon-list-wrapper">
+                    <div class="we-icon">
+                        <img src="/o/edelweisstokio-theme/images/w-icon3.png" alt="icon">
+                    </div>
+                    <div class="we-text">
+                        <h6>Rate Table</h6>
+                        <a href="${rateTable.getData()}" target="_blank"> <img src="/o/edelweisstokio-theme/images/down-file.png" alt="icon"> View Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+.we-icon {
+    min-width: 51px;
+}
+.icon-list-wrapper .we-text h6 {
+    font-family: "Montserrat-SemiBold";
+}
+.icon-list-wrapper .we-text a {
+    font-family: "Montserrat-Medium", sans-serif;
+    line-height: 2.2;
+}
+</style>

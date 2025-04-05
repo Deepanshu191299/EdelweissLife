@@ -1,0 +1,78 @@
+
+// button scss
+
+.edto-btn-primary{
+    font-size: $fs14;
+    letter-spacing: .6px;
+    box-shadow: $boxShadowbtn;
+	background-color: $bgOrange;
+	color: $txtWhite;
+    padding: 13px 20px;
+	font-family:'Montserrat-SemiBold';
+    border: 0;
+    line-height: 14px;
+    text-transform: $uppercase;
+	border-radius: 30px;
+	display: inline-block;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+	text-decoration: none;
+		&:hover{
+			background-color: $bgOrange;
+			border-color: $bgOrange;
+		}
+		&:focus{
+			background-color: $bgOrange;
+			border-color: $bgOrange;
+			box-shadow: $boxShadowbtn;
+		}
+		&:active{
+			background-color: $bgOrange !important;
+			border-color: $bgOrange !important;
+			box-shadow: $boxShadowbtn !important;
+		}
+		span{
+			display: inline-block;
+			padding-right: 6px;
+				img{
+					width: 20px;
+				}
+		}
+}
+
+// button link
+
+.edto-btn-link{
+	color: $textBlue-btn;
+	font-family:'Montserrat-SemiBold';
+	font-size: $fs14;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+// out line
+
+.edto-outline-btn{
+	font-size: $fs14;
+	letter-spacing: .6px;
+	box-shadow: $boxShadowbtn;
+	background-color: $bgWhite;
+	color: $bgOrange;
+	border: 1px solid $bgOrange;
+	padding: 13px 20px;
+	font-family:'Montserrat-SemiBold';
+	line-height: 14px;
+	text-transform: $uppercase;
+	border-radius: 20px;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}

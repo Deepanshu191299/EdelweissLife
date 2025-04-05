@@ -1,0 +1,4 @@
+Bundle-Name: edelweisslife-sitemap-component
+Bundle-SymbolicName: in.edelweisslife.sitemap.component
+Bundle-Version: 1.0.0
+Export-Package: in.edelweisslife.sitemap.component.constants
